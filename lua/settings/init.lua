@@ -17,8 +17,8 @@ opt.fillchars = { eob = " " }
 opt.mouse = "a"
 
 -- Search
-opt.hlsearch = true
 opt.incsearch = true
+opt.hlsearch = true
 opt.ignorecase = true
 opt.smartcase = true
 
