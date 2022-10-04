@@ -53,6 +53,8 @@ return packer.startup(function(use)
     use 'roxma/vim-hug-neovim-rpc'
     use 'romgrk/fzy-lua-native'
     -- Utils
+    use 'lewis6991/impatient.nvim'          -- Speed up deffered plugins
+    use 'terryma/vim-multiple-cursors'      -- Multiple Cursors
     use 'jiangmiao/auto-pairs'              -- Add closing pair
     use {'norcalli/nvim-colorizer.lua',     -- Colourize hex colours
         config = function() require 'colorizer'.setup() end}
