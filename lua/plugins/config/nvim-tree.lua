@@ -28,11 +28,6 @@ require'nvim-tree'.setup {
     filesystem_watchers = {
         enable = true,
     },
-    actions = {
-        open_file = {
-            resize_window = true,
-        },
-    },
     renderer = {
         highlight_git = false,
         highlight_opened_files = "none",

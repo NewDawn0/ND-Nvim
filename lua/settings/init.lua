@@ -1,4 +1,5 @@
 local opt = vim.opt
+local g = vim.g
 
 -- Statusline
 opt.laststatus = 3
@@ -40,3 +41,36 @@ opt.fileencoding = 'utf-8'
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
+
+-- Disable some plugins
+local default_plugins = {
+  "2html_plugin",
+  "getscript",
+  "getscriptPlugin",
+  "gzip",
+  "logipat",
+  "netrw",
+  "netrwPlugin",
+  "netrwSettings",
+  "netrwFileHandlers",
+  "matchit",
+  "tar",
+  "tarPlugin",
+  "rrhelper",
+  "spellfile_plugin",
+  "vimball",
+  "vimballPlugin",
+  "zip",
+  "zipPlugin",
+  "tutor",
+  "rplugin",
+  "syntax",
+  "synmenu",
+  "optwin",
+  "compiler",
+  "bugreport",
+  "ftplugin",
+}
+for _, plugin in pairs(default_plugins) do
+  g["loaded_" .. plugin] = 1
+end

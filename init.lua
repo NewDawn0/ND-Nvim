@@ -17,21 +17,13 @@ require('colourschemes')
 
 require('plugins')
 
--- //////// confi ////////
--- colourschemes
-cmd([[
-let g:onedark_config = {
-    \ 'style': 'deep',
-\}
-]])
-
 -- /////// Setup ////////
 cmd("colorscheme onedark")
 
 
 
 -- //////// Info ////////
--- Coloruschemes
+-- Colourschemes
 --      nightfox    solarized dark
 --      terafox     solarized dark
 --      dayfox      lightmode
