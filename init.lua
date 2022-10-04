@@ -14,7 +14,7 @@ local g = vim.g
 -- //////// Load modules ////////
 require('settings')
 require('colourschemes')
-
+require('mappings')
 require('plugins')
 
 -- /////// Setup ////////
