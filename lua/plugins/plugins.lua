@@ -56,6 +56,10 @@ return packer.startup(function(use)
     use 'lewis6991/impatient.nvim'          -- Speed up deffered plugins
     use 'terryma/vim-multiple-cursors'      -- Multiple Cursors
     use 'jiangmiao/auto-pairs'              -- Add closing pair
+    use {'akinsho/toggleterm.nvim',
+        tag = '*', config = function() require "plugins.config.toggleterm" end}
+    use {'Pocco81/auto-save.nvim',          -- Autosave
+        config = function() require "plugins.config.auto-save" end}
     use {'norcalli/nvim-colorizer.lua',     -- Colourize hex colours
         config = function() require 'colorizer'.setup() end}
     use {'gelguy/wilder.nvim',              -- Wildmenu
@@ -64,6 +68,8 @@ return packer.startup(function(use)
     use {'kyazdani42/nvim-tree.lua',        -- File Browser
         requires = {'kyazdani42/nvim-web-devicons'},
         config = function() require "plugins.config.nvim-tree" end}
+    use {'iamcco/markdown-preview.nvim',
+        run = function() vim.fn["mkdp#util#install"]() end}
     -- Autosetup config after cloning packer.nivm
     if PACKER_BOOTSTRAP then
 		require("packer").sync()
