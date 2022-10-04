@@ -52,11 +52,13 @@ return packer.startup(function(use)
     use 'roxma/nvim-yarp'
     use 'roxma/vim-hug-neovim-rpc'
     use 'romgrk/fzy-lua-native'
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-lua/popup.nvim'
     -- Utils
     use 'lewis6991/impatient.nvim'          -- Speed up deffered plugins
     use 'terryma/vim-multiple-cursors'      -- Multiple Cursors
     use 'jiangmiao/auto-pairs'              -- Add closing pair
-    use {'akinsho/toggleterm.nvim',
+    use {'akinsho/toggleterm.nvim',         -- Terminal
         tag = '*', config = function() require "plugins.config.toggleterm" end}
     use {'Pocco81/auto-save.nvim',          -- Autosave
         config = function() require "plugins.config.auto-save" end}
@@ -69,9 +71,14 @@ return packer.startup(function(use)
         requires = {'kyazdani42/nvim-web-devicons'},
         config = function() require "plugins.config.nvim-tree" end}
     use {'iamcco/markdown-preview.nvim',
-        run = function() vim.fn["mkdp#util#install"]() end}
+        ft = 'markdown', cmd = 'MarkdownPreview',
+        run = 'cd app && yarn install'}
     use {'neovim/nvim-lspconfig',           -- LSP config
         config = function() require "plugins.config.lspconfig" end}
+    use {'rcarriga/nvim-notify',            -- Notifications
+        config = function() require "plugins.config.notify" end}
+    use {'Darazaki/indent-o-matic',         -- Auto indentation
+        config = function() require "plugins.config.indent-o-matic" end}
 
     -- Autosetup config after cloning packer.nivm
     if PACKER_BOOTSTRAP then
