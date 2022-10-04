@@ -70,6 +70,9 @@ return packer.startup(function(use)
         config = function() require "plugins.config.nvim-tree" end}
     use {'iamcco/markdown-preview.nvim',
         run = function() vim.fn["mkdp#util#install"]() end}
+    use {'neovim/nvim-lspconfig',           -- LSP config
+        config = function() require "plugins.config.lspconfig" end}
+
     -- Autosetup config after cloning packer.nivm
     if PACKER_BOOTSTRAP then
 		require("packer").sync()
