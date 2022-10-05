@@ -12,16 +12,19 @@ local cmd = vim.cmd
 local g = vim.g
 
 -- //////// Load modules ////////
+-- General
 require('settings')
 require('colourschemes')
 require('mappings')
 require('plugins')
 require('autocmd')
 
+-- LSP stupp
+require('lsp-config')
+require('lsp-config.nvim-cmp')
+
 -- /////// Setup ////////
 cmd("colorscheme onedark")
-
-
 
 -- //////// Info ////////
 -- Colourschemes

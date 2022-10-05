@@ -8,3 +8,4 @@ map('n', '<leader>tt', ':ToggleTerm direction=horizontal<CR>', opts)    -- Toogl
 map('n', '<leader>tf', ':ToggleTerm<CR>', opts)                         -- ToggleTerm
 map('n', '<leader>w', ':w<CR>', opts)                                   -- Save
 map('n', '<leader>wq', ':wq<CR>', opts)                                 -- Save and Quit
+
