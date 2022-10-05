@@ -16,6 +16,7 @@ require('settings')
 require('colourschemes')
 require('mappings')
 require('plugins')
+require('autocmd')
 
 -- /////// Setup ////////
 cmd("colorscheme onedark")
