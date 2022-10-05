@@ -38,6 +38,7 @@ opt.undofile = true
 opt.undolevels = 1000
 opt.wrap = false
 opt.fileencoding = 'utf-8'
+vim.cmd("filetype on")
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250

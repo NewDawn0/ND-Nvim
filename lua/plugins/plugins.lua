@@ -71,7 +71,6 @@ return packer.startup(function(use)
         requires = {'kyazdani42/nvim-web-devicons'},
         config = function() require "plugins.config.nvim-tree" end}
     use {'iamcco/markdown-preview.nvim',
-        ft = 'markdown', cmd = 'MarkdownPreview',
         run = 'cd app && yarn install'}
     use {'neovim/nvim-lspconfig',           -- LSP config
         config = function() require "plugins.config.lspconfig" end}
