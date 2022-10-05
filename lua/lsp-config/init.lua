@@ -1,3 +1,4 @@
+-- nvim lsp
 local nvim_lsp = require("lspconfig")
 local map = vim.keymap.set
 -- Mappings.
@@ -48,3 +49,4 @@ for _, lsp in ipairs(servers) do
         capabilities = capabilities,
     }
 end
+

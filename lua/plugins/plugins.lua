@@ -76,14 +76,14 @@ return packer.startup(function(use)
         config = function() require "plugins.config.notify" end}
     use {'Darazaki/indent-o-matic',         -- Auto indentation
         config = function() require "plugins.config.indent-o-matic" end}
+	use {'williamboman/nvim-lsp-installer',	-- Adds the :LspInstall command
+		config = function() require("nvim-lsp-installer").setup {} end}
     use 'neovim/nvim-lspconfig'		        -- LSP config
 	use 'onsails/lspkind.nvim'				-- Stylize menu
 	use 'hrsh7th/nvim-cmp'					-- Autocompletion Plugin
 	use 'hrsh7th/cmp-nvim-lsp'				-- Lsp source for cmp
 	use 'saadparwaiz1/cmp_luasnip'			-- Snippets source for cmp
 	use 'L3MON4D3/LuaSnip'					-- Snippets plugin
-	use {'williamboman/mason.nvim',			-- Lsp servers linters..
-		config = function() require("mason").setup() end}
 
     -- Autosetup config after cloning packer.nivm
     if PACKER_BOOTSTRAP then
