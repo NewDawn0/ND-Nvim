@@ -13,4 +13,12 @@ cd ~/.config/nvim
 git pull
 nvim +PackerSync
 ```
-
+## Keybinds
+**General Keybinds**
+- Leader key => `space`
+- Save => `<leader> + w`
+- Save and quit => `<leader> +wq`
+- Toggle file brower => `<leader> + e`
+- Toggle auotsave => `<leader> + as`
+- Open bottom terminal => `<leader> + tt`
+- Open floating terminal => `<leader> + tf`
