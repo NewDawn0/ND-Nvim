@@ -55,8 +55,8 @@ return packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/popup.nvim'
     -- Utils
-    use 'lewis6991/impatient.nvim'          -- Speed up deffered plugins
     use 'terryma/vim-multiple-cursors'      -- Multiple Cursors
+	use 'lervag/vimtex'						-- Vimtex
     use 'jiangmiao/auto-pairs'              -- Add closing pair
     use {'akinsho/toggleterm.nvim',         -- Terminal
         tag = '*', config = function() require "plugins.config.toggleterm" end}
@@ -84,6 +84,12 @@ return packer.startup(function(use)
 	use 'hrsh7th/cmp-nvim-lsp'				-- Lsp source for cmp
 	use 'saadparwaiz1/cmp_luasnip'			-- Snippets source for cmp
 	use 'L3MON4D3/LuaSnip'					-- Snippets plugin
+	use 'lukas-reineke/indent-blankline.nvim'-- Indent blacklines
+	use {'nvim-telescope/telescope.nvim',	-- Telescope file search
+		tag = '0.1.0', requires = 'nvim-lua/plenary.nvim',
+		config = function () require "plugins.config.telescope" end}
+	use {'feline-nvim/feline.nvim',
+		config = function () require "plugins.config.feline" end}
 
     -- Autosetup config after cloning packer.nivm
     if PACKER_BOOTSTRAP then

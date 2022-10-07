@@ -15,4 +15,4 @@ cmd("autocmd BufEnter *.md | MarkdownPreviewToggle")
 
 -- Turn autosave on for certain filetypes
 cmd("autocmd BufEnter *.md | ASToggle")
-cmd("autocmd BufEnter *.tex | AsToggle")
+

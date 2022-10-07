@@ -22,7 +22,7 @@ require('autocmd')
 -- LSP stupp
 require('lsp-config')
 require('lsp-config.nvim-cmp')
-
+-- require('plugins.config.autostatus')
 -- /////// Setup ////////
 cmd("colorscheme onedark")
 

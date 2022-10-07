@@ -1,8 +1,12 @@
 require'nvim-tree'.setup {
-    disable_netrw = true,
     filters = {
         dotfiles = false,
         exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
+    },
+    actions = {
+        open_file = {
+            resize_window = true,
+        },
     },
     disable_netrw = true,
     hijack_netrw = true,
