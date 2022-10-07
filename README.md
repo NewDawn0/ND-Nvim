@@ -4,7 +4,7 @@ My personal neovim configuration
 ## Installation
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak
-git clone https://github.com/NewDawn0/nvim-config.git ~/.config/nvim
+git clone https://github.com/NewDawn0/ND-Nvim.git ~/.config/nvim
 nvim +PackerSync
 ```
 ## Updating
