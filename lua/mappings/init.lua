@@ -13,6 +13,7 @@ map('n', '<C-h>', '<C-w>h', opts)                                               
 map('n', '<C-k>', '<C-w>k', opts)                                                                     -- Remap move up 
 map('n', '<C-j>', '<C-w>j', opts)                                                                     -- Remap move down 
 map('v', '<', '<gv', opts)                                                                            -- Remain in visual mode after insert
+map('n', '#', '<Cmd>CommentToggle<CR>', opts)                                                         -- Toggle comments
 -- Split --
 map('n', '<C-Left>', '<Cmd>lua require("smart-splits").resize_left(3)<CR>', opts)                     -- Resize left
 map('n', '<C-Right>', '<Cmd>lua require("smart-splits").resize_right(3)<CR>', opts)                   -- Resize left

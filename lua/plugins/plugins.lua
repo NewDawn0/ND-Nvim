@@ -54,6 +54,8 @@ return packer.startup(function(use)
 	use 'lewis6991/impatient.nvim'				-- Speed up plugins
 	use {'kazhala/close-buffers.nvim',			-- Better bufferclose
 		config = function() require "plugins.config.close-buffers" end}
+	use {'terrortylor/nvim-comment',			-- Comments
+		config = function() require "plugins.config.comment" end}
     use {'akinsho/toggleterm.nvim',         	-- Terminal
         tag = '*', config = function() require "plugins.config.toggleterm" end}
     use {'Pocco81/auto-save.nvim',          	-- Autosave
