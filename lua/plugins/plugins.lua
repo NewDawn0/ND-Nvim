@@ -55,7 +55,8 @@ return packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/popup.nvim'
     -- Utils
-    use 'terryma/vim-multiple-cursors'      -- Multiple Cursors
+    use 'terryma/vim-multiple-cursors'      -- Multiple cursors
+	use 'dstein64/vim-startuptime'			-- Measure startup time
     use 'jiangmiao/auto-pairs'              -- Add closing pair
 	use 'lewis6991/impatient.nvim'			-- Speed up plugins
 	use {'kazhala/close-buffers.nvim',		-- Better bufferclose
