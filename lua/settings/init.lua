@@ -1,10 +1,8 @@
 local opt = vim.opt
 local g = vim.g
-
 -- Statusline
 opt.laststatus = 3
 opt.showmode = false
-
 -- Indenting
 opt.smarttab = true
 opt.expandtab = true
@@ -15,20 +13,18 @@ opt.tabstop = 4
 opt.clipboard = "unnamedplus"
 opt.fillchars = { eob = " " }
 opt.mouse = "a"
-
 -- Search
 opt.incsearch = true
 opt.hlsearch = true
 opt.ignorecase = true
 opt.smartcase = true
-
--- Numbers
+-- Numbers --
 opt.number = true
 opt.numberwidth = 2
 opt.ruler = false
 vim.cmd("set nu rnu") -- hybrid numbers
 opt.hidden = true
-
+-- File stuff --
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true
@@ -38,10 +34,9 @@ opt.undofile = true
 opt.undolevels = 1000
 opt.wrap = false
 opt.fileencoding = 'utf-8'
--- interval for writing swap file to disk, also used by gitsigns
+-- interval for writing swap file to disk, also used by gitsigns --
 opt.updatetime = 250
-
--- Disable some plugins
+-- Disable default plugins --
 local default_plugins = {
   "2html_plugin",
   "getscript",
@@ -68,7 +63,7 @@ local default_plugins = {
   "optwin",
   "compiler",
   "bugreport",
-  "ftplugin",
+  "ftplugin"
 }
 for _, plugin in pairs(default_plugins) do
   g["loaded_" .. plugin] = 1
