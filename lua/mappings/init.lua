@@ -35,7 +35,7 @@ map('n', '<leader>gc', '<Cmd>Telescope git_commits<CR>', opts)                  
 map('n', '<leader>gs', '<Cmd>Telescope git_status<CR>', opts)                                         -- Telescope buffers
 -- Bufferline --
 map('n', '<C-p>', '<Cmd>BufferLinePick<CR>', opts)                                                    -- Pick
-map('n', '<C-p>i', '<Cmd>BufferLineTogglePin<CR>', opts)                                              -- Pin/undpin
+map('n', '<C-u>', '<Cmd>BufferLineTogglePin<CR>', opts)                                              -- Pin/undpin
 map('n', '<C-c>', '<CMD>lua require("close_buffers").delete({type = "this"})<CR>', opts)              -- Close current buffer
 map('n', '<C-c>a', '<CMD>lua require("close_buffers").wipe({ type = "other" })<CR>', opts)            -- Close all exept current
 map('n', '<C-c>p', '<CMD>BufferLinePickClose<CR>', opts)                                              -- Pick close
@@ -47,8 +47,8 @@ map('n', '<leader>pS', '<Cmd>PackerStatus<CR>', opts)                           
 map('n', '<leader>pu', '<Cmd>PackerUpdate<CR>', opts)                                                 -- PackerUpdate
 -- LSP stuff --
 vimap('n', '<space>d', vim.diagnostic.open_float, opts)                                               -- Open diagnostics
-vimap('n', '[d', vim.diagnostic.goto_prev, opts)                                                      -- Go to previous diagnostic
-vimap('n', ']d', vim.diagnostic.goto_next, opts)                                                      -- Go to next diagnostic
+vimap('n', '<d', vim.diagnostic.goto_prev, opts)                                                      -- Go to previous diagnostic
+vimap('n', '>d', vim.diagnostic.goto_next, opts)                                                      -- Go to next diagnostic
 vimap('n', '<space>q', vim.diagnostic.setloclist, opts)                                               -- Close diagnostics
 vimap('n', 'gD', vim.lsp.buf.declaration, bufopts)                                                    -- Goto declaration
 vimap('n', 'gd', vim.lsp.buf.definition, bufopts)                                                     -- Goto definiton
