@@ -26,7 +26,7 @@ opt.smartcase = true
 opt.number = true
 opt.numberwidth = 2
 opt.ruler = false
-vim.cmd("set nu rnu") -- hybrid number
+vim.cmd("set nu rnu") -- hybrid numbers
 opt.hidden = true
 
 opt.signcolumn = "yes"
@@ -38,8 +38,6 @@ opt.undofile = true
 opt.undolevels = 1000
 opt.wrap = false
 opt.fileencoding = 'utf-8'
-vim.cmd("filetype on")
-
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
 
