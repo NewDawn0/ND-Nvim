@@ -65,11 +65,68 @@ nvim +PackerSync
 **General Keybinds**
 - `space` leader key
 - `<leader> + w` Save
-- `<leader> +wq` Save and quit
-- `<leader> + e` Toggle file brower
-- `<leader> + as` Toggle auotsave
-- `<leader> + tt` Open bottom terminal
-- `<leader> + tf` Open floating terminal
+- `<leader> + wq` Save and quit
+- `<leader> + h` Disable highlighting
+
+**Naviagation and splits**
+- `ctrl + h` Move to left menu
+- `ctrl + j` Move to lower menu
+- `ctrl + k` Move to upper menu
+- `ctrl + h` Move to right menu
+- `ctrl + up arrow` Resize splits upwards
+- `ctrl + down arrow` Resize splits downwards
+- `ctrl + left arrow` Resize splits to the left
+- `ctrl + right arrow` Resize splits to the right
+
+**Terminal**
+- `<leader> + tt` Toggle terminal at the bottom
+- `<leader> + tf` Toggle floating terminal
+
+**Files**
+- `<leader> + e` Toggle file browser
+- `<leader> + o` Focus file browser
+- `<leader> + ff` Quick search
+- `<leader> + fa` Quick search including hidden files
+- `<leader> + f2` Live grep (similar to ripgrep)
+- `<leader> + fb` Find buffers
+- `<leader> + gc` Find git commits
+- `<leader> + gs` Show git status
+- `<leader> + as` Toggle autosave
+- `<leader> + a` Toggle context menu
+
+**Plugins**
+- `<leader> + pc` Packer compile
+- `<leader> + pi` Packer install
+- `<leader> + ps` Packer sync
+- `<leader> + pu` Packer update
+- `<leader> + pS` Packer Status
+
+**Bufferline/Buffertabs**
+- `ctrl + p` Pick buffer
+- `ctrl + u` Pin/unpin buffer
+- `ctrl + c` Close current buffer
+- `ctrl + ca` Close all except current buffer
+- `ctrl + cp` Pick buffer to close
+
+**LSP stuff**
+- `<leader> + d` Open diagnostics
+- `<d` Goto next diagnostic 
+- `>d` Goto previous diagnostic
+- `<leader> + q` Close diagnostics
+- `gD` Goto declaration
+- `gd` Goto definition
+- `gr` Find references
+- `K` Get hover description
+- `gi` Goto Implementation
+- `ctrl + k` Goto help
+- `<leader> + D` Type definition
+- `<leader> + rn` Rename all instances
+- `<leader> + ca` Toggle code actions
+- `<leader> + fo` Format file
+
+**Misc**
+- `#` Comment line
+- `<` Indent line in visual mode
 
 ## Special thanks
 - [NvChad](https://github.com/NvChad/NvChad)
