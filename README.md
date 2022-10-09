@@ -15,10 +15,10 @@ nvim +PackerSync
 ```
 ## Keybinds
 **General Keybinds**
-- Leader key => `space`
-- Save => `<leader> + w`
-- Save and quit => `<leader> +wq`
-- Toggle file brower => `<leader> + e`
-- Toggle auotsave => `<leader> + as`
-- Open bottom terminal => `<leader> + tt`
-- Open floating terminal => `<leader> + tf`
+- `space` leader key
+- `<leader> + w` Save
+- `<leader> +wq` Save and quit
+- `<leader> + e` Toggle file brower
+- `<leader> + as` Toggle auotsave
+- `<leader> + tt` Open bottom terminal
+- `<leader> + tf` Open floating terminal

@@ -18,11 +18,9 @@ require('colourschemes')
 require('mappings')
 require('plugins')
 require('autocmd')
-
--- LSP stupp
-require('lsp-config')
-require('lsp-config.nvim-cmp')
--- require('plugins.config.autostatus')
+-- LSP
+-- require('lsp-config')
+-- require('lsp-config.nvim-cmp')
 -- /////// Setup ////////
 cmd("colorscheme onedark")
 

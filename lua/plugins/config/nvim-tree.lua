@@ -4,9 +4,7 @@ require'nvim-tree'.setup {
         exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
     },
     actions = {
-        open_file = {
-            resize_window = true,
-        },
+        open_file = { resize_window = true }
     },
     disable_netrw = true,
     hijack_netrw = true,
@@ -17,33 +15,29 @@ require'nvim-tree'.setup {
     update_cwd = true,
     update_focused_file = {
         enable = true,
-        update_cwd = false,
+        update_cwd = false
     },
     view = {
         adaptive_size = true,
         side = "left",
         width = 25,
-        hide_root_folder = true,
+        hide_root_folder = true
     },
     git = {
         enable = false,
-        ignore = true,
+        ignore = true
     },
-    filesystem_watchers = {
-        enable = true,
-    },
+    filesystem_watchers = { enable = true },
     renderer = {
         highlight_git = false,
         highlight_opened_files = "none",
-        indent_markers = {
-            enable = false,
-        },
+        indent_markers = { enable = false },
         icons = {
             show = {
                 file = true,
                 folder = true,
                 folder_arrow = true,
-                git = false,
+                git = false
             },
             glyphs = {
                 default = "",
@@ -56,7 +50,7 @@ require'nvim-tree'.setup {
                     symlink = "",
                     symlink_open = "",
                     arrow_open = "",
-                    arrow_closed = "",
+                    arrow_closed = ""
                 },
                 git = {
                     unstaged = "✗",
@@ -65,9 +59,9 @@ require'nvim-tree'.setup {
                     renamed = "➜",
                     untracked = "★",
                     deleted = "",
-                    ignored = "◌",
-                },
-            },
-        },
-    },
+                    ignored = "◌"
+                }
+            }
+        }
+    }
 }
