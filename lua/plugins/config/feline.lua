@@ -343,7 +343,7 @@ local components = {
 		left,
 		middle,
 		right
-	},
+	}
 }
 -- Load Config --
 require('feline').setup {
