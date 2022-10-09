@@ -13,6 +13,10 @@ cd ~/.config/nvim
 git pull
 nvim +PackerSync
 ```
+## Dependencies
+- npm
+- yarn
+
 ## Keybinds
 **General Keybinds**
 - `space` leader key
