@@ -10,22 +10,28 @@ autocmd("FileType", {
     vim.opt_local.buflisted = false
   end,
 })
--- Autosave --
-autocmd("FileType", {
-  pattern = { "md", "txt", "tex" },
-  command = "ASToggle"
+-- Wrap--
+autocmd("BufEnter", {
+  pattern = {'*.md', '*.txt', '*.tex'},
+  command = "set wrap"
 })
--- Open Markdown previever --
-autocmd("FileType", {
-  pattern = "md",
+autocmd("BufLeave", {
+  pattern = {'*.md', '*.txt', '*.tex'},
+  command = "set nowrap"
+})
+autocmd("BufEnter", {
+  pattern = '*.md',
   command = "MarkdownPreviewToggle"
 })
+-- cmd("autocmd BufEnter *.md | MarkdownPreviewToggle")
+
 -- Highlight yanks --
 autocmd("TextYankPost", {
   callback = function() vim.highlight.on_yank{timeout=500} end
 })
 -- Autostart RainbowParentheses
 autocmd("BufEnter", {
+  pattern = "*",
   command = "RainbowParentheses"
 })
 -- Return to last edit position when opening files --
