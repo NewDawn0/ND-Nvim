@@ -64,6 +64,7 @@ local function file_osinfo()
     end
     return icon .. os
 end
+-- Word counter --
 local function word_counter()
     local words = tostring(fn.wordcount().words)
     local icon = icons.words
@@ -310,7 +311,7 @@ local left = {
     c.spacing.one,
     c.spacing.two,
     c.file.info,
-    c.spacing.three,
+    c.spacing.three
 }
 local middle = {
     c.words,
@@ -348,5 +349,5 @@ local components = {
 require('feline').setup {
     default_bg = colours.bg,
     components = components,
-    vi_mode_colors = vi_mode_colours,
+    vi_mode_colors = vi_mode_colours
 }

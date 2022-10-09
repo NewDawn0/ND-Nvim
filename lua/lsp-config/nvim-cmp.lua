@@ -2,7 +2,7 @@
 local luasnip = require 'luasnip'
 local lspkind = require 'lspkind'
 local cmp = require 'cmp'
-
+-- Set window Border --
 local function border(hl_name)
   return {
     { "╭", hl_name },
@@ -12,24 +12,24 @@ local function border(hl_name)
     { "╯", hl_name },
     { "─", hl_name },
     { "╰", hl_name },
-    { "│", hl_name },
+    { "│", hl_name }
   }
 end
-
+-- Setup nvim cmp --
 cmp.setup {
   window = {
     completion = {
       border = border "CmpBorder",
-      winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+      winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None"
     },
     documentation = {
-      border = border "CmpDocBorder",
+      border = border "CmpDocBorder"
     },
   },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
-    end,
+    end
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
@@ -37,7 +37,7 @@ cmp.setup {
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+      select = true
     },
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -56,7 +56,7 @@ cmp.setup {
       else
         fallback()
       end
-    end, { 'i', 's' }),
+    end, { 'i', 's' })
   }),
   sources = {
     { name = "luasnip" },

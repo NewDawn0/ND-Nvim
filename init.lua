@@ -7,25 +7,22 @@
 -----------  https://github.com/NewDawn0  -----------
 --]]
 
--- Aliases
+-- Aliases --
 local cmd = vim.cmd
 local g = vim.g
-
--- //////// Load modules ////////
--- General
+-- General --
 require('settings')
 require('colourschemes')
 require('mappings')
 require('plugins')
 require('autocmd')
--- LSP
--- require('lsp-config')
--- require('lsp-config.nvim-cmp')
--- /////// Setup ////////
+-- Setup --
 cmd("colorscheme onedark")
 
+
 -- //////// Info ////////
--- Colourschemes
+-- Available colourschemes
+--      name     :  type
 --      nightfox    solarized dark
 --      terafox     solarized dark
 --      dayfox      lightmode

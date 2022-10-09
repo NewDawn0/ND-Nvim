@@ -6,7 +6,7 @@ require("toggleterm").setup {
         border = "curved",
         highlights = {
             border = "Normal",
-            background = "Normal",
-        },
-    },
+            background = "Normal"
+        }
+    }
 }

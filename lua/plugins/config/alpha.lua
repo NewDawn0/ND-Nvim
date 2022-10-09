@@ -16,7 +16,7 @@ local logo1 = {
     "            ⠉⠛⠿⣿⣿⣿⣿⣿⣶⣤⣀           ⣀⣤⣶⣿⣿⣿⣿⣿⠿⠛⠉",
     "                ⠉⠛⠿⣿⣿⣿⣿⣿⣶⣤⣀   ⣀⣤⣶⣿⣿⣿⣿⣿⠿⠛⠉",
     "                    ⠉⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉",
-    "                        ⠉⠛⠿⣿⣿⠿⠛⠉",
+    "                        ⠉⠛⠿⣿⣿⠿⠛⠉"
 }
 local logo2 = {
     "              ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
@@ -35,24 +35,7 @@ local logo2 = {
     "██╔██╗ ██║██║  ██║█████╗██╔██╗ ██║██║   ██║██║██╔████╔██║",
     "██║╚██╗██║██║  ██║╚════╝██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║",
     "██║ ╚████║██████╔╝      ██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║",
-    "╚═╝  ╚═══╝╚═════╝       ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝",
-}
-local logo3 = {
-    "            ⣀⣤⣶⣿⣿⣶⣤⣀",
-    "        ⣀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀",
-    "    ⣀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀    ███╗   ██╗██████╗",
-    "⣀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀████╗  ██║██╔══██╗",
-    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿██╔██╗ ██║██║  ██║",
-    "⣿⣿⣿⣿⠉⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉ ⣿⣿⣿⣿██║╚██╗██║██║  ██║",
-    "⣿⣿⣿⣿     ⠉⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉     ⣿⣿⣿⣿██║ ╚████║██████╔╝",
-    "⣿⣿⣿⣿         ⠉⣿⣿⣿⣿⠉         ⣿⣿⣿⣿╚═╝  ╚═══╝╚═════╝",
-    "⣿⣿⣿⣿⣤⣀        ⣿⣿⣿⣿        ⣀⣤⣿⣿⣿⣿███╗   ██╗██╗   ██╗██╗███╗   ███╗",
-    "⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀    ⣿⣿⣿⣿    ⣀⣤⣶⣿⣿⣿⣿⣿⣿⣿████╗  ██║██║   ██║██║████╗ ████║",
-    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿    ⣿⣿⣿⣿    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿██╔██╗ ██║██║   ██║██║██╔████╔██║",
-    "⠉⠛⠿⣿⣿⣿⣿⣿⣿⣿    ⣿⣿⣿⣿    ⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║",
-    "    ⠉⠛⠿⣿⣿⣿    ⣿⣿⣿⣿    ⣿⣿⣿⠿⠛⠉    ██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║",
-    "        ⠉⠛    ⣿⣿⣿⣿    ⠛⠉        ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝",
-    "              ⠿⣿⣿⠿  ",
+    "╚═╝  ╚═══╝╚═════╝       ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝"
 }
 local theme = "Keyword"
 -- Theme colurs
@@ -62,6 +45,7 @@ local theme = "Keyword"
 -- Number => Orange
 dashboard.section.header.val = logo1
 dashboard.section.header.opts.hl = theme
+-- Create Buttons
 local function button(sc, txt, keybind, keybind_opts)
   local b = dashboard.button(sc, txt, keybind, keybind_opts)
   b.opts.hl = theme
@@ -76,11 +60,14 @@ dashboard.section.buttons.val = {
   button("Leader + ps", "勒Reload Plugins", "<Cmd>PackerSync<CR>"),
   button("q", "  Quit", "<Cmd>qa<CR>")
 }
+-- Set footer --
 local function footer()
   local total_plugins = #vim.tbl_keys(packer_plugins)
-
   return "Loaded " .. total_plugins .. " plugins  "
 end
+dashboard.section.footer.val = footer()
+dashboard.section.footer.opts.hl = "AlphaFooter"
+-- Set headline --
 local heading = {
   type = "text",
   val = "~ brain.exists() == null; ~",
@@ -89,8 +76,7 @@ local heading = {
     hl = "AlphaComment",
   },
 }
-dashboard.section.footer.val = footer()
-dashboard.section.footer.opts.hl = "AlphaFooter"
+-- Set options --
 local opts = {
   layout = {
     { type = "padding", val = 5 },

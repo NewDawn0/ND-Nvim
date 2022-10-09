@@ -1,2 +1,2 @@
-local cmd = vim.cmd
-cmd("so ~/.config/nvim/lua/colourschemes/onedark.vim")
+-- Load onedark config --
+vim.cmd("so ~/.config/nvim/lua/colourschemes/onedark.vim")
