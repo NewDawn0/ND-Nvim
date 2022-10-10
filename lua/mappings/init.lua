@@ -37,8 +37,8 @@ map('n', '<leader>gs', '<Cmd>Telescope git_status<CR>', opts)                   
 map('n', '<C-p>', '<Cmd>BufferLinePick<CR>', opts)                                                    -- Pick
 map('n', '<C-u>', '<Cmd>BufferLineTogglePin<CR>', opts)                                              -- Pin/undpin
 map('n', '<C-c>', '<CMD>lua require("close_buffers").delete({type = "this"})<CR>', opts)              -- Close current buffer
-map('n', '<C-c>a', '<CMD>lua require("close_buffers").wipe({ type = "other" })<CR>', opts)            -- Close all exept current
-map('n', '<C-c>p', '<CMD>BufferLinePickClose<CR>', opts)                                              -- Pick close
+map('n', '<C-a>', '<CMD>lua require("close_buffers").wipe({ type = "other" })<CR>', opts)            -- Close all exept current
+map('n', '<C-t>', '<CMD>BufferLinePickClose<CR>', opts)                                              -- Pick close
 -- Packer --
 map('n', '<leader>pc', '<Cmd>PackerCompile<CR>', opts)                                                -- Packer compile
 map('n', '<leader>pi', '<Cmd>PackerInstall<CR>', opts)                                                -- Packer install

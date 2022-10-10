@@ -105,8 +105,8 @@ nvim +PackerSync
 - `ctrl + p` Pick buffer
 - `ctrl + u` Pin/unpin buffer
 - `ctrl + c` Close current buffer
-- `ctrl + ca` Close all except current buffer
-- `ctrl + cp` Pick buffer to close
+- `ctrl + a` Close all except current buffer
+- `ctrl + t` Pick buffer to close
 
 **LSP stuff**
 - `<leader> + d` Open diagnostics
