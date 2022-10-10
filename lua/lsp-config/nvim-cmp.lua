@@ -1,6 +1,5 @@
 -- luasnip setup
 local luasnip = require 'luasnip'
-local lspkind = require 'lspkind'
 local cmp = require 'cmp'
 -- Set window Border --
 local function border(hl_name)
@@ -63,7 +62,6 @@ cmp.setup {
     { name = "nvim_lsp" },
     { name = "buffer" },
     { name = "nvim_lua" },
-    { name = "path" },
-    { name = "buffer-lines" }
+    { name = "path" }
   }
 }
