@@ -119,6 +119,8 @@ return packer.startup(function(use)
 	use {'hrsh7th/nvim-cmp',														-- Autocompletion Plugin
 		after = "friendly-snippets",
 		config = function() require "lsp-config.nvim-cmp" end}
+	use {'amarakon/nvim-cmp-buffer-lines',
+		after = "friendly-snippets"}
 	use {'nvim-treesitter/nvim-treesitter', 										-- Treesitter language parsing
 		config = function() require "plugins.config.treesitter" end,
 		run = ':TSUpdate', event = "BufRead"}

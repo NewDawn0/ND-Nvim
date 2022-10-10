@@ -63,6 +63,7 @@ cmp.setup {
     { name = "nvim_lsp" },
     { name = "buffer" },
     { name = "nvim_lua" },
-    { name = "path" }
+    { name = "path" },
+    { name = "buffer-lines" }
   }
 }
