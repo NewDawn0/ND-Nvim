@@ -66,6 +66,8 @@ return packer.startup(function(use)
         config = function() require "plugins.config.indent-o-matic" end}
 	use {'nvim-orgmode/orgmode',													-- Add orgmode
 		ft = {'org'}, config = function() require('orgmode').setup{} end}
+	use {'alvan/vim-closetag',														-- Autoclose html tags
+		config = function() vim.cmd("so ~/.config/nvim/lua/plugins/config/vim-closetag.vim") end}
     -- UI --
 	use 'junegunn/rainbow_parentheses.vim'											-- Rainbow parantheses
 	use 'mrjones2014/smart-splits.nvim'												-- Better window splits
