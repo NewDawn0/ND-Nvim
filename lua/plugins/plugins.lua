@@ -42,16 +42,24 @@ return packer.startup(function(use)
     use 'romgrk/doom-one.vim'														-- Doom-one colourscheme
     use 'Mofiqul/dracula.nvim'														-- Dracula colourscheme
     use 'navarasu/onedark.nvim'														-- Onedark
+	use 'folke/tokyonight.nvim' 													-- Tokyonight
+	use 'Shadorain/shadotheme'
     -- Dependencies --
     use 'kyazdani42/nvim-web-devicons'												-- Icons
     use 'roxma/nvim-yarp'															-- Remote plugin framework
     use 'nvim-lua/plenary.nvim'														-- Functions library
     use 'nvim-lua/popup.nvim'														-- Popup api
     -- Utils --
+	use 'rhysd/vim-grammarous'														-- Grammar checker
     use 'terryma/vim-multiple-cursors'      										-- Multiple cursors
 	use 'dstein64/vim-startuptime'													-- Measure startup time
+	use 'mzlogin/vim-markdown-toc' 													-- Generate markdown table of contents
     use 'jiangmiao/auto-pairs'              										-- Add closing pair
 	use 'lewis6991/impatient.nvim'													-- Speed up plugins
+	use {'lervag/vimtex',															-- Vimtex
+		config = function () vim.cmd("so ~/.config/nvim/lua/plugins/config/vimtex.vim") end}
+	use {'kylechui/nvim-surround',													-- Surround nvim
+		tag = "*", config = function () require("nvim-surround").setup() end}
 	use {'kazhala/close-buffers.nvim',												-- Better bufferclose
 		config = function() require "plugins.config.close-buffers" end}
 	use {'terrortylor/nvim-comment',												-- Comments
@@ -66,10 +74,8 @@ return packer.startup(function(use)
         config = function() require "plugins.config.indent-o-matic" end}
 	use {'nvim-orgmode/orgmode',													-- Add orgmode
 		ft = {'org'}, config = function() require('orgmode').setup{} end}
-	use {'alvan/vim-closetag',														-- Autoclose html tags
-		config = function() vim.cmd("so ~/.config/nvim/lua/plugins/config/vim-closetag.vim") end}
     -- UI --
-	use 'junegunn/rainbow_parentheses.vim'											-- Rainbow parantheses
+	use 'frazrepo/vim-rainbow'														-- rainbow parentheses
 	use 'mrjones2014/smart-splits.nvim'												-- Better window splits
 	use {'goolord/alpha-nvim',														-- Dashboard}
 		requires = { 'kyazdani42/nvim-web-devicons' },
@@ -102,10 +108,12 @@ return packer.startup(function(use)
 	use {'stevearc/aerial.nvim',													-- Code outline for skimming and navigation
 		config = function() require "plugins.config.aerial" end}
 	-- Autocomplete --
+	use {'williamboman/mason.nvim',													-- mason
+		config = function() require "lsp-config.mason" end}
+	use {'williamboman/mason-lspconfig.nvim',
+		config = function() require "lsp-config.mason-lsp" end}
     use {'neovim/nvim-lspconfig',		    										-- LSP config
 		config = function() require "lsp-config" end}
-	use {'williamboman/nvim-lsp-installer',											-- Adds the :LspInstall command
-		config = function() require("nvim-lsp-installer").setup {} end}
 	use 'rafamadriz/friendly-snippets'												-- friendly snippets
 	use 'L3MON4D3/LuaSnip'															-- Snippets plugin
 	use {'saadparwaiz1/cmp_luasnip',												-- CMP sources
@@ -117,6 +125,7 @@ return packer.startup(function(use)
   	use {'hrsh7th/cmp-path',														-- CMP sources
     	after = "cmp-buffer"}
 	use 'hrsh7th/cmp-nvim-lsp'														-- LSP source for nvim-cmp
+	use 'hrsh7th/cmp-nvim-lsp-signature-help'										-- Help menu
 	use {'hrsh7th/nvim-cmp',														-- Autocompletion Plugin
 		after = "friendly-snippets",
 		config = function() require "lsp-config.nvim-cmp" end}

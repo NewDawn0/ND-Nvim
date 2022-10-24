@@ -1,12 +1,12 @@
 local nvim_lsp = require("lspconfig")
+local autocmd = vim.api.nvim_create_autocmd
 -- On attach --
 local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 -- Set flags, capabilities and servers --
 local lsp_flags = { debounce_text_changes = 150 }
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua' }
 -- Setup servers --
 for _, lsp in ipairs(servers) do

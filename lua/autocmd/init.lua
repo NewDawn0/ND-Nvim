@@ -21,17 +21,17 @@ autocmd("BufLeave", {
 -- Markdown preview
 autocmd("BufEnter", {
   pattern = '*.md',
-  command = "MarkdownPreviewToggle"
+  command = "MarkdownPreview"
 })
 -- Highlight yanks --
 autocmd("TextYankPost", {
   callback = function() vim.highlight.on_yank{timeout=500} end
 })
 -- Autostart RainbowParentheses
-autocmd("BufEnter", {
-  pattern = "*",
-  command = "RainbowParentheses"
-})
+-- autocmd("BufEnter", {
+--   pattern = "*",
+--   command = "RainbowToggle"
+-- })
 -- Return to last edit position when opening files --
 autocmd("BufReadPost", {
   callback = function ()
