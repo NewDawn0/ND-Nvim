@@ -13,6 +13,7 @@ map('n', '<C-h>', '<C-w>h', opts)                                               
 map('n', '<C-k>', '<C-w>k', opts)                                                                     -- Remap move up 
 map('n', '<C-j>', '<C-w>j', opts)                                                                     -- Remap move down 
 map('v', '<', '<gv', opts)                                                                            -- Remain in visual mode after insert
+map('v', '>', '>gv', opts)                                                                            -- Remain in visual mode after insert
 map('n', '#', '<Cmd>CommentToggle<CR>', opts)                                                         -- Toggle comments
 -- Split --
 map('n', '<C-Left>', '<Cmd>lua require("smart-splits").resize_left(3)<CR>', opts)                     -- Resize left
@@ -35,10 +36,10 @@ map('n', '<leader>gc', '<Cmd>Telescope git_commits<CR>', opts)                  
 map('n', '<leader>gs', '<Cmd>Telescope git_status<CR>', opts)                                         -- Telescope buffers
 -- Bufferline --
 map('n', '<C-p>', '<Cmd>BufferLinePick<CR>', opts)                                                    -- Pick
-map('n', '<C-u>', '<Cmd>BufferLineTogglePin<CR>', opts)                                              -- Pin/undpin
+map('n', '<C-u>', '<Cmd>BufferLineTogglePin<CR>', opts)                                               -- Pin/undpin
 map('n', '<C-c>', '<CMD>lua require("close_buffers").delete({type = "this"})<CR>', opts)              -- Close current buffer
-map('n', '<C-a>', '<CMD>lua require("close_buffers").wipe({ type = "other" })<CR>', opts)            -- Close all exept current
-map('n', '<C-t>', '<CMD>BufferLinePickClose<CR>', opts)                                              -- Pick close
+map('n', '<C-a>', '<CMD>lua require("close_buffers").wipe({ type = "other" })<CR>', opts)             -- Close all exept current
+map('n', '<C-t>', '<CMD>BufferLinePickClose<CR>', opts)                                               -- Pick close
 -- Packer --
 map('n', '<leader>pc', '<Cmd>PackerCompile<CR>', opts)                                                -- Packer compile
 map('n', '<leader>pi', '<Cmd>PackerInstall<CR>', opts)                                                -- Packer install
@@ -57,6 +58,6 @@ vimap('n', 'gi', vim.lsp.buf.implementation, bufopts)                       -- G
 vimap('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)                    -- Goto help
 vimap('n', '<space>D', vim.lsp.buf.type_definition, bufopts)                -- type_definition
 vimap('n', '<space>rn', vim.lsp.buf.rename, bufopts)                        -- Rename 
-vimap('n', '<space>ca', vim.lsp.buf.code_action, bufopts)                   -- code
+vimap('n', '<space>f', vim.lsp.buf.code_action, bufopts)                   -- code
 vimap('n', 'gr', vim.lsp.buf.references, bufopts)                           -- Find references
 vimap('n', '<space>fo', function() vim.lsp.buf.formatting {} end, bufopts)  -- Reformat file

@@ -43,7 +43,7 @@ return packer.startup(function(use)
     use 'Mofiqul/dracula.nvim'														-- Dracula colourscheme
     use 'navarasu/onedark.nvim'														-- Onedark
 	use 'folke/tokyonight.nvim' 													-- Tokyonight
-	use 'Shadorain/shadotheme'
+	use 'Shadorain/shadotheme'														-- shadotheme
     -- Dependencies --
     use 'kyazdani42/nvim-web-devicons'												-- Icons
     use 'roxma/nvim-yarp'															-- Remote plugin framework
@@ -75,6 +75,8 @@ return packer.startup(function(use)
 	use {'nvim-orgmode/orgmode',													-- Add orgmode
 		ft = {'org'}, config = function() require('orgmode').setup{} end}
     -- UI --
+	-- use {'nvim-zh/colorful-winsep.nvim',											-- colourful winsep
+	-- 	config = function() require "plugins.config.colourful-winsep" end}
 	use 'frazrepo/vim-rainbow'														-- rainbow parentheses
 	use 'mrjones2014/smart-splits.nvim'												-- Better window splits
 	use {'goolord/alpha-nvim',														-- Dashboard}
