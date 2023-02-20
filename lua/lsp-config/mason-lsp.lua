@@ -1,6 +1,6 @@
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "sumneko_lua", "rust_analyzer", "clangd",
+        "lua_ls", "rust_analyzer", "clangd",
         "jdtls", "marksman" , "pyright"
     }
 })

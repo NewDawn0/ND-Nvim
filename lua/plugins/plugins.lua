@@ -40,6 +40,7 @@ return packer.startup(function(use)
     -- Colourschemes --
     use 'EdenEast/nightfox.nvim'													-- Nord colourscheme and others
     use 'romgrk/doom-one.vim'														-- Doom-one colourscheme
+	use 'Shatur/neovim-ayu'															-- Ayu colourscheme
     use 'Mofiqul/dracula.nvim'														-- Dracula colourscheme
     use 'navarasu/onedark.nvim'														-- Onedark
 	use 'folke/tokyonight.nvim' 													-- Tokyonight
@@ -51,6 +52,7 @@ return packer.startup(function(use)
     use 'nvim-lua/popup.nvim'														-- Popup api
     -- Utils --
 	use 'rhysd/vim-grammarous'														-- Grammar checker
+	use 'mattn/emmet-vim'															-- Emmet
     use 'terryma/vim-multiple-cursors'      										-- Multiple cursors
 	use 'dstein64/vim-startuptime'													-- Measure startup time
 	use 'mzlogin/vim-markdown-toc' 													-- Generate markdown table of contents
@@ -72,8 +74,6 @@ return packer.startup(function(use)
         run = 'cd app && yarn install'}
     use {'Darazaki/indent-o-matic',         										-- Auto indentation
         config = function() require "plugins.config.indent-o-matic" end}
-	use {'nvim-orgmode/orgmode',													-- Add orgmode
-		ft = {'org'}, config = function() require('orgmode').setup{} end}
     -- UI --
 	-- use {'nvim-zh/colorful-winsep.nvim',											-- colourful winsep
 	-- 	config = function() require "plugins.config.colourful-winsep" end}
