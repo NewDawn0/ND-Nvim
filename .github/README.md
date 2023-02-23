@@ -87,7 +87,7 @@ nvim +PackerSync
 - `<leader> + o` Focus file browser
 - `<leader> + ff` Quick search
 - `<leader> + fa` Quick search including hidden files
-- `<leader> + f2` Live grep (similar to ripgrep)
+- `<leader> + fw` Live grep (similar to ripgrep)
 - `<leader> + fb` Find buffers
 - `<leader> + gc` Find git commits
 - `<leader> + gs` Show git status
