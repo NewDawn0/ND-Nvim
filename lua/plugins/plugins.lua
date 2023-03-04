@@ -77,6 +77,9 @@ return packer.startup(function(use)
     -- UI --
 	-- use {'nvim-zh/colorful-winsep.nvim',											-- colourful winsep
 	-- 	config = function() require "plugins.config.colourful-winsep" end}
+	use {'folke/todo-comments.nvim',
+		requires = "nvim-lua/plenary.nvim",
+		config = function() require("todo-comments").setup() end }
 	use 'frazrepo/vim-rainbow'														-- rainbow parentheses
 	use 'mrjones2014/smart-splits.nvim'												-- Better window splits
 	use {'goolord/alpha-nvim',														-- Dashboard}
