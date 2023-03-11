@@ -29,6 +29,10 @@ return {
     { 'feline-nvim/feline.nvim', event = "BufWinEnter", ft = "!alpha",
         config = function() require 'config.plugins.feline' end
     },
+    { 'goolord/alpha-nvim',
+        dependencies = { 'kyazdani42/nvim-web-devicons' },
+        config = function() require 'config.plugins.dashboard' end
+    },
     -- Utils
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
