@@ -74,6 +74,9 @@ return {
     	cmd = "ASToggle",
         config = function() require 'config.plugins.save' end
     },
+    { 'terrortylor/nvim-comment', cmd = "CommentToggle", keys = { "gcc" },
+        config = function() require 'config.plugins.comment' end
+    },
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
     { 'mrjones2014/smart-splits.nvim', },
