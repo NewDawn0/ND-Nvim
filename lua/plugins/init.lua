@@ -59,6 +59,16 @@ return {
     { 'stevearc/aerial.nvim', event = "BufWinEnter", priority = 7,
         config = function() require 'config.plugins.aerial' end
     },
+    { 'gelguy/wilder.nvim', event = "BufWinEnter",
+        config = function() require 'config.plugins.wilder' end,
+        dependencies = {
+            'roxma/nvim-yarp',
+            'kyazdani42/nvim-web-devicons'
+        }
+    },
+    { 'akinsho/toggleterm.nvim', cmd = "ToggleTerm",
+        config = function() require 'config.plugins.term' end
+    },
     -- Utils
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
