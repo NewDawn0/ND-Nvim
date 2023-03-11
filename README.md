@@ -51,13 +51,14 @@
 
 ## Requirements
 - Neovim >= 0.8
-- nodejs, npm and yarn
-- nolsp
+- NodeJS, Yarn
+- Python >= 3.5
+- fzf
 
 ## Installation
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak
-git clone --depth 1 https://github.com/NewDawn0/ND-Nvim.git ~/.config/nvim
+git clone --depth 1 --branch v1 https://github.com/NewDawn0/ND-Nvim.git ~/.config/nvim
 nvim +PackerSync
 ```
 
