@@ -66,10 +66,14 @@ return {
             'kyazdani42/nvim-web-devicons'
         }
     },
+    -- Utils
     { 'akinsho/toggleterm.nvim', cmd = "ToggleTerm",
         config = function() require 'config.plugins.term' end
     },
-    -- Utils
+    { 'Pocco81/auto-save.nvim',
+    	cmd = "ASToggle",
+        config = function() require 'config.plugins.save' end
+    },
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
     { 'mrjones2014/smart-splits.nvim', },
