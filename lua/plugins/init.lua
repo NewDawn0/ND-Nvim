@@ -33,6 +33,9 @@ return {
         dependencies = { 'kyazdani42/nvim-web-devicons' },
         config = function() require 'config.plugins.dashboard' end
     },
+    { 'NvChad/nvim-colorizer.lua', event = "BufWinEnter", ft = { "!aerial", "!NvimTree", "!alpha" },
+        config = function () require 'config.plugins.colorizer' end
+    },
     -- Utils
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
