@@ -66,6 +66,10 @@ return {
             'kyazdani42/nvim-web-devicons'
         }
     },
+    { 'nvim-telescope/telescope.nvim',
+    	cmd = "Telescope",
+        config = function() require 'config.plugins.telescope' end
+    },
     -- Utils
     { 'akinsho/toggleterm.nvim', cmd = "ToggleTerm",
         config = function() require 'config.plugins.term' end
@@ -76,6 +80,12 @@ return {
     },
     { 'terrortylor/nvim-comment', cmd = "CommentToggle", keys = { "gcc" },
         config = function() require 'config.plugins.comment' end
+    },
+    { 'windwp/nvim-autopairs', event = "InsertEnter",
+        config = function() require 'config.plugins.pairs' end
+    },
+    { 'nvim-treesitter/nvim-treesitter', event = "BufWinEnter",
+        build = { ":TSUpdate", ":TSInstall all" }, priority = 8
     },
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
