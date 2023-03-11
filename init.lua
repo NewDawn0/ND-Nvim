@@ -14,3 +14,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.cmd('set tabstop=4')
 
+-- Packages
+require('bootstrap')
+require('lazy').setup(require('plugins'), {})
+
