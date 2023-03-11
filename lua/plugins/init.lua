@@ -40,6 +40,18 @@ return {
         config = function() require 'config.plugins.todo' end,
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
+    { 'lewis6991/gitsigns.nvim',
+        ft = "gitcommit", event = "BufWinEnter",
+        config = true
+    },
+    { 'akinsho/bufferline.nvim', event = "BufWinEnter",
+        config = function() require 'config.plugins.bufferline' end,
+        dependencies = { 'kyazdani42/nvim-web-devicons' }
+    },
+    { 'kyazdani42/nvim-tree.lua', event = "UIEnter",
+        config = function() require 'config.plugins.tree' end,
+        dependencies = { 'kyazdani42/nvim-web-devicons', }
+    },
     -- Utils
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},

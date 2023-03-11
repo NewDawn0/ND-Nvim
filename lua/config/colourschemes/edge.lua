@@ -7,7 +7,5 @@
   File: edge.lua
   Desc: Edge colourscheme config 
 --]]
-
--- Set some global vim optsions
 vim.g.edge_style = 'aura'
 vim.g.edge_better_performance = 1

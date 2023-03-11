@@ -8,6 +8,10 @@
   Desc: Todo comments plugin config
 --]]
 require('todo-comments').setup({
+    keywords = {
+        -- Add the RM keyword
+        RM = { icon = "󱍮", color = "error", alt = { "REMOVE" }}
+    },
     highlight = {
         multiline = false
     }
