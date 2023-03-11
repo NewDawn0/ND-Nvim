@@ -23,4 +23,12 @@ return {
     	lazy = true, priority = 10,
         config = function() require 'config.colourschemes.onedark' end
     },
+    -- UI
+    { 'nvim-zh/colorful-winsep.nvim', event = "VimEnter", config = true },
+    { 'iamcco/markdown-preview.nvim', build = 'cd app && yarn install', lazy = true },
+    -- Utils
+    { 'famiu/bufdelete.nvim', lazy = true},
+    { 'mzlogin/vim-markdown-toc', lazy = false},
+    { 'mrjones2014/smart-splits.nvim', },
+    -- LSP
 }
