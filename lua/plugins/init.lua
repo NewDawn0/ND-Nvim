@@ -36,6 +36,10 @@ return {
     { 'NvChad/nvim-colorizer.lua', event = "BufWinEnter", ft = { "!aerial", "!NvimTree", "!alpha" },
         config = function () require 'config.plugins.colorizer' end
     },
+    { 'folke/todo-comments.nvim', event = "BufWinEnter",
+        config = function() require 'config.plugins.todo' end,
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
     -- Utils
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
