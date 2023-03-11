@@ -52,6 +52,10 @@ return {
         config = function() require 'config.plugins.tree' end,
         dependencies = { 'kyazdani42/nvim-web-devicons', }
     },
+    { 'rcarriga/nvim-notify', priority = 9,
+        cmd = { 'AerialToggle', 'AerialClose', 'AerialCloseAll', 'AerialOpen', 'AerialOpenAll' },
+        config = function() require 'config.plugins.notify' end
+    },
     -- Utils
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
