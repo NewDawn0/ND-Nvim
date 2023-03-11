@@ -28,6 +28,7 @@ opt.tabstop = 4
 
 -- Line numbers
 opt.relativenumber = true
+opt.number = true
 opt.cursorline = true
 opt.cursorlineopt = 'number'
 
@@ -46,6 +47,7 @@ opt.timeoutlen = 400
 opt.undofile = true
 opt.undolevels = 1000
 opt.wrap = false
+opt.encoding = 'utf-8'
 
 -- interval for writing to disk, required by gitsings as well
 opt.updatetime = 250

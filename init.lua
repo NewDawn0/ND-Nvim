@@ -16,7 +16,7 @@ vim.cmd('set tabstop=4')
 
 -- Packages
 require('bootstrap')
-require('lazy').setup(require('plugins'), {})
+require('lazy').setup(require('plugins'), {ui = { border = "rounded" }})
 
 -- Colourscheme
 vim.cmd('colorscheme material')
