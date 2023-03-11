@@ -56,6 +56,9 @@ return {
         cmd = { 'AerialToggle', 'AerialClose', 'AerialCloseAll', 'AerialOpen', 'AerialOpenAll' },
         config = function() require 'config.plugins.notify' end
     },
+    { 'stevearc/aerial.nvim', event = "BufWinEnter", priority = 7,
+        config = function() require 'config.plugins.aerial' end
+    },
     -- Utils
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
