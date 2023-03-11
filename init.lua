@@ -18,3 +18,6 @@ vim.cmd('set tabstop=4')
 require('bootstrap')
 require('lazy').setup(require('plugins'), {})
 
+-- Colourscheme
+vim.cmd('colorscheme material')
+
