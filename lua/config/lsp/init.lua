@@ -28,14 +28,14 @@ require("mason-lspconfig").setup_handlers {
     -- Default handlers
     function (server)
         lspconfig[server].setup {
-            on_attach = require("aerial").on_attach,
+            on_attach = require('aerial').on_attach,
             capabilities = require("cmp_nvim_lsp").default_capabilities()
         }
     end,
     -- Dedicated handlers
     ["ltex"] = function ()
         lspconfig.ltex.setup {
-            on_attach = require("aerial").on_attach,
+            on_attach = require('aerial').on_attach,
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
             settings = {
                 ltex = {
@@ -46,7 +46,7 @@ require("mason-lspconfig").setup_handlers {
     end,
     ["lua_ls"] = function ()
         lspconfig.lua_ls.setup {
-            on_attach = require("aerial").on_attach,
+            on_attach = require('aerial').on_attach,
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
             settings = {
                 runtime = { version = 'LuaJIT' },

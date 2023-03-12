@@ -54,7 +54,7 @@ map('n', '<leader>ee', '<Cmd>NvimTreeToggle<Cr>', opts)
 map('n', '<leader>ef', '<Cmd>NvimTreeFocus<Cr>', opts)
 map('n', '<leader>ec', '<Cmd>NvimTreeClos<Cr>', opts)
 map('n', '<leader>ea', '<CMD>AerialToggle right<Cr>', opts)
-map('n', '<leader>eac', '<CMD>AerialClose<Cr>', opts)
+map('n', '<leader>ec', '<CMD>AerialClose<Cr>', opts)
 -- diagnostics
 map('n', '<leader>do', '<Cmd>lua vim.diagnostic.open_float()<Cr>', opts)
 map('n', '<leader>dn', '<Cmd>lua vim.diagnostic.goto_next()<Cr>', opts)

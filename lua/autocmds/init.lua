@@ -26,14 +26,5 @@ autocmd("BufReadPost", {
     end
 })
 
--- Wrap --
-autocmd("BufEnter", {
-    pattern = {'*.md', '*.txt', '*.tex'},
-    command = 'set wrap'
-})
-autocmd("BufLeave", {
-    pattern = {'*.md', '*.txt', '*.tex'},
-    command = 'set nowrap'
-})
 -- Alpha.lua
 cmd('autocmd FileType alpha setlocal nofoldenable')

@@ -110,7 +110,7 @@ nvim
 - `<leader> + ef` Focus File browser
 - `<leader> + ec` Close File browser
 - `<leader> + ea` Open mini map
-- `<leader> + eac` Close mini map
+- `<leader> + ec` Close mini map
 
 **Workspaces**
 - `<leader> + wl` List workspace folders

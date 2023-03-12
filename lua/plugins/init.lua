@@ -62,10 +62,10 @@ return {
         dependencies = { 'kyazdani42/nvim-web-devicons', }
     },
     { 'rcarriga/nvim-notify', priority = 9,
-        cmd = { 'AerialToggle', 'AerialClose', 'AerialCloseAll', 'AerialOpen', 'AerialOpenAll' },
         config = function() require 'config.plugins.notify' end
     },
     { 'stevearc/aerial.nvim', event = "BufWinEnter", priority = 7,
+        cmd = { 'AerialToggle', 'AerialClose', 'AerialCloseAll', 'AerialOpen', 'AerialOpenAll' },
         config = function() require 'config.plugins.aerial' end
     },
     { 'gelguy/wilder.nvim', event = "BufWinEnter",
