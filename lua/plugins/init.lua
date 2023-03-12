@@ -71,6 +71,13 @@ return {
         config = function() require 'config.plugins.telescope' end
     },
     -- Utils
+    -- RM: Remove benchmark after testing
+    { 'dstein64/vim-startuptime',
+        cmd = "StartupTime",
+    },
+    { 'famiu/bufdelete.nvim', lazy = true},
+    { 'mzlogin/vim-markdown-toc', lazy = false},
+    { 'mrjones2014/smart-splits.nvim', },
     { 'akinsho/toggleterm.nvim', cmd = "ToggleTerm",
         config = function() require 'config.plugins.term' end
     },
@@ -91,8 +98,5 @@ return {
         config = function() require 'config.plugins.indent' end,
         dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
-    { 'famiu/bufdelete.nvim', lazy = true},
-    { 'mzlogin/vim-markdown-toc', lazy = false},
-    { 'mrjones2014/smart-splits.nvim', },
     -- LSP
 }
