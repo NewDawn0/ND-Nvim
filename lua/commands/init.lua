@@ -7,7 +7,6 @@
   File: init.lua
   Desc: Set commands autocommands
 --]]
-
 -- Aliases
 local api = vim.api
 local cmd = vim.api.nvim_create_user_command
@@ -23,7 +22,7 @@ local function scratch_exists()
     return false
 end
 
-cmd("Scratch", function ()
+cmd("Scratch", function()
     local win = scratch_exists()
     if win == false then
         api.nvim_command('vsplit | enew')
@@ -33,4 +32,9 @@ cmd("Scratch", function ()
     else
         api.nvim_set_current_win(win)
     end
+end, {})
+
+-- format
+cmd("Format", function()
+    vim.lsp.buf.format { async = true }
 end, {})
