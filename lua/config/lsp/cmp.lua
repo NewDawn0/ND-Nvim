@@ -74,9 +74,12 @@ cmp.setup {
     },
     formatting = {
         fields = { "kind", "abbr", "menu" },
-        format = require('lspkind').cmp_format()
+        format = require('lspkind').cmp_format({
+             symbol_map = { Codeium = "", }
+        })
     },
     sources = {
+        { name = 'codeium' },
         { name = "luasnip" },
         { name = "nvim_lsp" },
         { name = "buffer" },
