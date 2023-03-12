@@ -108,4 +108,18 @@ return {
         dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
     -- LSP
+    { 'rafamadriz/friendly-snippets', priority = 7 },
+    { 'neovim/nvim-lspconfig', priority = 3 },
+    { 'L3MON4D3/LuaSnip', priority = 7 },
+    { 'saadparwaiz1/cmp_luasnip', priority = 6,
+        dependencies = { 'L3MON4D3/LuaSnip' }
+    },
+    { 'hrsh7th/cmp-nvim-lua', event = "BufWinEnter", priority = 6 },
+    { 'hrsh7th/cmp-path', event = "BufWinEnter", priority = 6 },
+    { 'hrsh7th/cmp-nvim-lsp', event = "BufWinEnter", priority = 6 },
+    { 'hrsh7th/cmp-nvim-lsp-signature-help', event = "BufWinEnter", priority = 6 },
+    { 'hrsh7th/nvim-cmp', event = "BufWinEnter", priority = 5,
+        dependencies = { 'rafamadriz/friendly-snippets' },
+        config = function() require 'config.lsp.cmp' end
+    },
 }
