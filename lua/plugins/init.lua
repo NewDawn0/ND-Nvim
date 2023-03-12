@@ -123,10 +123,7 @@ return {
         dependencies = { 'rafamadriz/friendly-snippets' },
         config = function() require 'config.lsp.cmp' end
     },
-    {'williamboman/mason.nvim', event = "BufWinEnter", priority = 5 },
-    {'williamboman/mason-lspconfig.nvim',
-        event = "BufWinEnter", priority = 5,
-        config = function() require 'config.lsp' end
-    },
-    {'neovim/nvim-lspconfig', event = "BufWinEnter", priority = 5 },
+    {'williamboman/mason.nvim', lazy = true },
+    {'williamboman/mason-lspconfig.nvim', lazy = true },
+    {'neovim/nvim-lspconfig', lazy = true, },
 }
