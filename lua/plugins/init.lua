@@ -71,10 +71,11 @@ return {
         config = function() require 'config.plugins.telescope' end
     },
     -- Utils
-    -- RM: Remove benchmark after testing
+    -- RM: Remove benchmarks after testing
     { 'dstein64/vim-startuptime',
         cmd = "StartupTime",
     },
+    { 'lewis6991/impatient.nvim' },
     { 'famiu/bufdelete.nvim', lazy = true},
     { 'mzlogin/vim-markdown-toc', lazy = false},
     { 'mrjones2014/smart-splits.nvim', },

@@ -18,6 +18,23 @@ vim.cmd('set tabstop=4')
 require('bootstrap')
 require('lazy').setup(require('plugins'), {ui = { border = "rounded" }})
 
+-- Improve speed
+require('impatient')
+
+-- Settings & commands 
+require('settings')
+require('commands')
+
 -- Colourscheme
 vim.cmd('colorscheme material')
 
+-- Open nvim tree on startup
+local function open_nvim_tree(data)
+    local directory = vim.fn.isdirectory(data.file) == 1
+        if not directory then
+            return
+        end
+    vim.cmd.cd(data.file)
+    require("nvim-tree.api").tree.open()
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
