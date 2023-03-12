@@ -109,13 +109,13 @@ return {
         dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
     -- LSP
-    { 'jcdickinson/codeium.nvim', event = "BufWinEnter",
-        priority = 6, config = true,
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "hrsh7th/nvim-cmp",
-        }
-    },
+    -- { 'jcdickinson/codeium.nvim', event = "BufWinEnter",
+    --     priority = 6, config = true,
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim",
+    --         "hrsh7th/nvim-cmp",
+    --     }
+    -- },
     { 'onsails/lspkind.nvim', lazy = true },
     { 'rafamadriz/friendly-snippets', priority = 7 },
     { 'neovim/nvim-lspconfig', priority = 3 },
