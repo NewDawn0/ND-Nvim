@@ -108,6 +108,7 @@ return {
         dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
     -- LSP
+    { 'onsails/lspkind.nvim', lazy = true },
     { 'rafamadriz/friendly-snippets', priority = 7 },
     { 'neovim/nvim-lspconfig', priority = 3 },
     { 'L3MON4D3/LuaSnip', priority = 7 },

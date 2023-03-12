@@ -72,6 +72,10 @@ cmp.setup {
             end
         end, { 'i', 's' })
     },
+    formatting = {
+        fields = { "kind", "abbr", "menu" },
+        format = require('lspkind').cmp_format()
+    },
     sources = {
         { name = "luasnip" },
         { name = "nvim_lsp" },
