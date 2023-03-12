@@ -21,8 +21,10 @@ require('lazy').setup(require('plugins'), {ui = { border = "rounded" }})
 -- Improve speed
 require('impatient')
 
--- Settings & commands 
+-- Settings, commands, autocmds & mappings
+require('autocmds')
 require('settings')
+require('mappings')
 require('commands')
 
 -- Colourscheme
