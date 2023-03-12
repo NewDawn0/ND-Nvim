@@ -49,11 +49,14 @@
 - Fast file browsing using [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - Better splits using [Smart splits](https://github.com/mrjones2014/smart-splits.nvim)
 
-## Requirements
+## Dependencies
 - Neovim >= 0.8
 - NodeJS, Yarn
 - Python >= 3.5
-- fzf
+- Fzf
+- Rust/Cargo
+- Luarocks
+- Ghc, Cabal
 
 ## Installation
 ```bash
