@@ -6,6 +6,14 @@
   |_| \_|____/      |_| \_|  \_/  |_|_| |_| |_|
   File: plugins.lua
   Desc: List of plugins 
+
+  Priorities:
+    10 => colourschemes
+     9 => notifications
+     8 => treesitter
+     7 => aerial + lsp sources
+     6 => more lsp sources
+     5 => mason + nvim cmp + mason-lsp
 --]]
 return {
     -- Colourschemes
