@@ -8,12 +8,7 @@
   Desc: Highlight hexcolourschemes config
 --]]
 require('colorizer').setup({
-    filetypes = {
-        '*',
-        css = { rgb_fn = true, hsl_fn = true },
-        sass = { rgb_fn = true, hsl_fn = true },
-        html = { mode = 'foreground' }
-    },
+    filetypes = { '*' },
     user_default_options = {
         names = false,
         RRGGBBAA = true,

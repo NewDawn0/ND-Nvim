@@ -28,3 +28,10 @@ autocmd("BufReadPost", {
 
 -- Alpha.lua
 cmd('autocmd FileType alpha setlocal nofoldenable')
+
+-- Comment toggle
+autocmd("BufEnter", {
+    callback = function ()
+        require('colorizer').attach_to_buffer(0, {})
+    end
+})
