@@ -17,20 +17,8 @@
 --]]
 return {
     -- Colourschemes
-    { dir = '~/GitHub/focus.nvim' },
     { 'marko-cerovac/material.nvim', lazy = false, priority = 10,
         config = function() require 'config.colourschemes.material' end
-    },
-    {'sainnhe/edge', lazy = true , priority = 10,
-        config = function() require 'config.colourschemes.edge' end
-    },
-    {'tiagovla/tokyodark.nvim', lazy = true, priority = 10,
-        config = function() require 'config.colourschemes.tokyodark' end
-    },
-    { 'folke/tokyonight.nvim', lazy = true, priority = 10 },
-    { 'navarasu/onedark.nvim',
-    	lazy = true, priority = 10,
-        config = function() require 'config.colourschemes.onedark' end
     },
     -- UI
     { 'nvim-zh/colorful-winsep.nvim', event = "VimEnter", config = true },
@@ -42,8 +30,8 @@ return {
         dependencies = { 'kyazdani42/nvim-web-devicons' },
         config = function() require 'config.plugins.dashboard' end
     },
-    { 'NvChad/nvim-colorizer.lua', event = "BufWinEnter", ft = { "!aerial", "!NvimTree", "!alpha" },
-        config = function () require 'config.plugins.colorizer' end
+    { 'NvChad/nvim-colorizer.lua', ft = { "!aerial", "!NvimTree", "!alpha" },
+        config = function () require 'config.plugins.colorizer' end,
     },
     { 'folke/todo-comments.nvim', event = "BufWinEnter",
         config = function() require 'config.plugins.todo' end,
