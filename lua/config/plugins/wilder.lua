@@ -8,6 +8,7 @@
   Desc: Wilder command menu config
 --]]
 local wilder = require('wilder')
+local cols = require('config.colourschemes.global')
 -- Setup --
 wilder.setup({modes = {':', '/', '?'}})
 wilder.set_option('renderer', wilder.popupmenu_renderer(
@@ -17,7 +18,7 @@ wilder.set_option('renderer', wilder.popupmenu_renderer(
             border = 'Normal',
             accent = wilder.make_hl(
                 'WilderAccent', 'Pmenu',
-                { {a = 1}, {a = 1}, {foreground = '#f4468f'} }
+                { {a = 1}, {a = 1}, {foreground = cols.red, bold = true} }
             )
         },
         left = {' ', wilder.popupmenu_devicons()},
