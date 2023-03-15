@@ -27,8 +27,7 @@ local colours = {
     yellow1 = "#fecc27",
     red = "#ff5370",
     red2 = '#ec5f67',
-    red3 = "#ffbba6",
-    repl = "#fca2a9",
+    pink = "#e772b7",
     grey = "#5c6370",
     grey1 = "#4b5263",
     gold = "#f5d070",
@@ -36,5 +35,7 @@ local colours = {
     cyan2 = "#40d9ff",
     pale = "#a2b8ee",
     purple = "#c678dd",
+    menu = "#22262e",
+    menu1 = "#2b3139"
 }
 return colours
