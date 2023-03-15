@@ -9,24 +9,25 @@
 --]]
 
 -- Colours --
+local vim = vim
+local colours = require('config.colourschemes.global')
 local cols = {
-    terminal = '#e5c07b',
-    replace = '#fca2a9',
-    selection = '#ec5f67',
-    block = '#e772b7',
-    insert = '#c678dd',
-    none = '#7589ee',
-    visual = '#a2b8ee',
-    normal = '#51afef',
-    command = '#98be65',
+    terminal = colours.gold,
+    replace = colours.orange,
+    selection = colours.red,
+    block = colours.pink,
+    insert = colours.purple,
+    visual = colours.pale,
+    normal = colours.blue,
+    command = colours.green,
     enter = '#3d9583',
-    err = '#ec5f67',
-    warn = '#e5c07b',
-    info = '#98be65',
-    hint = '#c678dd',
-    bg = '#22262e',
-    bg2 = '#2b3139',
-    NULL = '#ff5533' -- TODO: Repl with own colours
+    err = colours.red,
+    warn = colours.gold,
+    info = colours.green,
+    hint = colours.purple,
+    bg = colours.menu,
+    bg2 = colours.menu1,
+    none = colours.none
 }
 
 local vim_col = function ()
@@ -49,7 +50,7 @@ local vi_mode_colours = {
     COMMAND = cols.command,
     TERM = cols.terminal,
     SHELL = cols.terminal,
-    NONE = cols.none
+    NONE = colours.blue1
 }
 -- Icons --
 local icons = {
@@ -108,7 +109,7 @@ local mod = {
             provider = icons.left,
             hl = {
                 fg = cols.bg,
-                bg = cols.NULL
+                bg = cols.none
             }
         },
         right = {
@@ -131,7 +132,7 @@ local mod = {
             provider = icons.right,
             hl = {
                 fg = cols.bg,
-                bg = cols.NULL
+                bg = cols.none
             }
         }
     },
@@ -161,7 +162,7 @@ local mod = {
         provider = word_counter,
         hl = {
             fg = cols.normal,
-            bg = cols.NULL,
+            bg = cols.bg,
             style = 'bold'
         }
     },
@@ -189,37 +190,37 @@ local mod = {
 		provider = "diagnostic_errors",
 		hl = {
 		    fg = cols.err,
-            bg = cols.NULL,
+            bg = cols.bg,
             style = 'bold'
 		},
-        left_sep = 'block'
+        left_sep = ' '
 	},
 	diagnostic_warnings = {
 		provider = "diagnostic_warnings",
 		hl = {
 			fg = cols.warn,
-            bg = cols.NULL,
+            bg = cols.bg,
             style = 'bold'
 		},
-        left_sep = 'block'
+        left_sep = ' '
 	},
 	diagnostic_hints = {
 		provider = "diagnostic_hints",
 		hl = {
 			fg = cols.hint,
-            bg = cols.NULL,
+            bg = cols.bg,
             style = 'bold'
 		},
-        left_sep = 'block'
+        left_sep = ' '
 	},
     diagnostic_info = {
 		provider = "diagnostic_info",
         hl = {
             fg = cols.info,
-            bg = cols.NULL,
+            bg = cols.bg,
             style = 'bold'
         },
-        left_sep = 'block'
+        left_sep = ' '
 	},
     git_branch = {
         provider = "git_branch",
@@ -270,11 +271,13 @@ local left = {
     mod.spacing.left_none
 }
 local middle = {
+    mod.spacing.right_none,
     mod.words,
     mod.diagnostic_errors,
     mod.diagnostic_warnings,
     mod.diagnostic_info,
-    mod.diagnostic_hints
+    mod.diagnostic_hints,
+    mod.spacing.left_none
 }
 local right = {
     mod.spacing.right_none,
