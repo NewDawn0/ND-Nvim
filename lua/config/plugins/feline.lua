@@ -273,9 +273,9 @@ local left = {
 local middle = {
     mod.spacing.right_none,
     mod.words,
-    mod.diagnostic_errors,
-    mod.diagnostic_warnings,
     mod.diagnostic_info,
+    mod.diagnostic_warnings,
+    mod.diagnostic_errors,
     mod.diagnostic_hints,
     mod.spacing.left_none
 }
