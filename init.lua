@@ -26,6 +26,9 @@ require('settings')
 require('mappings')
 require('commands')
 
+-- vars
+local g = vim.g
+
 -- Setup lsp
 require('config.lsp')
 
@@ -42,3 +45,11 @@ local function open_nvim_tree(data)
     require("nvim-tree.api").tree.open()
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
+-- neovide options
+if vim.g.neovide then
+    g.neovide_confirm_quit = false
+    g.neovide_input_macos_alt_is_meta = true
+    g.neovide_cursor_animation_length = 0.05
+    g.neovide_cursor_trail_size = 0.5
+end
