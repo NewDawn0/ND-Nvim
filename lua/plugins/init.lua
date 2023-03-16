@@ -20,6 +20,9 @@ return {
     { 'marko-cerovac/material.nvim', lazy = false, priority = 10,
         config = function() require 'config.colourschemes.material' end
     },
+    { 'navarasu/onedark.nvim', lazy = false, priority = 10,
+        config = function () require 'config.colourschemes.onedark' end
+    },
     -- UI
     { 'nvim-zh/colorful-winsep.nvim', event = "VimEnter", config = true },
     { 'iamcco/markdown-preview.nvim', build = 'cd app && yarn install', lazy = true },
