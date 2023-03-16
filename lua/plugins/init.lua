@@ -33,7 +33,8 @@ return {
         dependencies = { 'kyazdani42/nvim-web-devicons' },
         config = function() require 'config.plugins.dashboard' end
     },
-    { 'NvChad/nvim-colorizer.lua', ft = { "!aerial", "!NvimTree", "!alpha" },
+    { 'NvChad/nvim-colorizer.lua', cmd = "ColorizerToggle",
+        ft = { "!aerial", "!NvimTree", "!alpha" },
         config = function () require 'config.plugins.colorizer' end,
     },
     { 'folke/todo-comments.nvim', event = "BufWinEnter",
