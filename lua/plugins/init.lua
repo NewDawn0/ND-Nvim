@@ -25,7 +25,7 @@ return {
     },
     -- UI
     { 'nvim-zh/colorful-winsep.nvim', event = "VimEnter", config = true },
-    { 'iamcco/markdown-preview.nvim', build = 'cd app && yarn install', cmd = "MarkdownPreviewToggle" },
+    { 'iamcco/markdown-preview.nvim', build = 'cd app && yarn install' },
     { 'feline-nvim/feline.nvim', event = "BufWinEnter", ft = "!alpha",
         config = function() require 'config.plugins.feline' end
     },
