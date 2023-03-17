@@ -20,12 +20,12 @@ return {
     { 'marko-cerovac/material.nvim', lazy = false, priority = 10,
         config = function() require 'config.colourschemes.material' end
     },
-    { 'navarasu/onedark.nvim', lazy = false, priority = 10,
+    { 'navarasu/onedark.nvim', lazy = true, priority = 10,
         config = function () require 'config.colourschemes.onedark' end
     },
     -- UI
     { 'nvim-zh/colorful-winsep.nvim', event = "VimEnter", config = true },
-    { 'iamcco/markdown-preview.nvim', build = 'cd app && yarn install', lazy = true },
+    { 'iamcco/markdown-preview.nvim', build = 'cd app && yarn install', cmd = "MarkdownPreviewToggle" },
     { 'feline-nvim/feline.nvim', event = "BufWinEnter", ft = "!alpha",
         config = function() require 'config.plugins.feline' end
     },
