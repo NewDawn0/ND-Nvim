@@ -33,7 +33,7 @@ local g = vim.g
 require('config.lsp')
 
 -- Colourscheme
-vim.cmd('colorscheme material')
+vim.cmd('colorscheme tokyonight-night')
 
 -- Open nvim tree on startup
 local function open_nvim_tree(data)

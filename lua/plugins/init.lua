@@ -17,11 +17,14 @@
 --]]
 return {
     -- Colourschemes
-    { 'marko-cerovac/material.nvim', lazy = false, priority = 10,
+    { 'marko-cerovac/material.nvim', lazy = true, priority = 10,
         config = function() require 'config.colourschemes.material' end
     },
     { 'navarasu/onedark.nvim', lazy = true, priority = 10,
         config = function () require 'config.colourschemes.onedark' end
+    },
+    { 'folke/tokyonight.nvim', lazy = false,
+		priority = 10, config = true
     },
     -- UI
     { 'nvim-zh/colorful-winsep.nvim', event = "VimEnter", config = true },
