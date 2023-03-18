@@ -52,7 +52,7 @@
 ## Installation
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak
-git clone --depth 1 --branch v2 https://github.com/NewDawn0/ND-Nvim.git ~/.config/nvim
+git clone https://github.com/NewDawn0/ND-Nvim.git ~/.config/nvim
 nvim
 
 # run the following in neovim
@@ -155,3 +155,6 @@ nvim
 ## Special thanks
 - [NvChad](https://github.com/NvChad/NvChad)
 - [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+
+## Switching versions
+To view all possible versions of ND-Nvims's major versions, which are git branches, run `git branch -a`. To switch versions, run `git branch <version name>`.
