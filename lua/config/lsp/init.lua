@@ -33,6 +33,9 @@ require("mason-lspconfig").setup_handlers {
         }
     end,
     -- Dedicated handlers
+    ["rust_analyzer"] = function ()
+        require('rust-tools').setup({})
+    end,
     ["ltex"] = function ()
         lspconfig.ltex.setup {
             on_attach = require('aerial').on_attach,

@@ -103,6 +103,7 @@ return {
         config = function() require 'config.plugins.indent' end,
         dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
+    { 'mfussenegger/nvim-dap', lazy = true},
     -- LSP
     -- { 'jcdickinson/codeium.nvim', event = "BufWinEnter",
     --     priority = 6, config = true,
@@ -126,7 +127,8 @@ return {
         dependencies = { 'rafamadriz/friendly-snippets' },
         config = function() require 'config.lsp.cmp' end
     },
-    {'williamboman/mason.nvim', lazy = true },
-    {'williamboman/mason-lspconfig.nvim', lazy = true },
-    {'neovim/nvim-lspconfig', lazy = true, },
+    { 'williamboman/mason.nvim', lazy = true },
+    { 'williamboman/mason-lspconfig.nvim', lazy = true },
+    { 'neovim/nvim-lspconfig', lazy = true },
+    { 'simrat39/rust-tools.nvim'}
 }
