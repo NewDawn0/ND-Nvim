@@ -34,6 +34,7 @@ require('config.lsp')
 
 -- Colourscheme
 vim.cmd('colorscheme tokyonight-night')
+-- vim.cmd('colorscheme habamax')
 
 -- Open nvim tree on startup
 local function open_nvim_tree(data)

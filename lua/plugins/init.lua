@@ -23,7 +23,7 @@ return {
     { 'navarasu/onedark.nvim', lazy = true, priority = 10,
         config = function () require 'config.colourschemes.onedark' end
     },
-    { 'folke/tokyonight.nvim', lazy = false,
+    { 'folke/tokyonight.nvim', lazy = true,
 		priority = 10, config = true
     },
     -- UI
@@ -75,14 +75,11 @@ return {
         config = function() require 'config.plugins.telescope' end
     },
     -- Utils
-    -- RM: Remove benchmarks after testing
-    { 'dstein64/vim-startuptime',
-        cmd = "StartupTime",
-    },
+    { 'christoomey/vim-tmux-navigator', lazy = false },
     { 'lewis6991/impatient.nvim' },
-    { 'famiu/bufdelete.nvim', lazy = true},
-    { 'mzlogin/vim-markdown-toc', lazy = false},
-    { 'mrjones2014/smart-splits.nvim', },
+    { 'famiu/bufdelete.nvim', lazy = true },
+    { 'mzlogin/vim-markdown-toc', lazy = false },
+    { 'mrjones2014/smart-splits.nvim' },
     { 'akinsho/toggleterm.nvim', cmd = "ToggleTerm",
         config = function() require 'config.plugins.term' end
     },
@@ -103,7 +100,7 @@ return {
         config = function() require 'config.plugins.indent' end,
         dependencies = { 'nvim-treesitter/nvim-treesitter' }
     },
-    { 'mfussenegger/nvim-dap', lazy = true},
+    { 'mfussenegger/nvim-dap', lazy = true },
     -- LSP
     -- { 'jcdickinson/codeium.nvim', event = "BufWinEnter",
     --     priority = 6, config = true,
@@ -112,6 +109,9 @@ return {
     --         "hrsh7th/nvim-cmp",
     --     }
     -- },
+    { 'lervag/vimtex', ft = { "md", "tex" },
+        config = function () require 'config.plugins.vimtex' end
+    },
     { 'onsails/lspkind.nvim', lazy = true },
     { 'rafamadriz/friendly-snippets', priority = 7 },
     { 'neovim/nvim-lspconfig', priority = 3 },
