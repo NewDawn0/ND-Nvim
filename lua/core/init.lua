@@ -1,3 +1,12 @@
+--[[
+ _   _ ____        _   _       _
+| \ | |  _ \      | \ | |_   _(_)_ __ ___
+|  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+| |\  | |_| |_____| |\  |\ V /| | | | | | |
+|_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+File: init.lua
+Desc: Core settings config
+--]]
 local opt = vim.opt
 local g = vim.g
 local config = require("core.utils").load_config()
@@ -53,7 +62,7 @@ g.mapleader = " "
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
-  vim.g["loaded_" .. provider .. "_provider"] = 0
+    vim.g["loaded_" .. provider .. "_provider"] = 0
 end
 
 -- add binaries installed by mason.nvim to path
@@ -65,46 +74,42 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- dont list quickfix buffers
 autocmd("FileType", {
-  pattern = "qf",
-  callback = function()
-    vim.opt_local.buflisted = false
-  end,
+    pattern = "qf",
+    callback = function() vim.opt_local.buflisted = false end,
 })
 
 -- reload some chadrc options on-save
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = vim.tbl_map(
-    vim.fs.normalize,
-    vim.fn.glob(vim.fn.stdpath "config" .. "/lua/custom/**/*.lua", true, true, true)
-  ),
-  group = vim.api.nvim_create_augroup("ReloadNvChad", {}),
+    pattern = vim.tbl_map(
+        vim.fs.normalize,
+        vim.fn.glob(vim.fn.stdpath "config" .. "/lua/custom/**/*.lua", true, true, true)
+    ),
+    group = vim.api.nvim_create_augroup("ReloadNvChad", {}),
 
-  callback = function(opts)
-    local fp = vim.fn.fnamemodify(vim.fs.normalize(vim.api.nvim_buf_get_name(opts.buf)), ":r") --[[@as string]]
-    local app_name = vim.env.NVIM_APPNAME and vim.env.NVIM_APPNAME or "nvim"
-    local module = string.gsub(fp, "^.*/" .. app_name .. "/lua/", ""):gsub("/", ".")
+    callback = function(opts)
+        local fp = vim.fn.fnamemodify(vim.fs.normalize(vim.api.nvim_buf_get_name(opts.buf)), ":r") --[[@as string]]
+        local app_name = vim.env.NVIM_APPNAME and vim.env.NVIM_APPNAME or "nvim"
+        local module = string.gsub(fp, "^.*/" .. app_name .. "/lua/", ""):gsub("/", ".")
 
-    require("plenary.reload").reload_module "base46"
-    require("plenary.reload").reload_module(module)
-    require("plenary.reload").reload_module "custom.chadrc"
+        require("plenary.reload").reload_module "base46"
+        require("plenary.reload").reload_module(module)
+        require("plenary.reload").reload_module "custom.chadrc"
 
-    config = require("core.utils").load_config()
+        config = require("core.utils").load_config()
 
-    vim.g.nvchad_theme = config.ui.theme
-    vim.g.transparency = config.ui.transparency
+        vim.g.nvchad_theme = config.ui.theme
+        vim.g.transparency = config.ui.transparency
 
-    -- statusline
-    require("plenary.reload").reload_module("nvchad_ui.statusline." .. config.ui.statusline.theme)
-    vim.opt.statusline = "%!v:lua.require('nvchad_ui.statusline." .. config.ui.statusline.theme .. "').run()"
+        -- statusline
+        require("plenary.reload").reload_module("nvchad_ui.statusline." .. config.ui.statusline.theme)
+        vim.opt.statusline = "%!v:lua.require('nvchad_ui.statusline." .. config.ui.statusline.theme .. "').run()"
 
-    require("base46").load_all_highlights()
-    -- vim.cmd("redraw!")
-  end,
+        require("base46").load_all_highlights()
+        -- vim.cmd("redraw!")
+    end,
 })
 
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 
-new_cmd("NvChadUpdate", function()
-  require "nvchad.update"()
-end, {})
+new_cmd("NvChadUpdate", function() require "nvchad.update" () end, {})

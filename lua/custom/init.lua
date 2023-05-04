@@ -1,20 +1,19 @@
 --[[
-     _   _ ____        _   _       _           
-    | \ | |  _ \      | \ | |_   _(_)_ __ ___  
-    |  \| | | | |_____|  \| \ \ / / | '_ ` _ \ 
-    | |\  | |_| |_____| |\  |\ V /| | | | | | |
-    |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
-    File: init.lua
-    Desc: General nvim settings
+ _   _ ____        _   _       _
+| \ | |  _ \      | \ | |_   _(_)_ __ ___
+|  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+| |\  | |_| |_____| |\  |\ V /| | | | | | |
+|_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+File: init.lua
+Desc: General nvim settings
 --]]
-
 -- Alias
 local opt = vim.opt
 -- General settings
 opt.autoread = true
 opt.backup = false
-opt.clipboard = 'unnamedplus'
-opt.mouse = 'a'
+opt.clipboard = "unnamedplus"
+opt.mouse = "a"
 opt.scrolloff = 4
 opt.timeout = false
 opt.wrap = false
@@ -28,7 +27,7 @@ opt.tabstop = 4
 opt.relativenumber = true
 opt.number = true
 opt.cursorline = true
-opt.cursorlineopt = 'number'
+opt.cursorlineopt = "number"
 -- Search
 opt.incsearch = true
 opt.ignorecase = true

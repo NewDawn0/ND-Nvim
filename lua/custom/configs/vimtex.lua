@@ -130,14 +130,8 @@ local plugins = {
     },
     {
         "lervag/vimtex",
-        ft = "tex",
+        ft = { "markdown", "tex" },
         config = function() require "custom.configs.vimtex" end,
-    },
-    {
-        "goolord/alpha-nvim",
-        event = "VimEnter",
-        depends = { "nvim-tree/nvim-web-devicons" },
-        config = function() require "custom.configs.alpha" end,
     },
 }
 

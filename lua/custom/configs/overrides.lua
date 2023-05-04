@@ -1,13 +1,12 @@
 --[[
-     _   _ ____        _   _       _           
-    | \ | |  _ \      | \ | |_   _(_)_ __ ___  
-    |  \| | | | |_____|  \| \ \ / / | '_ ` _ \ 
-    | |\  | |_| |_____| |\  |\ V /| | | | | | |
-    |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
-    File: overrides.lua
-    Desc: File for default plugin settins overrides
+ _   _ ____        _   _       _
+| \ | |  _ \      | \ | |_   _(_)_ __ ___
+|  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+| |\  | |_| |_____| |\  |\ V /| | | | | | |
+|_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+File: overrides.lua
+Desc: Overrides default plugin configs
 --]]
-
 local M = {}
 
 M.treesitter = {
@@ -23,32 +22,32 @@ M.treesitter = {
         "markdown",
         "markdown_inline",
     },
-        indent = {
+    indent = {
         enable = true,
-    -- disable = {
-    --   "python"
-    -- },
-    }
+        -- disable = {
+        --   "python"
+        -- },
+    },
 }
 
 M.mason = {
     ensure_installed = {
-    -- lua stuff
+        -- lua stuff
         "lua-language-server",
         "stylua",
 
-    -- web dev stuff
+        -- web dev stuff
         "css-lsp",
         "html-lsp",
         "typescript-language-server",
         "deno",
         "prettier",
 
-    -- c/cpp stuff
+        -- c/cpp stuff
         "clangd",
         "clang-format",
-    -- chad stuff
-        "rust analyzer"
+        -- chad stuff
+        "rust analyzer",
     },
 }
 
@@ -70,7 +69,7 @@ M.nvimtree = {
 
 -- Autopairs
 M.autopairs = {
-    disable_filetype = { "TelescopePrompt", "vim", "alpha", "aerial", "NvimTree" }
+    disable_filetype = { "TelescopePrompt", "vim", "alpha", "aerial", "NvimTree" },
 }
 
 return M

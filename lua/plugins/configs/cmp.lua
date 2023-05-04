@@ -1,15 +1,13 @@
 --[[
-     _   _ ____        _   _       _           
-    | \ | |  _ \      | \ | |_   _(_)_ __ ___  
-    |  \| | | | |_____|  \| \ \ / / | '_ ` _ \ 
-    | |\  | |_| |_____| |\  |\ V /| | | | | | |
-    |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
-    File: cmp.lua
-    Desc: Modified NvChad nvim cmd config
+ _   _ ____        _   _       _
+| \ | |  _ \      | \ | |_   _(_)_ __ ___
+|  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+| |\  | |_| |_____| |\  |\ V /| | | | | | |
+|_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+File: cmp.lua
+Desc: Modified NvChad nvim cmd config
 --]]
-
 local cmp = require "cmp"
-
 dofile(vim.g.base46_cache .. "cmp")
 
 local cmp_ui = require("core.utils").load_config().ui.cmp
@@ -27,9 +25,7 @@ local formatting_style = {
     format = function(_, item)
         local icons = require("nvchad_ui.icons").lspkind
         local icon = (cmp_ui.icons and icons[item.kind]) or ""
-        if item.kind == "Codeium" then
-            icon = ""
-        end
+        if item.kind == "Codeium" then icon = "" end
 
         if cmp_style == "atom" or cmp_style == "atom_colored" then
             icon = " " .. icon .. " "
@@ -41,7 +37,7 @@ local formatting_style = {
         end
 
         return item
-    end
+    end,
 }
 
 local function border(hl_name)
@@ -53,13 +49,13 @@ local function border(hl_name)
         { "╯", hl_name },
         { "─", hl_name },
         { "╰", hl_name },
-        { "│", hl_name }
+        { "│", hl_name },
     }
 end
 
 local options = {
     completion = {
-        completeopt = "menu,menuone"
+        completeopt = "menu,menuone",
     },
 
     window = {
@@ -71,12 +67,10 @@ local options = {
         documentation = {
             border = border "CmpDocBorder",
             winhighlight = "Normal:CmpDoc",
-        }
+        },
     },
     snippet = {
-        expand = function(args)
-            require("luasnip").lsp_expand(args.body)
-        end
+        expand = function(args) require("luasnip").lsp_expand(args.body) end,
     },
 
     formatting = formatting_style,
@@ -100,7 +94,7 @@ local options = {
             else
                 fallback()
             end
-        end, { "i", "s", }),
+        end, { "i", "s" }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
@@ -109,21 +103,19 @@ local options = {
             else
                 fallback()
             end
-        end, { "i", "s", }),
+        end, { "i", "s" }),
     },
     sources = {
-        { name = "codeium" },
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
-        { name = "nvim_lsp_signature_help" }
-    }
+        { name = "nvim_lsp_signature_help" },
+        { name = "codeium" },
+    },
 }
 
-if cmp_style ~= "atom" and cmp_style ~= "atom_colored" then
-    options.window.completion.border = border "CmpBorder"
-end
+if cmp_style ~= "atom" and cmp_style ~= "atom_colored" then options.window.completion.border = border "CmpBorder" end
 
 return options

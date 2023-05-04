@@ -1,13 +1,12 @@
 --[[
-     _   _ ____        _   _       _           
-    | \ | |  _ \      | \ | |_   _(_)_ __ ___  
-    |  \| | | | |_____|  \| \ \ / / | '_ ` _ \ 
-    | |\  | |_| |_____| |\  |\ V /| | | | | | |
-    |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
-    File: mappings.lua
-    Desc: Keymap configuration
+ _   _ ____        _   _       _
+| \ | |  _ \      | \ | |_   _(_)_ __ ___
+|  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+| |\  | |_| |_____| |\  |\ V /| | | | | | |
+|_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+File: mappings.lua
+Desc: Keymap configuration
 --]]
-
 ---@type MappingsTable
 local M = {}
 local opts = { noremap = true, silent = true, nowait = true }
@@ -19,7 +18,7 @@ M.disabled = {
         ["<leader>b"] = "",
         ["<leader>h"] = "",
         ["<leader>ph"] = "",
-    }
+    },
 }
 M.general = {
     n = {
@@ -33,20 +32,36 @@ M.general = {
         ["<C-k>"] = { "<cmd>TmuxNavigateDown<CR>", "Move down", opts = opts },
         ["<C-l>"] = { "<cmd>TmuxNavigateRight<CR>", "Move right", opts = opts },
         -- Misc
-        ["gcc"]         = { "<cmd>CommentToggle<CR>", "toggle line comment", opts = opts },
-        ["<leader>h"]   = { "<cmd>nohlsearch<CR>", "disable highlight", opts = opts },
-        ["<leader>w"]   = { "<cmd>w<CR>", "safe files", opts = opts },
-        ["<leader>as"]  = { "<cmd>ASToggle<CR>", "toggle autosave", opts = opts },
+        ["gcc"] = { "<cmd>CommentToggle<CR>", "toggle line comment", opts = opts },
+        ["<leader>h"] = { "<cmd>nohlsearch<CR>", "disable highlight", opts = opts },
+        ["<leader>w"] = { "<cmd>w<CR>", "safe files", opts = opts },
+        ["<leader>as"] = { "<cmd>ASToggle<CR>", "toggle autosave", opts = opts },
         -- File + buffers
-        ["<leader>ff"]  = { "<cmd>Telescope find_files<CR>", "find files", opts = opts },
-        ["<leader>fa"]  = { "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>", "find all files", opts = opts },
-        ["<leader>fg"]  = { "<cmd>Telescope live_grep<CR>", "live grep", opts = opts },
-        ["<leader>fn"]  = { "<cmd>New<CR>", "new files", opts = opts },
-        ["<leader>fb"]  = { "<cmd>Telescope buffers<CR>", "new files", opts = opts },
+        ["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "find files", opts = opts },
+        ["<leader>fa"] = {
+            "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",
+            "find all files",
+            opts = opts,
+        },
+        ["<leader>fg"] = { "<cmd>Telescope live_grep<CR>", "live grep", opts = opts },
+        ["<leader>fn"] = { "<cmd>New<CR>", "new files", opts = opts },
+        ["<leader>fb"] = { "<cmd>Telescope buffers<CR>", "new files", opts = opts },
         -- Terminal
-        ["<leader>tt"]  = { "<cmd>lua require('nvterm.terminal').toggle('horizontal')<CR><cmd>set ma<CR>", "new files", opts = opts },
-        ["<leader>tf"]  = { "<cmd>lua require('nvterm.terminal').toggle('float')<CR><cmd>set ma<CR>", "new files", opts = opts },
-        ["<leader>tv"]  = { "<cmd>lua require('nvterm.terminal').toggle('vertical')<CR><cmd>set ma<CR>", "new files", opts = opts },
+        ["<leader>tt"] = {
+            "<cmd>lua require('nvterm.terminal').toggle('horizontal')<CR><cmd>set ma<CR>",
+            "new files",
+            opts = opts,
+        },
+        ["<leader>tf"] = {
+            "<cmd>lua require('nvterm.terminal').toggle('float')<CR><cmd>set ma<CR>",
+            "new files",
+            opts = opts,
+        },
+        ["<leader>tv"] = {
+            "<cmd>lua require('nvterm.terminal').toggle('vertical')<CR><cmd>set ma<CR>",
+            "new files",
+            opts = opts,
+        },
         -- Buffers
         ["<leader>bn"] = { "<cmd>bnex<CR>", "goto next buffer", opts = opts },
         ["<leader>bp"] = { "<cmd>bprevious<CR>", "goto previous buffer", opts = opts },
@@ -61,10 +76,10 @@ M.general = {
         ["<leader>pu"] = { "<cmd>Lazy update<CR>", "update packages", opts = opts },
     },
     v = {
-        ["<"]           = { "<gv", "unindent selction", opts = opts },
-        [">"]           = { ">gv", "unindent selction", opts = opts },
-        ["gcc"]         = { "<cmd>'<,'>CommentToggle<CR>", "toggle line comment", opts = opts }
-    }
+        ["<"] = { "<gv", "unindent selction", opts = opts },
+        [">"] = { ">gv", "unindent selction", opts = opts },
+        ["gcc"] = { "<cmd>'<,'>CommentToggle<CR>", "toggle line comment", opts = opts },
+    },
 }
 
 -- more keybinds!

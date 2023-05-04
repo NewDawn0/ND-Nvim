@@ -1,13 +1,12 @@
 --[[
-     _   _ ____        _   _       _           
-    | \ | |  _ \      | \ | |_   _(_)_ __ ___  
-    |  \| | | | |_____|  \| \ \ / / | '_ ` _ \ 
-    | |\  | |_| |_____| |\  |\ V /| | | | | | |
-    |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
-    File: chadrc.lua
-    Desc: NvChad config file
+ _   _ ____        _   _       _
+| \ | |  _ \      | \ | |_   _(_)_ __ ___
+|  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+| |\  | |_| |_____| |\  |\ V /| | | | | | |
+|_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+File: chadrc.lua
+Desc: NvChad config file
 --]]
-
 ---@type ChadrcConfig
 local M = {}
 
@@ -15,8 +14,8 @@ local M = {}
 local highlights = require "custom.highlights"
 
 -- Modules
-require("custom.command")
-require("custom.autocmds")
+require "custom.command"
+require "custom.autocmds"
 
 M.ui = {
     theme = "everblush",
