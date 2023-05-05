@@ -77,6 +77,7 @@ local plugins = {
     },
     {
         "iamcco/markdown-preview.nvim",
+        ft = "markdown",
         build = "cd app && yarn install",
     },
     {
@@ -94,10 +95,6 @@ local plugins = {
         "nvim-zh/colorful-winsep.nvim",
         event = "BufWinEnter",
         config = true,
-    },
-    {
-        "folke/which-key.nvim",
-        enabled = false,
     },
     {
         "christoomey/vim-tmux-navigator",
