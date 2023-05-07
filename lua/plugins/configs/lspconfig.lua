@@ -9,9 +9,6 @@ Desc: Core lsp configuration
 --]]
 dofile(vim.g.base46_cache .. "lsp")
 require "nvchad_ui.lsp"
-local mason_lspconfig = require "mason-lspconfig"
-local lspconfig = require "lspconfig"
-
 local M = {}
 local utils = require "core.utils"
 
@@ -41,29 +38,6 @@ M.capabilities.textDocument.completion.completionItem = {
             "documentation",
             "detail",
             "additionalTextEdits",
-        },
-    },
-}
-
-require("lspconfig").lua_ls.setup {
-    on_attach = M.on_attach,
-    capabilities = M.capabilities,
-
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { "vim" },
-            },
-            workspace = {
-                library = {
-                    [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-                    [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-                    [vim.fn.stdpath "data" .. "/lazy/extensions/nvchad_types"] = true,
-                    [vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy"] = true,
-                },
-                maxPreload = 100000,
-                preloadFileSize = 10000,
-            },
         },
     },
 }
