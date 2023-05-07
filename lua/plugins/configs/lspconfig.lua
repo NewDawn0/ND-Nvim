@@ -9,6 +9,8 @@ Desc: Core lsp configuration
 --]]
 dofile(vim.g.base46_cache .. "lsp")
 require "nvchad_ui.lsp"
+local mason_lspconfig = require "mason-lspconfig"
+local lspconfig = require "lspconfig"
 
 local M = {}
 local utils = require "core.utils"

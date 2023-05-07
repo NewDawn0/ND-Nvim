@@ -19,10 +19,11 @@ local plugins = {
                 "jose-elias-alvarez/null-ls.nvim",
                 config = function() require "custom.configs.null-ls" end,
             },
+            "williamboman/mason-lspconfig.nvim",
         },
         config = function()
             require "plugins.configs.lspconfig"
-            require "custom.configs.lspconfig"
+            require "custom.configs.lsp"
         end, -- Override to setup mason-lspconfig
     },
 
@@ -122,10 +123,6 @@ local plugins = {
         },
     },
     {
-        "Darazaki/indent-o-matic",
-        event = "BufWinEnter",
-    },
-    {
         "lervag/vimtex",
         ft = "tex",
         config = function() require "custom.configs.vimtex" end,
@@ -135,6 +132,12 @@ local plugins = {
         event = "VimEnter",
         depends = { "nvim-tree/nvim-web-devicons" },
         config = function() require "custom.configs.alpha" end,
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = {
+            "williamboman/mason.nvim",
+        },
     },
 }
 

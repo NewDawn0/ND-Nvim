@@ -25,7 +25,7 @@ M.ui = {
     hl_add = highlights.add,
 }
 
-M.plugins = "custom.plugins"
+M.plugins = "custom.plugin"
 
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
