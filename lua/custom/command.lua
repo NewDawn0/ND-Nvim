@@ -75,17 +75,25 @@ cmd("Scratch", function()
     if win then
         api.nvim_set_current_win(win)
     else
-        vim.cmd "vsplit | enew"
+        vim.cmd "vsplit | new"
         api.nvim_buf_set_option(0, "buftype", "nofile")
         api.nvim_buf_set_option(0, "bufhidden", "wipe")
         api.nvim_buf_set_name(0, "Scratch")
     end
 end, {})
 
--- Imporved :new
+-- Improved :new
 cmd("New", function()
     M.win_input("Enter new name", function(text) vim.cmd("new " .. text) end)
 end, {})
+
+-- Capitalize word under cursor
+cmd("CapitalizeWord", function()
+    local curr_word = vim.call("expand", "<cword>")
+    local str = string.lower(curr_word)
+    local changed = str:gsub("^%l", string.upper)
+    vim.cmd("normal! diwi" .. changed)
+end, { range = true })
 
 -- return Modules
 return M

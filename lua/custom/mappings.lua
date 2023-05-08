@@ -18,6 +18,10 @@ M.disabled = {
         ["<leader>b"] = "",
         ["<leader>h"] = "",
         ["<leader>ph"] = "",
+        ["<leader>/"] = "",
+    },
+    v = {
+        ["<leader>/"] = "",
     },
 }
 M.general = {
@@ -32,7 +36,7 @@ M.general = {
         ["<C-k>"] = { "<cmd>TmuxNavigateDown<CR>", "Move down", opts = opts },
         ["<C-l>"] = { "<cmd>TmuxNavigateRight<CR>", "Move right", opts = opts },
         -- Misc
-        ["gcc"] = { "<cmd>CommentToggle<CR>", "toggle line comment", opts = opts },
+        ["gcc"] = { function() require("Comment.api").toggle.linewise.current() end, "toggle comment", opts = opts },
         ["<leader>h"] = { "<cmd>nohlsearch<CR>", "disable highlight", opts = opts },
         ["<leader>w"] = { "<cmd>w<CR>", "safe files", opts = opts },
         ["<leader>as"] = { "<cmd>ASToggle<CR>", "toggle autosave", opts = opts },
@@ -76,9 +80,13 @@ M.general = {
         ["<leader>pu"] = { "<cmd>Lazy update<CR>", "update packages", opts = opts },
     },
     v = {
-        ["<"] = { "<gv", "unindent selction", opts = opts },
-        [">"] = { ">gv", "unindent selction", opts = opts },
-        ["gcc"] = { "<cmd>'<,'>CommentToggle<CR>", "toggle line comment", opts = opts },
+        ["<"] = { "<gv", "unindent selection", opts = opts },
+        [">"] = { ">gv", "unindent selection", opts = opts },
+        ["gcc"] = {
+            "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+            "comment toggle",
+            opts = opts,
+        },
     },
 }
 

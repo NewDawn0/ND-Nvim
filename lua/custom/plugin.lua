@@ -67,12 +67,6 @@ local plugins = {
         ft = "markdown",
     },
     {
-        "terrortylor/nvim-comment",
-        cmd = "CommentToggle",
-        keys = { "gcc" },
-        config = function() require "custom.configs.comment" end,
-    },
-    {
         "nvim-zh/colorful-winsep.nvim",
         event = "VimEnter",
     },
