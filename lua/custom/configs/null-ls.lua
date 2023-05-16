@@ -17,7 +17,6 @@ local augroup = api.nvim_create_augroup("LspFormatting", {})
 
 local sources = {
     -- formatting
-    b.formatting.asmfmt,     -- assembly
     b.formatting.beautysh,   -- shell
     b.formatting.black,      -- python
     b.formatting.cbfmt,      -- code blocks in md & org
