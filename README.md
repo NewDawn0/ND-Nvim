@@ -175,9 +175,10 @@ nvim
 
 - [NvChad](https://github.com/NvChad/NvChad)
 - [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+- [Lazy](https://github.com/LazyVim/LazyVim)
 
 ## Switching versions
 
-To view all possible versions of ND-Nvims's major versions, which are git
+To view all possible versions of ND-Nvim's major versions, which are git
 branches, run `git branch -a`. To switch versions, run
 `git branch <version name>`.
