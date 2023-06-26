@@ -25,3 +25,5 @@ autocmd("BufReadPost", {
         end
     end,
 })
+
+vim.cmd "au BufRead,BufNewFile *.mcmeta setfiletype json"

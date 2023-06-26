@@ -95,19 +95,17 @@ local plugins = {
         "christoomey/vim-tmux-navigator",
         lazy = false,
     },
-    {
-        "jcdickinson/codeium.nvim",
-        opts = { history = true, updateevents = "TextChanged,TextChangedI" },
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "hrsh7th/nvim-cmp",
-        },
-    },
+    -- {
+    --     "jcdickinson/codeium.nvim",
+    --     opts = { history = true, updateevents = "TextChanged,TextChangedUI" },
+    --     event = "InsertEnter",
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim",
+    --         "hrsh7th/nvim-cmp",
+    --     },
+    -- },
     {
         "hrsh7th/cmp-nvim-lsp",
-        dependencies = {
-            "jcdickinson/codeium.nvim",
-        },
     },
     {
         "simrat39/rust-tools.nvim",
@@ -124,13 +122,22 @@ local plugins = {
     {
         "goolord/alpha-nvim",
         event = "VimEnter",
-        depends = { "nvim-tree/nvim-web-devicons" },
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function() require "custom.configs.alpha" end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
         dependencies = {
             "williamboman/mason.nvim",
+        },
+    },
+    {
+        "glepnir/lspsaga.nvim",
+        event = "LspAttach",
+        config = function() require("lspsaga").setup {} end,
+        dependencies = {
+            { "nvim-tree/nvim-web-devicons" },
+            { "nvim-treesitter/nvim-treesitter" },
         },
     },
 }

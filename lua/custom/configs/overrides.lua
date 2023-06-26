@@ -8,7 +8,7 @@ File: overrides.lua
 Desc: Overrides default plugin configs
 --]]
 local M = {}
-
+-- Treesitter: general
 M.treesitter = {
     ensure_installed = {
         "vim",

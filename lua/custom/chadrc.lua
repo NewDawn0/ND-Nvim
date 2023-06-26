@@ -30,4 +30,10 @@ M.plugins = "custom.plugin"
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
+vim.filetype.add {
+    extension = {
+        hx = "haxe",
+    },
+}
+
 return M

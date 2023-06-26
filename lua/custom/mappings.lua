@@ -38,8 +38,11 @@ M.general = {
         -- Misc
         ["gcc"] = { function() require("Comment.api").toggle.linewise.current() end, "toggle comment", opts = opts },
         ["<leader>h"] = { "<cmd>nohlsearch<CR>", "disable highlight", opts = opts },
-        ["<leader>w"] = { "<cmd>w<CR>", "safe files", opts = opts },
         ["<leader>as"] = { "<cmd>ASToggle<CR>", "toggle autosave", opts = opts },
+        -- Git
+        ["<leader>gc"] = { "<cmd>Telescope git_commits<CR>", "Find git commits", opts = opts },
+        ["<leader>gs"] = { "<cmd>Telescope git_status<CR>", "Show git status", opts = opts },
+        ["<leader>gf"] = { "<cmd>Telescope git_files<CR>", "Show git files", opts = opts },
         -- File + buffers
         ["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "find files", opts = opts },
         ["<leader>fa"] = {
@@ -73,11 +76,23 @@ M.general = {
         ["<leader>bk"] = { "<cmd>bw<CR>", "kill buffer", opts = opts },
         ["<leader>bS"] = { "<cmd>Scratch<CR>", "open scratch buffer", opts = opts },
         -- Lazy
-        ["<leader>p"] = { "<cmd>Lazy<CR>", "open package manager", opts = opts },
+        ["<leader>pp"] = { "<cmd>Lazy<CR>", "open package manager", opts = opts },
         ["<leader>ps"] = { "<cmd>Lazy sync<CR>", "sync packages", opts = opts },
         ["<leader>pc"] = { "<cmd>Lazy clean<CR>", "clean packages", opts = opts },
-        ["<leader>pC"] = { "<cmd>Lazy ckeck<CR>", "check packages", opts = opts },
+        ["<leader>pC"] = { "<cmd>Lazy check<CR>", "check packages", opts = opts },
         ["<leader>pu"] = { "<cmd>Lazy update<CR>", "update packages", opts = opts },
+        -- Diagnostic
+        ["<leader>dh"] = { "<cmd>Lspsaga show_workspace_diagnostics<CR>", "diagnostics info", opts = opts },
+        ["<leader>dn"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "goto next diagnostic", opts = opts },
+        ["<leader>dp"] = { "<cmd>lua vim.diagnostic.goto_previous()<CR>", "goto previous diagnostic", opts = opts },
+        ["<leader>dd"] = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "goto type definition", opts = opts },
+        ["<leader>di"] = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "goto implementation", opts = opts },
+        ["<leader>dr"] = { "<cmd>lua vim.lsp.buf.references()<CR>", "goto references", opts = opts },
+        ["<leader>dm"] = { "<cmd>Lspsaga outline<CR>", "open map", opts = opts },
+        -- Code actions
+        ["<leader>ci"] = { "<cmd>Lspsaga hover_doc<CR>", "Get symbol documentation", opts = opts },
+        ["<leader>cr"] = { "<cmd>Lspsaga rename ++project<CR>", "rename symbol", opts = opts },
+        ["<leader>ca"] = { "<cmd>Lspsaga code_action<CR>", "code action", opts = opts },
     },
     v = {
         ["<"] = { "<gv", "unindent selection", opts = opts },

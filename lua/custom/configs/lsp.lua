@@ -60,4 +60,11 @@ require("mason-lspconfig").setup_handlers {
             },
         }
     end,
+    ["clangd"] = function()
+        capabilities.offsetEncoding = { "utf-16" }
+        lspconfig.clangd.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+        }
+    end,
 }
