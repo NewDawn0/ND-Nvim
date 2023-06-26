@@ -82,56 +82,52 @@ nvim
 **General Keybinds**
 
 - `space` leader key
-- `<leader> + w` Save
 - `<leader> + h` Disable highlighting
+- `<leader> + as` Toggle autosave
+- `gcc` Toggle comment [Modes: Normal + Visual]
+- `<` Indent selection to left [Mode: Visual]
+- `>` Indent selection to right [Mode: Visual]
 
 **Files**
 
 - `<leader> + ff` Find files
 - `<leader> + fa` Find files (including hidden)
-- `<leader> + fw` Live grep
+- `<leader> + bn` Find buffers
+- `<leader> + fg` Live grep
 - `<leader> + fn` Edit new file
 
 **Git**
 
 - `<leader> + gc` Find git commits
 - `<leader> + gs` Show git status
+- `<leader> + gf` Show git tracked files
 
 **Terminal**
 
 - `<leader> + tt` Toggle bottom terminal
 - `<leader> + tf` Toggle floating terminal
 - `<leader> + tv` Toggle vertical terminal
-- `<leader> + tb` Toggle terminal in new tab
 
 **Buffer**
 
-- `<leader> + bn` Open new buffer
-- `<leader> + bS` Open scratch buffer
+- `<leader> + bS` Open scratch buffer (Similar to Emacs's scratch buffer)
 - `<leader> + bn` Go to the next buffer
 - `<leader> + bp` Go to the previous buffer
-- `<leader> + bP` Pin/Unpin buffer in buffer line
-- `<leader> + bf` Find buffers
 - `<leader> + bc` Close buffer
-- `Ctrl + c` Close buffer
 - `<leader> + bk` Kill buffer
-- `<leader> + bK` Kill all buffers except current
 
 **Plugins**
 
-- `<leader> + pl` Open Lazy
+- `<leader> + pp` Open Lazy
 - `<leader> + ps` Sync packages
-- `<leader> + pC` Clean packages
-- `<leader> + pu` Check packages
-- `<leader> + pp` Open profile
+- `<leader> + pc` Clean packages
+- `<leader> + pC` Check packages
+- `<leader> + pu` Update packages
 
-**Mini map & File browser**
+**File browser**
 
-- `<leader> + ee` Toggle File browser
-- `<leader> + ef` Focus File browser
-- `<leader> + ec` Close File browser
-- `<leader> + ea` Open mini map
-- `<leader> + ec` Close mini map
+- `<leader> + ee` Toggle file browser
+- `<leader> + ef` Filter file browser
 
 **Workspaces**
 
@@ -152,24 +148,19 @@ nvim
 
 **Diagnostics**
 
-- `<leader> + do` Open diagnostics in float
-- `<leader> + dn` Go to the next diagnostic
-- `<leader> + dp` Go to the previous diagnostic
-- `<leader> + dl` List diagnostics
-- `<leader> + ds` Open signature help
-- `<leader> + dd` Go to the definition
-- `<leader> + dD` Go to the declaration
-- `<leader> + dr` Rename items
-- `<leader> + dR` Show references
-- `<leader> + dc` Code action
-- `<leader> + df` Format
+- `<leader>dh` Show workspace diagnostics
+- `<leader>dn` Go to next diagnostic
+- `<leader>dp` Go to the previous diagnostic
+- `<leader>dd` Go to definition
+- `<leader>di` Go to Implementation
+- `<leader>dr` Go to references
+- `<leader>dm` Open symbol outline
 
-**Misc**
+**LSP code actions**
 
-- `<leader> + as` Toggle autosave
-- `<` Left indent line in visual mode
-- `>` Right indent line in visual mode
-- `gcc` Toggle comment
+- `<leader>cr` Rename symbol
+- `<leader>ca` Code action
+- `<leader>ci` Get symbol documentation
 
 ## Changes and improvements
 
