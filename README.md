@@ -5,8 +5,8 @@
 |`<leader>ss`| Save | **Normal** |
 |`<leader>sw`| Save and quit | **Normal** |
 |`<leader>sq`| Quit | **Normal** |
-|`<leader>h`| Disable search highlight | **Normal** |
-|`<leader>tt`| Toggle transparency | **Normal** |
+|`<leader>hh`| Disable search highlight | **Normal** |
+|`<leader>tt`| Set transparency | **Normal** |
 |`<leader>bn`| Go to next buffer | **Normal** |
 |`<leader>bp`| Go to previous buffer | **Normal** |
 |`<leader>bdd`| Close current buffer | **Normal** |
@@ -46,6 +46,7 @@
 |`<ENTER>`| Complete/Expand snipptet | *Cmp completion menu* |
 |`<TAB>`| Select next | *Cmp completion menu* |
 |`<SHIFT><TAB>`| Select previous | *Cmp completion menu* |
+|`<leader>h`| Toogle hardtime | **Normal** |
 |`>`| Indent selection | **Visual** |
 |`<`| Unindent selection | **Visual** |
 |`<leader>ss`| Sort selection | **Visual** |
