@@ -1,3 +1,66 @@
+<h1 align='center'>ND-Nvim</h1>
+<div align='center'>
+
+![Lines of code](https://img.shields.io/tokei/lines/github/NewDawn0/ND-Nvim?color=%2381A1C1&label=LINES&logoColor=%2381A1C1&style=for-the-badge)
+![Bloat](https://img.shields.io/badge/Bloat-Minimal-c585cf?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/NewDawn0/ND-Nvim?color=e1b56a&style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/NewDawn0/ND-Nvim?color=74be88&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/NewDawn0/ND-Nvim?color=6d92bf&style=for-the-badge)
+
+</div>
+<div align='center'>
+
+## Screenshots
+
+![Home](https://raw.githubusercontent.com/NewDawn0/ND-Nvim/main/.github/screenshots/main.png)
+
+<details><summary><b>Gallery</b></summary>
+
+</details>
+</div>
+
+
+## Table of contents
+
+<!-- vim-markdown-toc GFM -->
+
+* [Dependencies](#dependencies)
+* [Installation](#installation)
+* [Extra keybinds](#extra-keybinds)
+* [Changes and improvements](#changes-and-improvements)
+* [Special thanks](#special-thanks)
+
+<!-- vim-markdown-toc -->
+
+## Dependencies
+- [Nix](https://nixos.org/download/)
+
+## Installation
+
+1. Add the following inputs to your `flake.nix`
+```nix
+{
+    inputs = {
+        ndnvim.url = "path:./lol/ndnvim";
+        stylix = {
+            url = "github:danth/stylix";
+            inputs.home-manager.follows = "home-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+    };
+}
+```
+2. Add the ndnvim overlay to your overlays
+```nix
+overlays = [ inputs.ndnvim.overlays.default ];
+```
+
+3. (Optional) Enable/disable the ndnvim home-manager module in home-manager configuration
+    ndnvimCfg.enable option enabled by default
+```nix
+    ndnvimCfg.enable = true;  # Or `ndnvimCfg.enable = false;` to disable
+```
+
 ## Extra keybinds
 | Keybind | Description | Modes |
 |---------|-------------|-------|
@@ -52,3 +115,13 @@
 |`<leader>ss`| Sort selection | **Visual** |
 |`<leader>fo`| Open fold | **Normal**, **Visual** |
 |`<leader>fc`| Close fold | **Normal**, **Visual** |
+
+## Changes and improvements
+- Nix integration
+
+## Special thanks
+- [NvChad](https://github.com/NvChad/NvChad)
+- [Lazy](https://github.com/LazyVim/LazyVim)
+- [How to create a Neovim flake](https://primamateria.github.io/blog/neovim-nix/)
+- [Home manager](https://github.com/nix-community/home-manager)
+- [Stylix](https://github.com/danth/stylix)
