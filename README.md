@@ -34,6 +34,7 @@
 
 ## Dependencies
 - [Nix](https://nixos.org/download/)
+- [Mixtral](https://mistral.ai) using `ollama pull mixtral`
 
 ## Installation
 
