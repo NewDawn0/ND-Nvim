@@ -19,7 +19,6 @@
 </details>
 </div>
 
-
 ## Table of contents
 
 <!-- vim-markdown-toc GFM -->
@@ -33,12 +32,14 @@
 <!-- vim-markdown-toc -->
 
 ## Dependencies
+
 - [Nix](https://nixos.org/download/)
 - [Mixtral](https://mistral.ai) using `ollama pull mixtral`
 
 ## Installation
 
 1. Add the following inputs to your `flake.nix`
+
 ```nix
 {
     inputs = {
@@ -51,76 +52,90 @@
     };
 }
 ```
+
 2. Add the ndnvim overlay to your overlays
+
 ```nix
 overlays = [ inputs.ndnvim.overlays.default ];
 ```
 
 3. (Optional) Enable/disable the ndnvim home-manager module in home-manager configuration
-    ndnvimCfg.enable option enabled by default
+   ndnvimCfg.enable option enabled by default
+
 ```nix
     ndnvimCfg.enable = true;  # Or `ndnvimCfg.enable = false;` to disable
 ```
 
 ## Extra keybinds
-| Keybind | Description | Modes |
-|---------|-------------|-------|
-|`<leader`| The leader is `space` | **ALL** |
-|`<leader>ss`| Save | **Normal** |
-|`<leader>sw`| Save and quit | **Normal** |
-|`<leader>sq`| Quit | **Normal** |
-|`<leader>hh`| Disable search highlight | **Normal** |
-|`<leader>tt`| Set transparency | **Normal** |
-|`<leader>bn`| Go to next buffer | **Normal** |
-|`<leader>bp`| Go to previous buffer | **Normal** |
-|`<leader>bdd`| Close current buffer | **Normal** |
-|`<leader>bdo`| Close other buffers | **Normal** |
-|`<leader>bdn`| Close right buffer | **Normal** |
-|`<leader>bdp`| Close left buffer | **Normal** |
-|`<leader>bmn`| Move buffer right | **Normal** |
-|`<leader>bmp`| Move buffer left | **Normal** |
-|`<leader>bt`| Pin/unpin buffer | **Normal** |
-|`<leader>fb`| Find buffers | **Normal** |
-|`<leader>fd`| Find diagnostics | **Normal** |
-|`<leader>ff`| Find files | **Normal** |
-|`<leader>fs`| Find string | **Normal** |
-|`<leader>fgc`| Find git commits | **Normal** |
-|`<leader>fgf`| Find git files | **Normal** |
-|`<leader>fn`| Find notifications | **Normal** |
-|`<leader>fll`| Find lsp symbols | **Normal** |
-|`<leader>oh`| Show oil help | *Oil filetype* |
-|`<leader>omu`| Move up | *Oil filetype* |
-|`-`| Move up | *Oil filetype* |
-|`<ENTER>`| Enter file/dir | *Oil filetype* |
-|`<leader>osc`| Change sort | *Oil filetype* |
-|`<leader>ox`| External | *Oil filetype* |
-|`<leader>o.`| Toggle hidden | *Oil filetype* |
-|`<leader>op`| Preview file | *Oil filetype* |
-|`<leader>osv`| Create vsplit with file/dir | *Oil filetype* |
-|`<leader>oss`| Create split with file/dir | *Oil filetype* |
-|`<leader>gss`| Stage hunk | **Visual** |
-|`<leader>gsu`| Undo stage hunk | **Visual** |
-|`<leader>gsr`| Reset hunk | **Visual** |
-|`<leader>gd`| Git diff this | **Normal** |
-|`<CTRL>i`| Increment/Toogle booleans | **Normal** |
-|`<CTRL>d`| Decrement/Toogle booleans | **Normal** |
-|`<CTRL>p`| Scroll docs backward | *Cmp completion menu* |
-|`<CTRL>n`| Scroll docs forward | *Cmp completion menu* |
-|`<CTRL><SPACE>`| Preview completion | *Cmp completion menu* |
-|`<ENTER>`| Complete/Expand snipptet | *Cmp completion menu* |
-|`<TAB>`| Select next | *Cmp completion menu* |
-|`<SHIFT><TAB>`| Select previous | *Cmp completion menu* |
-|`<leader>h`| Toogle hardtime | **Normal** |
-|`>`| Indent selection | **Visual** |
-|`<`| Unindent selection | **Visual** |
-|`<leader>ss`| Sort selection | **Visual** |
-|`<leader>fo`| Open fold | **Normal**, **Visual** |
-|`<leader>fc`| Close fold | **Normal**, **Visual** |
+
+| Keybind         | Description                       | Modes                  |
+| --------------- | --------------------------------- | ---------------------- |
+| `<leader`       | The leader is `space`             | **ALL**                |
+| `<leader>ss`    | Save                              | **Normal**             |
+| `<leader>sw`    | Save and quit                     | **Normal**             |
+| `<leader>sq`    | Quit                              | **Normal**             |
+| `<leader>hh`    | Disable search highlight          | **Normal**             |
+| `<leader>tt`    | Set transparency                  | **Normal**             |
+| `<leader>bn`    | Go to next buffer                 | **Normal**             |
+| `<leader>bp`    | Go to previous buffer             | **Normal**             |
+| `<leader>bdd`   | Close current buffer              | **Normal**             |
+| `<leader>bdo`   | Close other buffers               | **Normal**             |
+| `<leader>bdn`   | Close right buffer                | **Normal**             |
+| `<leader>bdp`   | Close left buffer                 | **Normal**             |
+| `<leader>bmn`   | Move buffer right                 | **Normal**             |
+| `<leader>bmp`   | Move buffer left                  | **Normal**             |
+| `<leader>bt`    | Pin/unpin buffer                  | **Normal**             |
+| `<leader>fb`    | Find buffers                      | **Normal**             |
+| `<leader>fd`    | Find diagnostics                  | **Normal**             |
+| `<leader>ff`    | Find files                        | **Normal**             |
+| `<leader>fs`    | Find string                       | **Normal**             |
+| `<leader>fgc`   | Find git commits                  | **Normal**             |
+| `<leader>fgf`   | Find git files                    | **Normal**             |
+| `<leader>fn`    | Find notifications                | **Normal**             |
+| `<leader>fll`   | Find lsp symbols                  | **Normal**             |
+| `<leader>oh`    | Show oil help                     | _Oil filetype_         |
+| `<leader>omu`   | Move up                           | _Oil filetype_         |
+| `-`             | Move up                           | _Oil filetype_         |
+| `<ENTER>`       | Enter file/dir                    | _Oil filetype_         |
+| `<leader>osc`   | Change sort                       | _Oil filetype_         |
+| `<leader>ox`    | External                          | _Oil filetype_         |
+| `<leader>o.`    | Toggle hidden                     | _Oil filetype_         |
+| `<leader>op`    | Preview file                      | _Oil filetype_         |
+| `<leader>osv`   | Create vsplit with file/dir       | _Oil filetype_         |
+| `<leader>oss`   | Create split with file/dir        | _Oil filetype_         |
+| `<leader>gss`   | Stage hunk                        | **Visual**             |
+| `<leader>gsu`   | Undo stage hunk                   | **Visual**             |
+| `<leader>gsr`   | Reset hunk                        | **Visual**             |
+| `<leader>gd`    | Git diff this                     | **Normal**             |
+| `<CTRL>i`       | Increment/Toggle booleans         | **Normal**             |
+| `<CTRL>d`       | Decrement/Toggle booleans         | **Normal**             |
+| `<CTRL>p`       | Scroll docs backward              | _Cmp completion menu_  |
+| `<CTRL>n`       | Scroll docs forward               | _Cmp completion menu_  |
+| `<CTRL><SPACE>` | Preview completion                | _Cmp completion menu_  |
+| `<ENTER>`       | Complete/Expand snipptet          | _Cmp completion menu_  |
+| `<TAB>`         | Select next                       | _Cmp completion menu_  |
+| `<SHIFT><TAB>`  | Select previous                   | _Cmp completion menu_  |
+| `sf`            | Flash jump                        | **Normal**             |
+| `sF`            | Flash jump with treesitter        | **Normal**             |
+| `sR`            | Flash jump with treesitter search | **Normal**             |
+| `sa`            | Surround add                      | **Visual**             |
+| `sd`            | Surround delete                   | **Visual**             |
+| `ssf`           | Surround find                     | **Visual**             |
+| `ssF`           | Surround find left                | **Visual**             |
+| `sr`            | Surround replace                  | **Visual**             |
+| `sn`            | Surround update n lines           | **Visual**             |
+| `>`             | Indent selection                  | **Visual**             |
+| `<`             | Unindent selection                | **Visual**             |
+| `<leader>ss`    | Sort selection                    | **Visual**             |
+| `<leader>fo`    | Open fold                         | **Normal**, **Visual** |
+| `<leader>fc`    | Close fold                        | **Normal**, **Visual** |
 
 ## Changes and improvements
+
 - Nix integration
 
 ## Special thanks
+
 - [NvChad](https://github.com/NvChad/NvChad)
 - [Lazy](https://github.com/LazyVim/LazyVim)
 - [How to create a Neovim flake](https://primamateria.github.io/blog/neovim-nix/)
