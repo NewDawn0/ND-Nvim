@@ -70,6 +70,12 @@ overlays = [ inputs.ndnvim.overlays.default ];
     ndnvimCfg.enable = true;  # Or `ndnvimCfg.enable = false;` to disable
 ```
 
+4. (Optional) If you plan on using [gen.nvim](https://github.com/David-Kunz/gen.nvim/blob/main/lua/gen/prompts.lua) install [mixtral](https://mistral.ai)
+
+   ```bash
+   ollama pull mixtral
+   ```
+
 ## Keybinds
 
 ### General
