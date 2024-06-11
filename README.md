@@ -14,24 +14,26 @@
 
 ![Home](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/main.png?raw=true)
 
-<details><summary><b>Gallery</b></summary>
+<details>
+    <summary><b>Gallery</b></summary>
 
-</div>
 <div align='center'>
 
-<h2> Nvim Cmp Suggestions </h2>
+### Nvim Cmp Suggestions
 
 ![Cmp](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/cmp.png?raw=true)
 
-<h2> Linting and formatting on save </h2>
+### Linting and formatting on save
 
 ![README](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/README.png?raw=true)
 
-<h2> Seamless tmux integration </h2>
+### Seamless tmux integration
 
 ![tmux](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/tmux.png?raw=true)
 
+</div>
 </details>
+
 </div>
 
 ## Table of contents
@@ -63,6 +65,7 @@
 - Seamless [Tmux](https://github.com/tmux/tmux) integration using [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator?tab=readme-ov-file)
 - Tip to use vim more effectively using [hardtime.nvim](https://www.google.com/search?q=hardtime+nvim)
 - Loads of highlight groups and [ui plugins](https://github.com/NewDawn0/ND-Nvim/blob/v4/plugins/ui.nix) to create a beatiful inferface
+- Pleasant Markdown editing using [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) and [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
 
 ## Installation
 
