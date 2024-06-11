@@ -16,7 +16,8 @@
 
 <details><summary><b>Gallery</b></summary>
 
-![Code]()
+![Cmp](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/cmp.png?raw=true)
+![README](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/REAMDE.png?raw=true)
 
 </details>
 </div>
