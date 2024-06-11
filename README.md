@@ -25,7 +25,7 @@
 
 <h2> Linting and formatting on save </h2>
 
-![README](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/REAMDE.png?raw=true)
+![README](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/README.png?raw=true)
 
 <h2> Seamless tmux integration </h2>
 
