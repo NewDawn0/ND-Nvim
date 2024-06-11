@@ -27,6 +27,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Dependencies](#dependencies)
+* [Features](#features)
 * [Installation](#installation)
 * [Keybinds](#keybinds)
     * [General](#general)
@@ -42,6 +43,11 @@
 
 - [Nix](https://nixos.org/download/)
 - [Mixtral](https://mistral.ai) using `ollama pull mixtral`
+
+## Features
+
+- Fully nix no external package managers like [lazy.nvim](https://github.com/folke/lazy.nvim) and [mason.nvim](https://github.com/williamboman/mason.nvim)
+- Automatic system theming using [stylix](https://github.com/danth/stylix)
 
 ## Installation
 
