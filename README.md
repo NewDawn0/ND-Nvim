@@ -16,8 +16,20 @@
 
 <details><summary><b>Gallery</b></summary>
 
+</div>
+<div align='center'>
+
+<h2> Nvim Cmp Suggestions </h2>
+
 ![Cmp](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/cmp.png?raw=true)
+
+<h2> Linting and formatting on save </h2>
+
 ![README](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/REAMDE.png?raw=true)
+
+<h2> Seamless tmux integration </h2>
+
+![tmux](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/tmux.png?raw=true)
 
 </details>
 </div>
@@ -48,6 +60,9 @@
 
 - Fully nix no external package managers like [lazy.nvim](https://github.com/folke/lazy.nvim) and [mason.nvim](https://github.com/williamboman/mason.nvim)
 - Automatic system theming using [stylix](https://github.com/danth/stylix)
+- Seamless [Tmux](https://github.com/tmux/tmux) integration using [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator?tab=readme-ov-file)
+- Tip to use vim more effectively using [hardtime.nvim](https://www.google.com/search?q=hardtime+nvim)
+- Loads of highlight groups and [ui plugins](https://github.com/NewDawn0/ND-Nvim/blob/v4/plugins/ui.nix) to create a beatiful inferface
 
 ## Installation
 
