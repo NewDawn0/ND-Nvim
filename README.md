@@ -25,7 +25,11 @@
 
 * [Dependencies](#dependencies)
 * [Installation](#installation)
-* [Extra keybinds](#extra-keybinds)
+* [Keybinds](#keybinds)
+    * [General](#general)
+    * [Normal](#normal)
+    * [Visual](#visual)
+    * [Normal & Visual](#normal--visual)
 * [Changes and improvements](#changes-and-improvements)
 * [Special thanks](#special-thanks)
 
@@ -66,69 +70,99 @@ overlays = [ inputs.ndnvim.overlays.default ];
     ndnvimCfg.enable = true;  # Or `ndnvimCfg.enable = false;` to disable
 ```
 
-## Extra keybinds
+## Keybinds
 
-| Keybind         | Description                       | Modes                  |
-| --------------- | --------------------------------- | ---------------------- |
-| `<leader`       | The leader is `space`             | **ALL**                |
-| `<leader>ss`    | Save                              | **Normal**             |
-| `<leader>sw`    | Save and quit                     | **Normal**             |
-| `<leader>sq`    | Quit                              | **Normal**             |
-| `<leader>hh`    | Disable search highlight          | **Normal**             |
-| `<leader>tt`    | Set transparency                  | **Normal**             |
-| `<leader>bn`    | Go to next buffer                 | **Normal**             |
-| `<leader>bp`    | Go to previous buffer             | **Normal**             |
-| `<leader>bdd`   | Close current buffer              | **Normal**             |
-| `<leader>bdo`   | Close other buffers               | **Normal**             |
-| `<leader>bdn`   | Close right buffer                | **Normal**             |
-| `<leader>bdp`   | Close left buffer                 | **Normal**             |
-| `<leader>bmn`   | Move buffer right                 | **Normal**             |
-| `<leader>bmp`   | Move buffer left                  | **Normal**             |
-| `<leader>bt`    | Pin/unpin buffer                  | **Normal**             |
-| `<leader>fb`    | Find buffers                      | **Normal**             |
-| `<leader>fd`    | Find diagnostics                  | **Normal**             |
-| `<leader>ff`    | Find files                        | **Normal**             |
-| `<leader>fs`    | Find string                       | **Normal**             |
-| `<leader>fgc`   | Find git commits                  | **Normal**             |
-| `<leader>fgf`   | Find git files                    | **Normal**             |
-| `<leader>fn`    | Find notifications                | **Normal**             |
-| `<leader>fll`   | Find lsp symbols                  | **Normal**             |
-| `<leader>oh`    | Show oil help                     | _Oil filetype_         |
-| `<leader>omu`   | Move up                           | _Oil filetype_         |
-| `-`             | Move up                           | _Oil filetype_         |
-| `<ENTER>`       | Enter file/dir                    | _Oil filetype_         |
-| `<leader>osc`   | Change sort                       | _Oil filetype_         |
-| `<leader>ox`    | External                          | _Oil filetype_         |
-| `<leader>o.`    | Toggle hidden                     | _Oil filetype_         |
-| `<leader>op`    | Preview file                      | _Oil filetype_         |
-| `<leader>osv`   | Create vsplit with file/dir       | _Oil filetype_         |
-| `<leader>oss`   | Create split with file/dir        | _Oil filetype_         |
-| `<leader>gss`   | Stage hunk                        | **Visual**             |
-| `<leader>gsu`   | Undo stage hunk                   | **Visual**             |
-| `<leader>gsr`   | Reset hunk                        | **Visual**             |
-| `<leader>gd`    | Git diff this                     | **Normal**             |
-| `<CTRL>i`       | Increment/Toggle booleans         | **Normal**             |
-| `<CTRL>d`       | Decrement/Toggle booleans         | **Normal**             |
-| `<CTRL>p`       | Scroll docs backward              | _Cmp completion menu_  |
-| `<CTRL>n`       | Scroll docs forward               | _Cmp completion menu_  |
-| `<CTRL><SPACE>` | Preview completion                | _Cmp completion menu_  |
-| `<ENTER>`       | Complete/Expand snipptet          | _Cmp completion menu_  |
-| `<TAB>`         | Select next                       | _Cmp completion menu_  |
-| `<SHIFT><TAB>`  | Select previous                   | _Cmp completion menu_  |
-| `sf`            | Flash jump                        | **Normal**             |
-| `sF`            | Flash jump with treesitter        | **Normal**             |
-| `sR`            | Flash jump with treesitter search | **Normal**             |
-| `sa`            | Surround add                      | **Visual**             |
-| `sd`            | Surround delete                   | **Visual**             |
-| `ssf`           | Surround find                     | **Visual**             |
-| `ssF`           | Surround find left                | **Visual**             |
-| `sr`            | Surround replace                  | **Visual**             |
-| `sn`            | Surround update n lines           | **Visual**             |
-| `>`             | Indent selection                  | **Visual**             |
-| `<`             | Unindent selection                | **Visual**             |
-| `<leader>ss`    | Sort selection                    | **Visual**             |
-| `<leader>fo`    | Open fold                         | **Normal**, **Visual** |
-| `<leader>fc`    | Close fold                        | **Normal**, **Visual** |
+### General
+
+- `<leader`: The leader is `space`
+
+### Normal
+
+- General:
+  - `<leader>ss` | Save
+  - `<leader>sw` | Save and quit
+  - `<leader>sq` | Quit
+  - `<leader>hh` | Disable search highlight
+- Buffer navigation:
+  - `<leader>bn` | Go to next buffer
+  - `<leader>bp` | Go to previous buffer
+  - `<leader>bdd` | Close current buffer
+  - `<leader>bdo` | Close other buffers
+  - `<leader>bdn` | Close right buffer
+  - `<leader>bdp` | Close left buffer
+  - `<leader>bmn` | Move buffer right
+  - `<leader>bmp` | Move buffer left
+  - `<leader>bt` | Pin/unpin buffer
+- [File Navigation](https://github.com/folke/flash.nvim):
+  - `sf` | Flash jump
+  - `sF` | Flash jump with treesitter
+  - `sR` | Flash jump with treesitter search
+- [Searching](https://github.com/nvim-telescope/telescope.nvim):
+  - `<leader>fb` | Find buffers
+  - `<leader>fd` | Find diagnostics
+  - `<leader>ff` | Find files
+  - `<leader>fs` | Find string
+  - `<leader>fgc` | Find git commits
+  - `<leader>fgf` | Find git files
+  - `<leader>fn` | Find notifications
+  - `<leader>fll` | Find lsp symbols
+- Diagnostics:
+  - `<leader>dh` | Diagnostics hover
+  - `<leader>dd` | Diagnostics definition
+  - `<leader>dD` | Diagnostics type definition
+  - `<leader>dgn` | Diagnostics go to next
+  - `<leader>dgp` | Diagnostics go to previous
+  - `<leader>df` | Telescope diagnostics
+  - `<leader>dr` | Lsp rename symbol
+- [Code completion](https://github.com/hrsh7th/nvim-cmp):
+  - `<CTRL>p` | Scroll docs backward | _Cmp completion menu_ |
+  - `<CTRL>n` | Scroll docs forward | _Cmp completion menu_ |
+  - `<CTRL><SPACE>` | Preview completion | _Cmp completion menu_ |
+  - `<ENTER>` | Complete/Expand snipptet | _Cmp completion menu_ |
+  - `<TAB>` | Select next | _Cmp completion menu_ |
+  - `<SHIFT><TAB>` | Select previous | _Cmp completion menu_ |
+- [File explorer](https://github.com/stevearc/oil.nvim) (Solely **Oil filetype!**):
+  - `<leader>oh` | Show oil help
+  - `-` | Move up
+  - `<leader>omu` | Move up
+  - `<ENTER>` | Enter file/dir
+  - `<leader>osc` | Change sort
+  - `<leader>ox` | External
+  - `<leader>o.` | Toggle hidden
+  - `<leader>op` | Preview file
+  - `<leader>osv` | Create vsplit with file/dir
+  - `<leader>oss` | Create split with file/dir
+- [Git integration](https://github.com/lewis6991/gitsigns.nvim):
+  - `<leader>gd` | Git diff this
+- [Boolean & Number toggle](https://github.com/nat-418/boole.nvim):
+  - `<CTRL>i` | Increment/Toggle booleans
+  - `<CTRL>d` | Decrement/Toggle booleans
+- [Transparency](https://github.com/xiyaowong/transparent.nvim):
+  - `<leader>tt` | Set transparency
+
+### Visual
+
+- Indentation:
+  - `>` : Indent selection
+  - `<` : Unindent selection
+- Sorting:
+  - `<leader>ss` : Sort selection
+- [Surround actions](https://github.com/echasnovski/mini.surround):
+  - `<leader>sa` : Surround add
+  - `<leader>ssf` : Surround find
+  - `<leader>ssF` : Surround find left
+  - `<leader>sr` : Surround replace
+  - `<leader>sn` : Surround update $n$ lines
+- [Git integration](https://github.com/lewis6991/gitsigns.nvim):
+  - `<leader>gss` : Stage hunk
+  - `<leader>gsu` : Undo stage hunk
+  - `<leader>gsr` : Reset hunk
+
+### Normal & Visual
+
+- Folds:
+  - `<leader>fo` : Open fold
+  - `<leader>fc` : Close fold
 
 ## Changes and improvements
 
