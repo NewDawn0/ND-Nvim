@@ -12,9 +12,11 @@
 
 ## Screenshots
 
-![Home](https://raw.githubusercontent.com/NewDawn0/ND-Nvim/main/.github/screenshots/main.png)
+![Home](https://github.com/NewDawn0/ND-Nvim/blob/v4/.github/screenshots/main.png?raw=true)
 
 <details><summary><b>Gallery</b></summary>
+
+![Code]()
 
 </details>
 </div>
