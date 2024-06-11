@@ -1,7 +1,6 @@
 <h1 align='center'>ND-Nvim</h1>
 <div align='center'>
 
-![Lines of code](https://img.shields.io/tokei/lines/github/NewDawn0/ND-Nvim?color=%2381A1C1&label=LINES&logoColor=%2381A1C1&style=for-the-badge)
 ![Bloat](https://img.shields.io/badge/Bloat-Minimal-c585cf?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/NewDawn0/ND-Nvim?color=e1b56a&style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/NewDawn0/ND-Nvim?color=74be88&style=for-the-badge)
@@ -66,6 +65,7 @@
 - Tip to use vim more effectively using [hardtime.nvim](https://www.google.com/search?q=hardtime+nvim)
 - Loads of highlight groups and [ui plugins](https://github.com/NewDawn0/ND-Nvim/blob/v4/plugins/ui.nix) to create a beatiful inferface
 - Pleasant Markdown editing using [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) and [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
+- Fast navigation using [flash.nvim](https://github.com/folke/flash.nvim) and [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Installation
 
