@@ -85,14 +85,20 @@ local function hl(groups, cols)
 end
 
 hl({ "CmpItemMenu" }, { fg = cols.base0E, bg = "NONE" })
-hl({ "CmpItemKindInterface", "CmpItemKindColor", "CmpItemKindTypeParameter" }, { fg = cols.base02, bg = cols.base0C })
-hl({ "CmpItemKindMethod", "CmpItemKindValue", "CmpItemKindEnumMember" }, { fg = cols.base02, bg = cols.base0D })
+hl(
+  { "CmpItemKindInterface", "CmpItemKindTypeParameter", "CmpItemKindKeyword", "CmpItemKindOperator" },
+  { fg = cols.base02, bg = cols.base0C }
+)
+hl({ "CmpItemKindMethod", "CmpItemKindValue", "CmpItemKindEvent" }, { fg = cols.base02, bg = cols.base0D })
 hl({ "CmpItemKindUnit", "CmpItemKindSnippet", "CmpItemKindFolder" }, { fg = cols.base02, bg = cols.base09 })
 hl({ "CmpItemKindConstant", "CmpItemKindConstructor", "CmpItemKindReference" }, { fg = cols.base02, bg = cols.base08 })
-hl({ "CmpItemKindText", "CmpItemKindEnum", "CmpItemKindKeyword" }, { fg = cols.base02, bg = cols.base0B })
-hl({ "CmpItemKindField", "CmpItemKindProperty", "CmpItemKindEvent" }, { fg = cols.base02, bg = cols.base0A })
-hl(
-  { "CmpItemKindFunction", "CmpItemKindStruct", "CmpItemKindClass", "CmpItemKindModule", "CmpItemKindOperator" },
-  { fg = cols.base02, bg = cols.base0B }
-)
+hl({ "CmpItemKindText", "CmpItemKindColor" }, { fg = cols.base02, bg = cols.base0B })
+hl({ "CmpItemKindField", "CmpItemKindProperty", "CmpItemKindEnumMember" }, { fg = cols.base02, bg = cols.base0A })
+hl({
+  "CmpItemKindFunction",
+  "CmpItemKindStruct",
+  "CmpItemKindClass",
+  "CmpItemKindModule",
+  "CmpItemKindEnum",
+}, { fg = cols.base02, bg = cols.base0E })
 hl({ "CmpItemKindVariable", "CmpItemKindFile" }, { fg = cols.base02, bg = cols.base05 })
