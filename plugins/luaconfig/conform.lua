@@ -23,7 +23,7 @@ require("conform").setup {
     rust = { "rustfmt" },
     scss = { "prettierd" },
     sh = { "shfmt", "shellharden" },
-    swift = { "swift-format" },
+    -- swift = { "swift-format" },
     toml = { "taplo" },
     typescript = { "prettierd" },
     vue = { "prettierd" },
