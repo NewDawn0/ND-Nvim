@@ -39,7 +39,6 @@
       showmode = false;
       signcolumn = "yes";
       smartindent = true;
-      smoothscroll = true;
       spelllang = [ "en" ];
       tabstop = 2;
       termguicolors = true;
