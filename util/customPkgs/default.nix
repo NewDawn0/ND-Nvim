@@ -8,9 +8,11 @@
       with pkgs.darwin.apple_sdk.frameworks; [
         SystemConfiguration
         pkgs.pkg-config
+        pkgs.openssl
       ]
     else
-      [ pkgs.pkg-config ];
+      with pkgs; [ pkg-config openssl ];
+    PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     src = builtins.fetchGit {
       url = "https://github.com/bergercookie/asm-lsp";
       ref = "master";
