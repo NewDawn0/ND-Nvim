@@ -4,7 +4,7 @@ with pkgs; [
   # haskellPackages.hls
   # nodePackages.grammarly-languageserver
   # zls
-  asm-lsp-git
+  # asm-lsp-git
   buf-language-server
   clang-tools
   cmake
