@@ -59,7 +59,7 @@
 
 ## Features
 
-- Fully nix no external package managers like [lazy.nvim](https://github.com/folke/lazy.nvim) and [mason.nvim](https://github.com/williamboman/mason.nvim)
+- Powerde by Nix (no external package managers like [lazy.nvim](https://github.com/folke/lazy.nvim) and [mason.nvim](https://github.com/williamboman/mason.nvim))
 - Automatic system theming using [stylix](https://github.com/danth/stylix)
 - Seamless [Tmux](https://github.com/tmux/tmux) integration using [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator?tab=readme-ov-file)
 - Tip to use vim more effectively using [hardtime.nvim](https://www.google.com/search?q=hardtime+nvim)
