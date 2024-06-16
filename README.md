@@ -74,7 +74,7 @@
 ```nix
 {
     inputs = {
-        ndnvim.url = "path:./lol/ndnvim";
+        ndnvim.url = "github:NewDawn0/ND-Nvim";
         stylix = {
             url = "github:danth/stylix";
             inputs.home-manager.follows = "home-manager";
