@@ -5,9 +5,12 @@
     doCheck = false;
     cargoHash = "sha256-Drn8REH2oHCzV6SUQw8xvG1ceqJhSbQWMyBm1ocz4sA=";
     buildInputs = if pkgs.stdenv.isDarwin then
-      with pkgs.darwin.apple_sdk.frameworks; [ SystemConfiguration ]
+      with pkgs.darwin.apple_sdk.frameworks; [
+        SystemConfiguration
+        pkgs.pkg-config
+      ]
     else
-      [ ];
+      [ pkgs.pkg-config ];
     src = builtins.fetchGit {
       url = "https://github.com/bergercookie/asm-lsp";
       ref = "master";

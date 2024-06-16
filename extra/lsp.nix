@@ -24,7 +24,6 @@ with pkgs; [
   nodePackages.diagnostic-languageserver
   nodePackages.svelte-language-server
   perlnavigator
-  pkg-config
   rust-analyzer
   taplo
   typescript
