@@ -14,7 +14,7 @@ with pkgs; [
   unstable.nixfmt-classic
   go
   taplo
-  swift-format # FIXME: No config found
+  # swift-format # FIXME: No config found
   fprettify # FIXME: No config found
   haskellPackages.fourmolu
   google-java-format
