@@ -4,7 +4,7 @@ with pkgs; [
   shellharden
   buf
   prettierd
-  # zig # FIXME: No config found
+  zig # FIXME: No config found
   black
   rustfmt
   rustup
@@ -14,7 +14,7 @@ with pkgs; [
   unstable.nixfmt-classic
   go
   taplo
-  # swift-format # FIXME: No config found
+  swift-format # FIXME: No config found
   fprettify # FIXME: No config found
   haskellPackages.fourmolu
   google-java-format
