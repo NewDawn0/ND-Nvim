@@ -147,6 +147,7 @@ overlays = [ inputs.ndnvim.overlays.default ];
   - `<leader>dgp` | Diagnostics go to previous
   - `<leader>df` | Telescope diagnostics
   - `<leader>dr` | Lsp rename symbol
+  - `<leader>ca` | Lsp code action
 - [Code completion](https://github.com/hrsh7th/nvim-cmp):
   - `<CTRL>p` | Scroll docs backward | _Cmp completion menu_ |
   - `<CTRL>n` | Scroll docs forward | _Cmp completion menu_ |
