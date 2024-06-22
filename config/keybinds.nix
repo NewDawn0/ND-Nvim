@@ -29,6 +29,14 @@
         action = ":foldclose<CR>";
         desc = "Close fold";
       };
+      "<leader>sv" = {
+        action = ":vsplit<CR>";
+        desc = "New vertical split";
+      };
+      "<leader>sh" = {
+        action = ":split<CR>";
+        desc = "New horizontal split";
+      };
     };
     visual = {
       "<" = {

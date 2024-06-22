@@ -115,6 +115,8 @@ overlays = [ inputs.ndnvim.overlays.default ];
   - `<leader>ss` | Save
   - `<leader>sw` | Save and quit
   - `<leader>sq` | Quit
+  - `<leader>sh` | Horizontal split
+  - `<leader>sv` | Vertical split
   - `<leader>hh` | Disable search highlight
 - Buffer navigation:
   - `<leader>bn` | Go to next buffer
@@ -197,6 +199,8 @@ overlays = [ inputs.ndnvim.overlays.default ];
 - Folds:
   - `<leader>fo` : Open fold
   - `<leader>fc` : Close fold
+- [Vim navigation tips](https://www.google.com/search?q=hardtime+nvim):
+  - `<leader>ht`: Toggle hardtime
 
 ## Changes and improvements
 
