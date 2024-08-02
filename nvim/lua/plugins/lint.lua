@@ -12,7 +12,7 @@ local lint = require "lint"
 
 -- Setup linters
 lint.linters_by_ft = {
-  markdown = { "write_good", "vale" },
+  markdown = { "write_good" },
 }
 
 -- Setup automatic linting

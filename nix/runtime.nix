@@ -149,8 +149,6 @@ else
 
 ++ (if opts.langs.all.enabled || opts.langs.markdown.enabled then [
   marksman
-  vale-ls
-  (vale.withStyles (s: with s; [ google microsoft readability write-good ]))
   write-good
 ] else
   [ ])

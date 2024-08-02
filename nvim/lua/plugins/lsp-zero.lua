@@ -52,6 +52,9 @@ lsps.setup_handlers {
       root_dir = function() return vim.fn.getcwd() end,
     }
   end,
+  ["bufls"] = function()
+    lsps.lspconfig.bufls.setup { root_dir = function() return vim.fn.getcwd() end }
+  end,
   ["clangd"] = function()
     lsps.lspconfig.clangd.setup {
       filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
@@ -97,16 +100,8 @@ lsps.setup_handlers {
       end,
     }
   end,
-  ["bufls"] = function()
-    lsps.lspconfig.bufls.setup {
-      root_dir = function() return vim.fn.getcwd() end,
-    }
-  end,
-  ["svelte"] = function()
-    lsps.lspconfig.svelte.setup {
-      root_dir = function() return vim.fn.getcwd() end,
-    }
-  end,
   ["rust_analyzer"] = function() require "rustaceanvim" end,
-  ["vale_ls"] = function() lsps.lspconfig.vale_ls.setup {} end,
+  ["svelte"] = function()
+    lsps.lspconfig.svelte.setup { root_dir = function() return vim.fn.getcwd() end }
+  end,
 }
