@@ -1,9 +1,19 @@
+--  _   _ ____        _   _       _
+-- | \ | |  _ \      | \ | |_   _(_)_ __ ___
+-- |  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+-- | |\  | |_| |_____| |\  |\ V /| | | | | | |
+-- |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+-- Copyright: 2024 NewDawn0
+--
+-- Author: NewDawn0 (https://github.com/NewDawn0)
+
 -- Highlight themes
 local theme = require("colours.theme").default
 
 -- Setup module
 local M = {}
 
+-- Set colours
 M.colors = {
   bg = theme.black,
   bg_dark = theme.black,
@@ -66,6 +76,7 @@ M.colors = {
   yellow = theme.yellow,
 }
 
+-- Set highlights
 M.highlights = {
   ["@annotation"] = "PreProc",
   ["@attribute"] = "PreProc",
