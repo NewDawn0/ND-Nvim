@@ -1,0 +1,13 @@
+{
+  "name": "awk-language-server",
+  "version": "0.4.12",
+  "description": "An awk language server",
+  "main": "main.js",
+  "bin": {
+    "awk-language-server": "./main.js"
+  },
+  "dependencies": {
+    "awk-language-server": "^0.10.5",
+    "minimist": "^1.2.8"
+  }
+}

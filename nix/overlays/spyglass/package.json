@@ -1,0 +1,12 @@
+{
+  "name": "spyglassmc-language-server",
+  "version": "0.4.12",
+  "description": "An mcfunction language server",
+  "main": "main.js",
+  "bin": {
+    "spyglassmc-language-server": "./main.js"
+  },
+  "dependencies": {
+    "@spyglassmc/language-server": "^0.4.12"
+  }
+}

@@ -26,25 +26,32 @@
           inherit system;
           config = { allowUnfree = true; };
           overlays = [
-            (final: prev: (import ./nix/pkgOverlays.nix { pkgs = prev; }))
+            (final: prev: (import ./nix/overlays { pkgs = prev; }))
             (final: prev: {
-              ndnvim = prev.callPackage ./nix/nvim.nix { pkgs = prev; };
+              ndnvim = prev.callPackage ./nix/ndnvim.nix {
+                pkgs = prev;
+                inherit opts;
+              };
             })
           ];
         };
       };
     in {
-      overlays.default = (final: prev: { ndnvim = self.packages.default; });
-      packages = eachSystem (sys:
-        let pkgs = mkPkgs sys;
-        in {
-          default = pkgs.writeShellApplication {
-            name = "nvim";
-            runtimeInputs = import ./nix/runtime.nix { inherit pkgs; };
-            text = ''
-              ${pkgs.ndnvim}/bin/nvim "$@"
-            '';
-          };
-        });
+      overlays.default = final: prev: {
+        ndnvim = self.packages.${prev.system}.default;
+      };
+      packages = eachSystem (system:
+        let
+          inherit (mkPkgs system) pkgs unstable;
+          ndnvimOverridable = opts:
+            pkgs.writeShellApplication {
+              name = "nvim";
+              runtimeInputs =
+                import ./nix/runtime.nix { inherit pkgs unstable opts; };
+              text = ''
+                ${pkgs.ndnvim}/bin/nvim "$@"
+              '';
+            };
+        in { default = pkgs.lib.makeOverridable ndnvimOverridable opts; });
     };
 }
