@@ -1,3 +1,12 @@
+--  _   _ ____        _   _       _
+-- | \ | |  _ \      | \ | |_   _(_)_ __ ___
+-- |  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+-- | |\  | |_| |_____| |\  |\ V /| | | | | | |
+-- |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+-- Copyright: 2024 NewDawn0
+--
+-- Author: NewDawn0 (https://github.com/NewDawn0)
+
 -- Load plugin configs
 require "plugins.alpha"
 require "plugins.autopairs"
@@ -6,10 +15,14 @@ require "plugins.bufferline"
 require "plugins.cmp"
 require "plugins.colouriser"
 require "plugins.comment"
+require "plugins.conform"
+require "plugins.dressing"
 require "plugins.flash"
 require "plugins.gen"
 require "plugins.gitsigns"
 require "plugins.indent-guides"
+require "plugins.lint"
+require "plugins.lsp-zero"
 require "plugins.lualine"
 require "plugins.notify"
 require "plugins.oil"

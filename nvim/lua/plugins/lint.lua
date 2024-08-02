@@ -7,12 +7,15 @@
 --
 -- Author: NewDawn0 (https://github.com/NewDawn0)
 
--- Utility functions
-local util = require "util.util"
+-- Abbrev
+local lint = require "lint"
 
--- Setup undotree
-local undotree = require "undotree"
-undotree.setup {}
+-- Setup linters
+lint.linters_by_ft = {
+  markdown = { "write_good", "vale" },
+}
 
--- Set keybinds
-util.setkb { "<leader>u", undotree.toggle, "Toggle undotree", { "n" } }
+-- Setup automatic linting
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function() lint.try_lint() end,
+})

@@ -1,3 +1,12 @@
+--  _   _ ____        _   _       _
+-- | \ | |  _ \      | \ | |_   _(_)_ __ ___
+-- |  \| | | | |_____|  \| \ \ / / | '_ ` _ \
+-- | |\  | |_| |_____| |\  |\ V /| | | | | | |
+-- |_| \_|____/      |_| \_| \_/ |_|_| |_| |_|
+-- Copyright: 2024 NewDawn0
+--
+-- Author: NewDawn0 (https://github.com/NewDawn0)
+
 -- Setup oil
 require("oil").setup {
   default_file_explorer = true,
@@ -25,7 +34,6 @@ require("oil").setup {
     ["-"] = "actions.parent",
     ["<leader>omu"] = "actions.parent",
     ["<leader>osc"] = "actions.change_sort",
-    ["<leader>ox"] = "actions.external",
     ["<leader>o."] = "actions.toggle_hidden",
     ["<leader>op"] = "actions.preview",
     ["<leader>orr"] = "actions.refresh",

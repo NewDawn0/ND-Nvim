@@ -7,12 +7,8 @@
 --
 -- Author: NewDawn0 (https://github.com/NewDawn0)
 
--- Utility functions
-local util = require "util.util"
-
--- Setup undotree
-local undotree = require "undotree"
-undotree.setup {}
-
--- Set keybinds
-util.setkb { "<leader>u", undotree.toggle, "Toggle undotree", { "n" } }
+-- Setup dressing nvim
+require("dressing").setup {
+  input = { enabled = true, default_prompt = "Input: ", trim_prompt = true },
+  select = { enabled = true, backend = { "telescope", "builtin", "fzf" } },
+}
