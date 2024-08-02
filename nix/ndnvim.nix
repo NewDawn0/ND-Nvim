@@ -40,8 +40,6 @@ let
     }
   '';
 in pkgs.neovim.override {
-  viAlias = true;
-  vimAlias = true;
   configure = {
     packages.all.start = import ./plugins.nix { inherit pkgs; };
     customRC = ''
