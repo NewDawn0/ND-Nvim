@@ -18,6 +18,7 @@
 * [Features](#features)
 * [Testing it out](#testing-it-out)
 * [Installation](#installation)
+* [Configuring ND-Nvim](#configuring-nd-nvim)
 * [Keybinds](#keybinds)
     * [General](#general)
     * [Normal](#normal)
@@ -49,22 +50,38 @@ nix run github:NewDawn0/ND-Nvim
 ## Installation
 
 1. Add ndnvim as an input
+
    ```nix
    {
        inputs.ndnvim = {
-           url = "github:NewDawn0";
+           url = "github:NewDawn0/ND-Nvim";
            # Optional
            inputs.nix-systems.follows = "nix-systems";
            inputs.nixpkgs.follows = "nixpkgs";
+           inputs.nixpkgs-unstable.follows = "nixpkgs-unstable";
        };
    }
    ```
-2. Add it to your packages
+
+2. Add the overlay
+
    ```nix
-   home.packages = with pkgs; [ inputs.ndnvim ];
-   # OR
-   environment.systemPackages = with pkgs; [ inputs.ndnvim ];
+   overlays = [ inputs.ndnvim.overlays.default ];
    ```
+
+3. Add it to your packages
+   ```nix
+   home.packages = with pkgs; [ ndnvim ];
+   # OR
+   environment.systemPackages = with pkgs; [ ndnvim ];
+   ```
+
+## Configuring ND-Nvim
+
+ND-Nvim comes with some language support by default
+
+- To enable/disable support for some languages use `(ndnvim.override { langs.<language>.enabled = true; })`
+- To check the language support use the command `:NDNvimInstallInfo` to get a list of languages and if they are enabledlanguages and if they are enabled
 
 ## Keybinds
 
