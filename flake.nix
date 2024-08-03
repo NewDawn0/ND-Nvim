@@ -18,22 +18,15 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
     let
-      opts = import ./nix/opts.nix;
+      defaultOpts = import ./nix/opts.nix;
       eachSystem = nixpkgs.lib.genAttrs (import inputs.nix-systems);
       mkPkgs = system: {
         unstable = nixpkgs-unstable.legacyPackages.${system};
         pkgs = import nixpkgs {
           inherit system;
           config = { allowUnfree = true; };
-          overlays = [
-            (final: prev: (import ./nix/overlays { pkgs = prev; }))
-            (final: prev: {
-              ndnvim = prev.callPackage ./nix/ndnvim.nix {
-                pkgs = prev;
-                inherit opts;
-              };
-            })
-          ];
+          overlays =
+            [ (final: prev: (import ./nix/overlays { pkgs = prev; })) ];
         };
       };
     in {
@@ -43,15 +36,20 @@
       packages = eachSystem (system:
         let
           inherit (mkPkgs system) pkgs unstable;
-          ndnvimOverridable = opts:
-            pkgs.writeShellApplication {
+          ndnvimOverridable = userOpts:
+            let
+              opts = pkgs.lib.recursiveUpdate defaultOpts userOpts;
+              ndnvim = pkgs.callPackage ./nix/ndnvim.nix { inherit pkgs opts; };
+            in pkgs.writeShellApplication {
               name = "nvim";
               runtimeInputs =
                 import ./nix/runtime.nix { inherit pkgs unstable opts; };
               text = ''
-                ${pkgs.ndnvim}/bin/nvim "$@"
+                ${ndnvim}/bin/nvim "$@"
               '';
             };
-        in { default = pkgs.lib.makeOverridable ndnvimOverridable opts; });
+        in {
+          default = pkgs.lib.makeOverridable ndnvimOverridable defaultOpts;
+        });
     };
 }
