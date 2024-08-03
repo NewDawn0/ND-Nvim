@@ -11,4 +11,3 @@
 require "util.autocommands"
 require "util.commands"
 require "util.keys"
-require "util.opts"
