@@ -54,4 +54,11 @@ with pkgs.vimPlugins; [
   vim-mcfunction
   vim-tmux-navigator
   wrapping-nvim
+  telescope-dap-nvim
+  nvim-dap-virtual-text
+  nvim-dap-ui
+  nvim-dap-python
+  nvim-dap-go
+  nvim-dap
+  nvim-dap-repl-highlights
 ]

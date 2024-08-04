@@ -17,6 +17,7 @@ with pkgs;
   fd
   fzf
   jq
+  lldb
   nodePackages.nodemon
   ripgrep
   wget
@@ -46,9 +47,10 @@ else
 else
   [ ])
 
-++ (if opts.langs.all.enabled || opts.langs.bash.enabled then [
+++ (if opts.langs.all.enabled || opts.langs.shell.enabled then [
   beautysh
   nodePackages.bash-language-server
+  shellcheck
   shellharden
 ] else
   [ ])
@@ -72,6 +74,7 @@ else
 ++ (if opts.langs.all.enabled || opts.langs.docker.enabled then [
   docker-compose-language-service
   dockerfile-language-server-nodejs
+  hadolint
 ] else
   [ ])
 
@@ -93,14 +96,16 @@ else
   [ ])
 
 ++ (if opts.langs.all.enabled || opts.langs.go.enabled then [
+  delve
+  golangci-lint
   golangci-lint-langserver
   gopls
-  templ
 ] else
   [ ])
 
 ++ (if opts.langs.all.enabled || opts.langs.haskell.enabled then [
   haskell-language-server
+  hlint
   ormolu
 ] else
   [ ])
@@ -116,6 +121,7 @@ else
 ++ (if opts.langs.all.enabled || opts.langs.hydrogen.enabled then [ ] else [ ])
 
 ++ (if opts.langs.all.enabled || opts.langs.java.enabled then [
+  checkstyle
   google-java-format
   java-language-server
   jdt-language-server
@@ -135,6 +141,7 @@ else
   [ ])
 
 ++ (if opts.langs.all.enabled || opts.langs.json.enabled then [
+  nodePackages.jsonlint
   prettierd
   spectral-language-server
   vscode-langservers-extracted
@@ -143,11 +150,13 @@ else
 
 ++ (if opts.langs.all.enabled || opts.langs.lua.enabled then [
   lua-language-server
+  luaPackages.luacheck
   stylua
 ] else
   [ ])
 
 ++ (if opts.langs.all.enabled || opts.langs.markdown.enabled then [
+  markdownlint-cli2
   marksman
   write-good
 ] else
@@ -195,13 +204,16 @@ else
 ++ (if opts.langs.all.enabled || opts.langs.protobuf.enabled then [
   buf
   buf-language-server
+  protolint
   protols
 ] else
   [ ])
 
 ++ (if opts.langs.all.enabled || opts.langs.python.enabled then [
+  (python3.withPackages (p: with p; [ debugpy pandas pytest requests ]))
   black
   isort
+  pylint
   pylyzer
   unstable.basedpyright
 ] else
@@ -239,6 +251,7 @@ else
   spectral-language-server
   yaml-language-server
   yamlfmt
+  yamllint
 ] else
   [ ])
 

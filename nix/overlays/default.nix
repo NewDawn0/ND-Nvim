@@ -132,6 +132,14 @@ in {
         url = "https://github.com/echasnovski/mini.surround";
       };
     };
+    nvim-dap-repl-highlights = pkgs.vimUtils.buildVimPlugin {
+      name = "nvim-dap-repl-highlights";
+      src = builtins.fetchGit {
+        ref = "master";
+        rev = "a7512fc0a0de0c0be8d58983939856dda6f72451";
+        url = "https://github.com/LiadOz/nvim-dap-repl-highlights";
+      };
+    };
     undotree-nvim = pkgs.vimUtils.buildVimPlugin {
       name = "undotree-nvim";
       src = builtins.fetchGit {

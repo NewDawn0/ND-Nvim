@@ -12,7 +12,18 @@ local lint = require "lint"
 
 -- Setup linters
 lint.linters_by_ft = {
-  markdown = { "write_good" },
+  bash = { "shellcheck" },
+  docker = { "hadolint" },
+  go = { "golangcilint" },
+  haskell = { "hlint" },
+  java = { "checkstyle" },
+  json = { "jsonlint" },
+  lua = { "luacheck" },
+  markdown = { "write_good", "markdownlint-cli2" },
+  proto = { "protolint" },
+  python = { "pylint" },
+  yaml = { "yamllint" },
+  zsh = { "shellcheck" },
 }
 
 -- Setup automatic linting

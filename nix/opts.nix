@@ -13,7 +13,6 @@
     arduino.enabled = false;
     assembly.enabled = true;
     awk.enabled = false;
-    bash.enabled = true;
     cpp.enabled = true;
     css.enabled = true;
     docker.enabled = true;
@@ -39,6 +38,7 @@
     protobuf.enabled = false;
     python.enabled = true;
     rust.enabled = true;
+    shell.enabled = true;
     svelte.enabled = false;
     toml.enabled = true;
     typescript.enabled = false;
