@@ -44,7 +44,6 @@ with pkgs.vimPlugins; [
   nvim-web-devicons
   oil-nvim
   plenary-nvim
-  rustaceanvim
   telescope-nvim
   todo-comments-nvim
   tokyonight-nvim

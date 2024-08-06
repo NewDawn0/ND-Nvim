@@ -100,7 +100,6 @@ lsps.setup_handlers {
       end,
     }
   end,
-  ["rust_analyzer"] = function() require "rustaceanvim" end,
   ["svelte"] = function()
     lsps.lspconfig.svelte.setup { root_dir = function() return vim.fn.getcwd() end }
   end,
