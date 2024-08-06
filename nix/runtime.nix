@@ -262,4 +262,4 @@ else
   [ ])
 
 ## FIXME:  TMP ###
-++ [ shellharden fnlfmt fortran-language-server fprettify java-language-server ]
+++ [ fnlfmt fennel-ls fortran-language-server fprettify java-language-server ]
