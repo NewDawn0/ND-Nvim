@@ -61,7 +61,6 @@ local keybinds = {
 }
 
 -- Set keybinds
-vim.notify "Hello from keybinds"
 for _, k in ipairs(keybinds) do
   vim.keymap.set(k.modes, k[1], k.action, { desc = k.desc })
 end
