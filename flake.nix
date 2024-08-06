@@ -36,20 +36,18 @@
       packages = eachSystem (system:
         let
           inherit (mkPkgs system) pkgs unstable;
+          inherit (pkgs) callPackage writeShellApplication;
+          inherit (pkgs.lib) makeOverridable recursiveUpdate;
           ndnvimOverridable = userOpts:
             let
-              opts = pkgs.lib.recursiveUpdate defaultOpts userOpts;
-              ndnvim = pkgs.callPackage ./nix/ndnvim.nix { inherit pkgs opts; };
-            in pkgs.writeShellApplication {
+              opts = recursiveUpdate defaultOpts userOpts;
+              ndnvim = callPackage ./nix/ndnvim.nix { inherit pkgs opts; };
+            in writeShellApplication {
               name = "nvim";
               runtimeInputs =
                 import ./nix/runtime.nix { inherit pkgs unstable opts; };
-              text = ''
-                ${ndnvim}/bin/nvim "$@"
-              '';
+              text = ''${ndnvim}/bin/nvim "$@"'';
             };
-        in {
-          default = pkgs.lib.makeOverridable ndnvimOverridable defaultOpts;
-        });
+        in { default = makeOverridable ndnvimOverridable defaultOpts; });
     };
 }
