@@ -38,7 +38,6 @@ dap.listeners.before.event_exited.dapui_config = function() dapui.close() end
 -- Setup dap extensions
 require("dap-go").setup()
 require("dap-python").setup "python"
-require("dap-python").test_runner "pytest"
 require("nvim-dap-virtual-text").setup {}
 require("telescope").load_extension "dap"
 
