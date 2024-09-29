@@ -41,12 +41,32 @@
           ndnvimOverridable = userOpts:
             let
               opts = recursiveUpdate defaultOpts userOpts;
-              ndnvim = callPackage ./nix/ndnvim.nix { inherit pkgs opts; };
-            in writeShellApplication {
-              name = "nvim";
-              runtimeInputs =
-                import ./nix/runtime.nix { inherit pkgs unstable opts; };
-              text = ''${ndnvim}/bin/nvim "$@"'';
+              nvimApp = let
+                ndnvim = callPackage ./nix/ndnvim.nix { inherit pkgs opts; };
+              in writeShellApplication {
+                name = "nvim";
+                runtimeInputs =
+                  import ./nix/runtime.nix { inherit pkgs unstable opts; };
+                text = ''${ndnvim}/bin/nvim "$@"'';
+              };
+            in pkgs.stdenv.mkDerivation {
+              name = "ndnvim-wrapper";
+              buildInputs = [ ];
+              phases = [ "installPhase" ];
+              installPhase = ''
+                # Create out dir
+                mkdir -p $out/bin
+
+                # Copy out dir
+                cp ${nvimApp}/bin/nvim $out/bin/nvim
+                # Conditionally enable vi and vim bins
+                if [ "${builtins.toString opts.viAlias.enabled}" = 1 ]; then
+                  cp ${nvimApp}/bin/nvim $out/bin/vi
+                fi
+                if [ "${builtins.toString opts.vimAlias.enabled}" = 1 ]; then
+                  cp ${nvimApp}/bin/nvim $out/bin/vim
+                fi
+              '';
             };
         in { default = makeOverridable ndnvimOverridable defaultOpts; });
     };

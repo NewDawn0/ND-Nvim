@@ -8,6 +8,8 @@
 # Author: NewDawn0 (https://github.com/NewDawn0)
 
 {
+  viAlias.enabled = true;
+  vimAlias.enabled = true;
   langs = {
     all.enabled = false;
     arduino.enabled = false;
