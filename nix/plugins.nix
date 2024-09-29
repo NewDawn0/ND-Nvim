@@ -36,6 +36,12 @@ with pkgs.vimPlugins; [
   nvim-autopairs
   nvim-cmp
   nvim-colorizer-lua
+  nvim-dap
+  nvim-dap-go
+  nvim-dap-python
+  nvim-dap-repl-highlights
+  nvim-dap-ui
+  nvim-dap-virtual-text
   nvim-lint
   nvim-lspconfig
   nvim-notify
@@ -44,6 +50,7 @@ with pkgs.vimPlugins; [
   nvim-web-devicons
   oil-nvim
   plenary-nvim
+  telescope-dap-nvim
   telescope-nvim
   todo-comments-nvim
   tokyonight-nvim
@@ -53,11 +60,4 @@ with pkgs.vimPlugins; [
   vim-mcfunction
   vim-tmux-navigator
   wrapping-nvim
-  telescope-dap-nvim
-  nvim-dap-virtual-text
-  nvim-dap-ui
-  nvim-dap-python
-  nvim-dap-go
-  nvim-dap
-  nvim-dap-repl-highlights
 ]
