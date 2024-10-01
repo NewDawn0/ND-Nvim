@@ -45,28 +45,3 @@ local disabled_builtins = {
 for _, plugin in pairs(disabled_builtins) do
   g["loaded_" .. plugin] = 1
 end
-
--- Remove redundant rtps
-local redundant_paths = {
-  "/nix/store/p5nfc7b4xfaaj7glfrj76j3qw3fb7yic-neovim-unwrapped-0.10.0/share/nvim/runtime",
-  "/nix/store/p5nfc7b4xfaaj7glfrj76j3qw3fb7yic-neovim-unwrapped-0.10.0/share/nvim/runtime/pack/dist/opt/matchit",
-  "/nix/var/nix/profiles/default/etc/xdg/nvim",
-  "/nix/var/nix/profiles/default/etc/xdg/nvim/after",
-  "/nix/var/nix/profiles/default/share/nvim/site",
-  "/nix/var/nix/profiles/default/share/nvim/site/after",
-  "/run/current-system/sw/etc/xdg/nvim",
-  "/run/current-system/sw/etc/xdg/nvim/after",
-  "/run/current-system/sw/share/nvim/site",
-  "/run/current-system/sw/share/nvim/site/after",
-  "~/.config/nvim",
-  "~/.config/nvim/after",
-  "~/.local/share/nvim/site/after",
-  "~/.nix-profile/etc/xdg/nvim",
-  "~/.nix-profile/etc/xdg/nvim/after",
-  "~/.nix-profile/share/nvim/site/after",
-}
-
--- Remove the paths from runtimepath permanently
-for _, path in ipairs(redundant_paths) do
-  vim.opt.runtimepath:remove(vim.fn.expand(path))
-end
