@@ -47,7 +47,7 @@ util.setkb { "<leader>cl", mc.prevCursor, "Rotate main cursor right", { "n", "v"
 util.setkb { "<leader>cd", mc.deleteCursor, "Delete main cursor", { "n", "v" } }
 
 -- Add and remove cursors with control + left click.
-util.setkb { "<c-leftmouse>", mc.handleMouse, "Add/remove cursors with ctrl+left click", { "n" } }
+util.setkb { "<c-leftmouse>", mc.handleMouse, "Add/remove cursors with mouse ", { "n" } }
 
 util.setkb {
   "<c-q>",
@@ -84,8 +84,8 @@ util.setkb { "<leader>cA", mc.appendVisual, "Append for each line of selections"
 util.setkb { "<leader>cR", mc.matchCursors, "Match cursors in selection by regex", { "v" } }
 
 -- Rotate visual selection contents.}
-util.setkb { "<leader>t", function() mc.transposeCursors(1) end, "Rotate selected contents left", { "v" } }
-util.setkb { "<leader>T", function() mc.transposeCursors(-1) end, "Rotate selected contents right", { "v" } }
+util.setkb { "<leader>t", function() mc.transposeCursors(1) end, "Transpose/rotate selected contents left", { "v" } }
+util.setkb { "<leader>T", function() mc.transposeCursors(-1) end, "Transpose/rotate selected contents right", { "v" } }
 
 -- Customize how cursors look.
 util.sethl({ "MultiCursorCursor" }, { link = "Cursor" })
