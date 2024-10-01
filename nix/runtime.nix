@@ -20,6 +20,7 @@ with pkgs;
   lldb
   nodePackages.nodemon
   ripgrep
+  tmux
   wget
 ]
 # Languages, tools, lsps, linters & daps:
@@ -133,6 +134,7 @@ else
   biome
   nodePackages.graphql-language-service-cli
   nodePackages.live-server
+  nodePackages.typescript-language-server
   nodejs
   postgres-lsp
   prettierd
@@ -240,6 +242,7 @@ else
 ++ (if opts.langs.all.enabled || opts.langs.typescript.enabled then [
   biome
   nodePackages.live-server
+  nodePackages.typescript-language-server
   nodejs
   postgres-lsp
   prettierd
