@@ -41,9 +41,10 @@ let
   '';
 in pkgs.neovim.override {
   configure = {
-    packages.all.start = import ./plugins.nix { inherit pkgs; };
+    packages.all.opt = import ./plugins.nix { inherit pkgs; };
     customRC = ''
       lua <<EOF
+      # Startup optimisations
       vim.loader.enable()
       vim.opt.rtp:prepend('${ndnvimRtp}/lua')
     '' + ''
