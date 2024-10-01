@@ -8,6 +8,7 @@
 -- Author: NewDawn0 (https://github.com/NewDawn0)
 
 -- Require modules
+require "util.opts"
 require "util.autocommands"
 require "util.commands"
 require "util.keys"
