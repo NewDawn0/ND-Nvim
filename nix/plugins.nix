@@ -33,6 +33,7 @@ with pkgs.vimPlugins; [
   luasnip
   markdown-preview-nvim
   mini-surround
+  multicursor-nvim
   nvim-autopairs
   nvim-cmp
   nvim-colorizer-lua
@@ -58,6 +59,7 @@ with pkgs.vimPlugins; [
   undotree-nvim
   vim-markdown-toc
   vim-mcfunction
+  vim-startuptime
   vim-tmux-navigator
   wrapping-nvim
 ]
