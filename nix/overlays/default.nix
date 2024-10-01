@@ -132,6 +132,14 @@ in {
         url = "https://github.com/echasnovski/mini.surround";
       };
     };
+    multicursor-nvim = pkgs.vimUtils.buildVimPlugin {
+      name = "multicursor-nvim";
+      src = builtins.fetchGit {
+        ref = "main";
+        rev = "d93e62b4dab607a0dff29efad04e3641e6e29574";
+        url = "https://github.com/jake-stewart/multicursor.nvim";
+      };
+    };
     nvim-dap-repl-highlights = pkgs.vimUtils.buildVimPlugin {
       name = "nvim-dap-repl-highlights";
       src = builtins.fetchGit {
