@@ -48,7 +48,7 @@ M.langs = {
   haskell = { "hls" },
   html = { "html", "htmx" },
   java = { "java_language_server", "jdtls" },
-  javascript = { "biome", "postgres_lsp", "graphql", "ts_ls" },
+  javascript = { "biome", "postgres_lsp", "graphql", },
   json = { "jsonls" },
   kotlin = { "kotlin_language_server" },
   lua = { "lua_ls" },
@@ -67,7 +67,7 @@ M.langs = {
   scala = { "metals" },
   svelte = { "svelte" },
   toml = { "taplo" },
-  typescript = { "biome", "postgres_lsp", "graphql", "ts_ls" },
+  typescript = { "biome", "postgres_lsp", "graphql", },
   yaml = { "spectral", "yamlls" },
   zig = { "zls" },
 }
