@@ -127,10 +127,9 @@ loader.setup {
     config = function() require "plugins.notify" end,
     lazy = { event = { "UIEnter" } },
   },
-  ["nvim-treesitter-textobjects"] = {
+  ["nvim-treesitter"] = {
     config = function() require "plugins.treesitter" end,
     lazy = { event = { "BufRead" } },
-    deps = { ["nvim-treesitter"] = {} },
   },
   ["oil.nvim"] = {
     config = function() require "plugins.oil" end,
@@ -175,17 +174,9 @@ loader.setup {
     config = function() require "plugins.surround" end,
     lazy = { event = { "ModeChanged" } },
   },
-  ["vimplugin-undotree-nvim"] = {
-    config = function() require "plugins.undotree" end,
-    lazy = false,
-  },
   ["vimplugin-colorful-winsep-nvim"] = {
     config = function() require "plugins.winsep" end,
     lazy = { event = { "UIEnter" } },
-  },
-  ["vimplugin-multicursor-nvim"] = {
-    config = function() require "plugins.multicursor" end,
-    lazy = { event = { "InsertEnter", "ModeChanged" } },
   },
   ["vimplugin-vim-mcfunction"] = {
     lazy = { ft = { "mcfunction" } },
@@ -199,6 +190,6 @@ loader.setup {
         notify_on_switch = false,
       }
     end,
-    lazy = { event = { "BufAdd" } },
+    lazy = { ft = { "markdown", "text" } },
   },
 }

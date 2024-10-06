@@ -26,14 +26,12 @@ with pkgs.vimPlugins; [
   friendly-snippets
   gen-nvim
   gitsigns-nvim
-  indent-blankline-nvim
   lsp-zero-nvim
   lspkind-nvim
   lualine-nvim
   luasnip
   markdown-preview-nvim
   mini-surround
-  multicursor-nvim
   nvim-autopairs
   nvim-cmp
   nvim-colorizer-lua
@@ -46,7 +44,6 @@ with pkgs.vimPlugins; [
   nvim-lint
   nvim-lspconfig
   nvim-notify
-  nvim-treesitter-textobjects
   nvim-treesitter.withAllGrammars
   nvim-web-devicons
   oil-nvim
@@ -56,7 +53,6 @@ with pkgs.vimPlugins; [
   todo-comments-nvim
   tokyonight-nvim
   trim-nvim
-  undotree-nvim
   vim-markdown-toc
   vim-mcfunction
   vim-startuptime

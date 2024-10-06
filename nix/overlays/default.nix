@@ -132,28 +132,12 @@ in {
         url = "https://github.com/echasnovski/mini.surround";
       };
     };
-    multicursor-nvim = pkgs.vimUtils.buildVimPlugin {
-      name = "multicursor-nvim";
-      src = builtins.fetchGit {
-        ref = "main";
-        rev = "d93e62b4dab607a0dff29efad04e3641e6e29574";
-        url = "https://github.com/jake-stewart/multicursor.nvim";
-      };
-    };
     nvim-dap-repl-highlights = pkgs.vimUtils.buildVimPlugin {
       name = "nvim-dap-repl-highlights";
       src = builtins.fetchGit {
         ref = "master";
         rev = "a7512fc0a0de0c0be8d58983939856dda6f72451";
         url = "https://github.com/LiadOz/nvim-dap-repl-highlights";
-      };
-    };
-    undotree-nvim = pkgs.vimUtils.buildVimPlugin {
-      name = "undotree-nvim";
-      src = builtins.fetchGit {
-        ref = "main";
-        rev = "eab459ab87dd249617b5f7187bb69e614a083047";
-        url = "https://github.com/jiaoshijie/undotree";
       };
     };
     vim-mcfunction = pkgs.vimUtils.buildVimPlugin {
