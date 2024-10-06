@@ -210,29 +210,10 @@ ND-Nvim comes with some language support by default
   - `<leader>fo` : Open fold
   - `<leader>fc` : Close fold
 
-- [Multicursors](https://github.com/jake-stewart/multicursor.nvim):
-
-  - `<leader>ck` Add cursor above
-  - `<leader>cj` Add cursor below
-  - `<leader>cK` Skip cursor below
-  - `<leader>cJ` Skip cursor below
-  - `<leader>cn` Add matching cursor
-  - `<leader>cs` Skip matching cursor
-  - `<leader>cN` Add matching cursor
-  - `<leader>cS` Skip matching cursor
-  - `<leader>ch` Rotate main cursor left
-  - `<leader>cl` Rotate main cursor right
-  - `<leader>cd` Delete main cursor
-  - `<leader>cq` Toggle multi cursors
-  - `<CTRL>n` Add cursor and jump to next word
-  - `<CTRL>s` Jump to next word without adding cursor
-  - `<CTRL>q` Stop other cursors from moving
-  - `<CTRL><Left mouse>` Add/remove cursors with mouse
 
 ## Changes and improvements
 
 - Nix integration
-- Add multicursor support
 - Lazy loading with my custom lazy loader
 
 ## Special thanks
