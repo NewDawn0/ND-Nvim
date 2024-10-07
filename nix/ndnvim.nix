@@ -34,17 +34,24 @@ let
     string = replaceStrings [ ''"'' ":" ] [ "" "=" ]
       (toString (toJSON (getAttrsRec opts)));
   in substring 1 ((stringLength string) - 2) string;
-  vimInit = ''
-    vim.g.ndnvim = {
-      ${luaOpts}
-    }
-  '';
 in pkgs.neovim.override {
   configure = {
+    packages.all.start = with pkgs.vimPlugins; [
+      cmp-buffer
+      cmp-nvim-lsp
+      cmp-nvim-lua
+      cmp-path
+      cmp_luasnip
+      codeium-nvim
+      lspkind-nvim
+      luasnip
+      nvim-cmp
+      nvim-lspconfig
+    ];
     packages.all.opt = import ./plugins.nix { inherit pkgs; };
     customRC = ''
       lua <<EOF
-      # Startup optimisations
+      -- Startup optimisations
       vim.loader.enable()
       vim.opt.rtp:prepend('${ndnvimRtp}/lua')
     '' + ''
