@@ -47,7 +47,7 @@ loader.setup {
   },
   ["lsp-zero.nvim"] = {
     config = function() require "plugins.lsp-zero" end,
-    lazy = { event = { "BufRead" } },
+    lazy = false,
     deps = { "cmp-nvim-lsp", "nvim-lspconfig" },
   },
   ["lualine.nvim"] = {
