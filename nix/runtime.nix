@@ -18,9 +18,9 @@ with pkgs;
   fzf
   jq
   lldb
+  tmux
   nodePackages.nodemon
   ripgrep
-  tmux
   wget
 ]
 # Languages, tools, lsps, linters & daps:
