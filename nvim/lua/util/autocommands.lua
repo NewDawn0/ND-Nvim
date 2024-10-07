@@ -9,6 +9,8 @@
 
 -- Abbrev
 local au = vim.api.nvim_create_autocmd
+local fn = vim.fn
+local cmd = vim.cmd
 
 -- Highlight on yank
 au("TextYankPost", {
@@ -18,9 +20,24 @@ au("TextYankPost", {
 -- Return to position when opening files
 au("BufReadPost", {
   callback = function()
-    if vim.fn.line "'\"" > 0 and vim.fn.line "'\"" <= vim.fn.line "$" then
-      vim.fn.setpos(".", vim.fn.getpos "'\"")
-      vim.cmd "silent! foldopen"
+    if vim.fn.line "'\"" > 0 and fn.line "'\"" <= fn.line "$" then
+      fn.setpos(".", fn.getpos "'\"")
+      cmd "silent! foldopen"
     end
   end,
+})
+
+-- Automatically reload file if changed
+au({ "BufEnter", "CursorHold", "FocusGained" }, {
+  callback = function() cmd "silent! checktime %" end,
+})
+
+-- Automatically resize windows when screen size changes
+au("VimResized", {
+  callback = function() cmd "tabdo wincmd =" end,
+})
+
+-- Create missing dirs for writing to path
+au("BufWritePre", {
+  callback = function() cmd "call mkdir(expand('<afile>:p:h'), 'p')" end,
 })
