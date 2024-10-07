@@ -12,11 +12,6 @@ with pkgs.vimPlugins; [
   alpha-nvim
   boole-nvim
   bufferline-nvim
-  cmp-buffer
-  cmp-nvim-lsp
-  cmp-nvim-lua
-  cmp-path
-  cmp_luasnip
   codeium-nvim
   colorful-winsep-nvim
   comment-nvim
@@ -26,14 +21,12 @@ with pkgs.vimPlugins; [
   friendly-snippets
   gen-nvim
   gitsigns-nvim
+  indent-blankline-nvim
   lsp-zero-nvim
-  lspkind-nvim
   lualine-nvim
-  luasnip
   markdown-preview-nvim
   mini-surround
   nvim-autopairs
-  nvim-cmp
   nvim-colorizer-lua
   nvim-dap
   nvim-dap-go
@@ -42,8 +35,8 @@ with pkgs.vimPlugins; [
   nvim-dap-ui
   nvim-dap-virtual-text
   nvim-lint
-  nvim-lspconfig
   nvim-notify
+  nvim-treesitter-textobjects
   nvim-treesitter.withAllGrammars
   nvim-web-devicons
   oil-nvim
