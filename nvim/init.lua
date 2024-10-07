@@ -7,38 +7,23 @@
 --
 -- Author: NewDawn0 (https://github.com/NewDawn0)
 
--- Speed up startup
+-- Load utility stuff
 require "util.startup"
+require "util"
 
 -- Import plugin loader
 local loader = require "util.loader"
-
--- Import all configs
-require "util"
-
--- locals
-local telescope = {
-  config = function() require "plugins.telescope" end,
-  lazy = {
-    keys = { "<leader>fb", "<leader>fd", "<leader>ff", "<leader>fgc", "<leader>fll", "<leader>fn", "<leader>fs" },
-  },
-  deps = {
-    ["dressing.nvim"] = {},
-    ["nvim-web-devicons"] = {},
-    ["plenary.nvim"] = {},
-    ["telescope-dap.nvim"] = {},
-  },
-}
 
 -- Setup plugins
 loader.setup {
   ["alpha-nvim"] = {
     config = function() require "plugins.alpha" end,
     lazy = false,
-    deps = { ["telescope.nvim"] = telescope },
+    deps = { "telescope.nvim" },
   },
   ["boole.nvim"] = {
     config = function() require "plugins.boole" end,
+    lazy = { event = { "InsertEnter" } },
   },
   ["comment.nvim"] = {
     config = function() require "plugins.comment" end,
@@ -54,23 +39,21 @@ loader.setup {
   },
   ["gitsigns.nvim"] = {
     config = function() require "plugins.gitsigns" end,
-    lazy = { event = { "BufAdd" } },
+    lazy = { event = { "BufRead" } },
   },
   ["indent-blankline.nvim"] = {
     config = function() require "plugins.indent" end,
-    lazy = { event = { "BufAdd" } },
+    lazy = { event = { "BufRead" } },
   },
   ["lsp-zero.nvim"] = {
     config = function() require "plugins.lsp-zero" end,
     lazy = { event = { "BufRead" } },
-    deps = {
-      ["cmp-nvim-lsp"] = {},
-      ["nvim-lspconfig"] = {},
-    },
+    deps = { "cmp-nvim-lsp", "nvim-lspconfig" },
   },
   ["lualine.nvim"] = {
     config = function() require "plugins.lualine" end,
     lazy = { event = { "UIEnter" } },
+    deps = { "tokyonight.nvim" },
   },
   ["markdown-preview.nvim"] = {
     lazy = { ft = { "markdown" } },
@@ -83,19 +66,21 @@ loader.setup {
     config = function() require "plugins.cmp" end,
     lazy = { event = { "InsertEnter" } },
     deps = {
-      ["cmp-buffer"] = {},
-      ["cmp-nvim-lsp"] = {},
-      ["cmp-nvim-lua"] = {},
-      ["cmp-path"] = {},
-      ["cmp_luasnip"] = {},
-      ["dressing.nvim"] = {},
-      ["friendly-snippets"] = {},
-      ["lspkind-nvim"] = {},
-      ["luasnip"] = {},
-      ["nvim-lspconfig"] = {},
-      ["nvim-web-devicons"] = {},
-      ["plenary.nvim"] = {},
-      ["vimplugin-codeium-nvim"] = {},
+      after = {
+        "cmp-buffer",
+        "cmp-nvim-lsp",
+        "cmp-nvim-lua",
+        "cmp-path",
+        "cmp_luasnip",
+        "dressing.nvim",
+        "friendly-snippets",
+        "lspkind.nvim",
+        "luasnip",
+        "nvim-lspconfig",
+        "nvim-web-devicons",
+        "plenary.nvim",
+        "vimplugin-codeium-nvim",
+      },
     },
   },
   ["nvim-colorizer.lua"] = {
@@ -104,19 +89,19 @@ loader.setup {
         user_default_options = { names = false },
       }
     end,
-    lazy = { event = { "BufReadPost" } },
+    lazy = { event = { "BufRead" } },
   },
   ["nvim-dap"] = {
     config = function() require "plugins.dap" end,
     lazy = { event = { "BufReadPre" } },
     deps = {
-      ["nvim-dap-go"] = {},
-      ["nvim-dap-python"] = {},
-      ["nvim-dap-ui"] = {},
-      ["nvim-dap-virtual-text"] = {},
-      ["plenary.nvim"] = {},
-      ["telescope.nvim"] = telescope,
-      ["vimplugin-nvim-dap-repl-highlight"] = {},
+      "nvim-dap-go",
+      "nvim-dap-python",
+      "nvim-dap-ui",
+      "nvim-dap-virtual-text",
+      "plenary.nvim",
+      "telescope.nvim",
+      "vimplugin-nvim-dap-repl-highlight",
     },
   },
   ["nvim-lint"] = {
@@ -129,13 +114,28 @@ loader.setup {
   },
   ["nvim-treesitter"] = {
     config = function() require "plugins.treesitter" end,
+    lazy = true,
+  },
+  ["nvim-treesitter-textobjects"] = {
     lazy = { event = { "BufRead" } },
+    deps = { "nvim-treesitter" },
   },
   ["oil.nvim"] = {
     config = function() require "plugins.oil" end,
     lazy = false,
   },
-  ["telescope.nvim"] = telescope,
+  ["telescope.nvim"] = {
+    config = function() require "plugins.telescope" end,
+    lazy = {
+      keys = { "<leader>fb", "<leader>fd", "<leader>ff", "<leader>fgc", "<leader>fll", "<leader>fn", "<leader>fs" },
+    },
+    deps = {
+      "dressing.nvim",
+      "nvim-web-devicons",
+      "plenary.nvim",
+      "telescope-dap.nvim",
+    },
+  },
   ["todo-comments.nvim"] = {
     config = function() require "plugins.todo-comments" end,
     lazy = { event = { "BufRead" } },
@@ -161,10 +161,7 @@ loader.setup {
   ["vimplugin-bufferline-nvim"] = {
     config = function() require "plugins.bufferline" end,
     lazy = { event = { "BufWinEnter" } },
-    deps = {
-      ["plenary.nvim"] = {},
-      ["nvim-web-devicons"] = {},
-    },
+    deps = { "plenary.nvim", "nvim-web-devicons" },
   },
   ["vimplugin-gen-nvim"] = {
     config = function() require "plugins.gen" end,
@@ -178,7 +175,7 @@ loader.setup {
     config = function() require "plugins.winsep" end,
     lazy = { event = { "UIEnter" } },
   },
-  ["vimplugin-vim-mcfunction"] = {
+  ["vim-vim-mcfunction"] = {
     lazy = { ft = { "mcfunction" } },
   },
   ["vim-startuptime"] = {
