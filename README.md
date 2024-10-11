@@ -10,22 +10,44 @@
 
 ## Screenshots
 
+![ND-Nvim Dashboard](./.github/assets/dashboard.png)
+
+<details>
+<summary>Gallery</summary>
+
+- Cmp Suggestions
+  ![ND-Nvim Cmp suggestions](./.github/assets/cmp.png)
+
+- Markdown editing
+  ![ND-Nvim Markdown editing](./.github/assets/md.png)
+
+- Tmux integration
+  ![ND-Nvim Tmux integration](./.github/assets/split.png)
+
+- Custom package lazy loader info available using the command `:NDNvimLoader`
+  ![ND-Nvim Tmux integration](./.github/assets/pkgLoader.png)
+
+- List of enabled languages available using the command `:NDNvimInstallInfo`
+  ![ND-Nvim Enabled languages](./.github/assets/installInfo.png)
+
+</details>
+
 ## Table of contents
 
 <!-- vim-markdown-toc GFM -->
 
-* [Dependencies](#dependencies)
-* [Features](#features)
-* [Testing it out](#testing-it-out)
-* [Installation](#installation)
-* [Configuring ND-Nvim](#configuring-nd-nvim)
-* [Keybinds](#keybinds)
-    * [General](#general)
-    * [Normal](#normal)
-    * [Visual](#visual)
-    * [Normal & Visual](#normal--visual)
-* [Changes and improvements](#changes-and-improvements)
-* [Special thanks](#special-thanks)
+- [Dependencies](#dependencies)
+- [Features](#features)
+- [Testing it out](#testing-it-out)
+- [Installation](#installation)
+- [Configuring ND-Nvim](#configuring-nd-nvim)
+- [Keybinds](#keybinds)
+  - [General](#general)
+  - [Normal](#normal)
+  - [Visual](#visual)
+  - [Normal & Visual](#normal--visual)
+- [Changes and improvements](#changes-and-improvements)
+- [Special thanks](#special-thanks)
 
 <!-- vim-markdown-toc -->
 
@@ -209,7 +231,6 @@ ND-Nvim comes with some language support by default
 
   - `<leader>fo` : Open fold
   - `<leader>fc` : Close fold
-
 
 ## Changes and improvements
 
