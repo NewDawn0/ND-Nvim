@@ -178,6 +178,9 @@ loader.setup {
   ["vim-vim-mcfunction"] = {
     lazy = { ft = { "mcfunction" } },
   },
+  ["vim-markdown-toc"] = {
+    lazy = { ft = { "markdown" } },
+  },
   ["vim-startuptime"] = {
     lazy = { event = { "CmdlineEnter" } },
   },
