@@ -50,7 +50,7 @@
                 text = ''${ndnvim}/bin/nvim "$@"'';
               };
             in pkgs.stdenv.mkDerivation {
-              name = "ndnvim-wrapper";
+              name = "nvim";
               buildInputs = [ ];
               phases = [ "installPhase" ];
               installPhase = ''
