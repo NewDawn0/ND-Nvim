@@ -14,7 +14,7 @@ local cmp = require "cmp"
 local luasnip = require "luasnip"
 
 -- Setup luasnip
-require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").load()
 
 -- Setup nvim cmp
 cmp.setup {
