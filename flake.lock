@@ -46,11 +46,45 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1729519605,
+        "narHash": "sha256-TA+t6sR58zRemaUxmEFb+szy8iCAHylcXiDSK8JybLE=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "227e4d2b0397cec9e80e7995bb350ab87be2fbb7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nix-systems": "nix-systems",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "treesitter-pinned": "treesitter-pinned"
+      }
+    },
+    "treesitter-pinned": {
+      "inputs": {
+        "nix-systems": [
+          "nix-systems"
+        ],
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-I7LFgVlO+r7qijCa/4wKZMjPJtW9tFW45GbKv4jbOfA=",
+        "path": "./nix/overlays/treesitter",
+        "type": "path"
+      },
+      "original": {
+        "path": "./nix/overlays/treesitter",
+        "type": "path"
       }
     }
   },

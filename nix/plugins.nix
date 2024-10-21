@@ -36,8 +36,8 @@ with pkgs.vimPlugins; [
   nvim-dap-virtual-text
   nvim-lint
   nvim-notify
+  nvim-treesitter
   nvim-treesitter-textobjects
-  nvim-treesitter.withAllGrammars
   nvim-web-devicons
   oil-nvim
   plenary-nvim

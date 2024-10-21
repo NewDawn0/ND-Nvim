@@ -14,6 +14,10 @@
     nix-systems.url = "github:nix-systems/default";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs";
+    treesitter-pinned = {
+      url = "path:./nix/overlays/treesitter";
+      inputs.nix-systems.follows = "nix-systems";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
@@ -25,8 +29,10 @@
         pkgs = import nixpkgs {
           inherit system;
           config = { allowUnfree = true; };
-          overlays =
-            [ (final: prev: (import ./nix/overlays { pkgs = prev; })) ];
+          overlays = [
+            (final: prev: (import ./nix/overlays { pkgs = prev; }))
+            inputs.treesitter-pinned.overlays.default
+          ];
         };
       };
     in {
