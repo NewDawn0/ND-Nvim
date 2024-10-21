@@ -77,14 +77,17 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1,
+        "lastModified": 1729534386,
         "narHash": "sha256-I7LFgVlO+r7qijCa/4wKZMjPJtW9tFW45GbKv4jbOfA=",
-        "path": "./nix/overlays/treesitter",
-        "type": "path"
+        "owner": "NewDawn0",
+        "repo": "treesitter-pinned-ndnvim",
+        "rev": "533af5c7af5d2189071196550200916632432402",
+        "type": "github"
       },
       "original": {
-        "path": "./nix/overlays/treesitter",
-        "type": "path"
+        "owner": "NewDawn0",
+        "repo": "treesitter-pinned-ndnvim",
+        "type": "github"
       }
     }
   },
