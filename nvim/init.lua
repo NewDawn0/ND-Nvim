@@ -123,6 +123,21 @@ loader.setup {
   ["oil.nvim"] = {
     config = function() require "plugins.oil" end,
     lazy = false,
+    deps = {
+      "flash.nvim",
+      "gitsigns.nvim",
+      "indent-blankline.nvim",
+      "lsp-zero.nvim",
+      "nvim-colorizer.lua",
+      "nvim-lint",
+      "nvim-treesitter-textobjects",
+      "telescope.nvim",
+      "todo-comments.nvim",
+      "tokyonight.nvim",
+      "vim-markdown-toc",
+      "vim-tmux-navigator",
+      "vimplugin-bufferline-nvim",
+    },
   },
   ["telescope.nvim"] = {
     config = function() require "plugins.telescope" end,
