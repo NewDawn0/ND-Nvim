@@ -1,3 +1,7 @@
+# This repo is has been completely rewritten as [nvimConfig](https://github.com/NewDawn0/nvimConfig) and is now deprecated
+
+---
+
 <h1 align='center'>ND-Nvim</h1>
 <div align='center'>
 
